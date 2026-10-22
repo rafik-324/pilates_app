@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnp*
+
+# Builds
+dist/
+build/
+.expo/
+.next/
+ios/Pods/
+android/.gradle/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.keystore
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+*.log
