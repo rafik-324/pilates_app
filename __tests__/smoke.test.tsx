@@ -3,6 +3,8 @@ import React from 'react';
 import DiscoverScreen from '../app/(tabs)/discover';
 import ProfileScreen from '../app/(tabs)/profile';
 import ThemePreviewScreen from '../app/dev/theme-preview';
+import { createTestRepositories } from '@/data/testing/testDb';
+import { useLibrary } from '@/features/library/store';
 import '@/i18n';
 import { useSettings } from '@/state/settings';
 import { ThemeProvider } from '@/ui/theme';
@@ -13,6 +15,14 @@ jest.mock('expo-router', () => ({
   router: { push: jest.fn() },
   Stack: { Screen: () => null },
 }));
+
+let mockRepos: Awaited<ReturnType<typeof createTestRepositories>>['repos'];
+jest.mock('@/data/init', () => ({ getRepositories: () => mockRepos }));
+
+beforeEach(async () => {
+  mockRepos = (await createTestRepositories()).repos;
+  useLibrary.getState().clear();
+});
 
 function wrap(node: React.ReactElement) {
   return render(<ThemeProvider>{node}</ThemeProvider>);

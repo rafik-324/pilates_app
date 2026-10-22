@@ -37,7 +37,15 @@
           }
         }
       ],
-      ["expo-sqlite", { "useSQLCipher": true }]
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      "expo-video",
+      "expo-audio",
+      "expo-sharing"
     ],
     "experiments": {
       "typedRoutes": true

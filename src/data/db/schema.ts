@@ -66,6 +66,8 @@ export const sessions = sqliteTable('sessions', {
   abgeschlossen: integer('abgeschlossen', { mode: 'boolean' }).notNull().default(false),
   uebungenErledigt: integer('uebungen_erledigt').notNull().default(0),
   feedback: text('feedback'), // zu_leicht | passend | zu_schwer
+  uebungenGesamt: integer('uebungen_gesamt').notNull().default(0),
+  abbruchGrund: text('abbruch_grund'), // zu_schwer | keine_zeit | sonstiges (/F610/)
 });
 
 /** /D070/ Gewichtseintrag */

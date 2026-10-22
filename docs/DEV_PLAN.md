@@ -13,9 +13,9 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 2 | Lokale Datenbank und Domänenlogik | erledigt (Prototyp) |
 | 3 | Onboarding | erledigt (Prototyp) |
 | 4 | Plan-Generator und Planansicht | erledigt (Prototyp) |
-| 5 | Bibliothek, Suche, Übungsdetails | offen |
-| 6 | Workout-Player | offen |
-| 7 | Workout-Abschluss und Fortschritt | offen |
+| 5 | Bibliothek, Suche, Übungsdetails | erledigt (Prototyp) |
+| 6 | Workout-Player | erledigt (Prototyp) |
+| 7 | Workout-Abschluss und Fortschritt | erledigt (Prototyp) |
 | 8 | Erinnerungen, Einstellungen, Datenschutz | offen |
 | 9 | Feinschliff und MVP-Abnahme | offen |
 
@@ -181,37 +181,69 @@ Demo: nach dem Onboarding erscheint der persönliche Plan; Challenge starten.
 
 ## Phase 5: Bibliothek, Suche, Übungsdetails
 
-- [ ] Entdecken-Tab mit Kategorien (/F300/), Filter nach Level, Dauer, Zielzone, Wand, Boden (/F310/)
-- [ ] Stichwortsuche über Workouts und Übungen, DE und EN, tolerant gegenüber Umlauten und Groß- / Kleinschreibung (/F320/, Test /T130/ mit "Brücke")
-- [ ] Workout-Detailseite (/F330/) inkl. Anpassung von Dauer / Wiederholungen vor dem Start (/F440/)
-- [ ] Favoriten (/F340/), Premium-Schloss-Symbol (/F360/), Premium-Inhalte in Stufe 1 trotzdem nutzbar (Schalter in den Entwicklereinstellungen, Standard: alles frei)
-- [ ] Übungsdetail: Video in Schleife, stumm (/F400/), Schritte, Atemhinweis, Fehler (/F410/), Fokusbereiche als einfache Körpergrafik (SVG, /F420/), Varianten (/F430/)
+- [x] Entdecken-Tab mit Kategorien (/F300/), Filter nach Level, Dauer, Zielzone, Wand, Boden (/F310/)
+- [x] Stichwortsuche über Workouts und Übungen, DE und EN, tolerant gegenüber Umlauten und Groß- / Kleinschreibung (/F320/, Test /T130/ mit "Brücke")
+- [x] Workout-Detailseite (/F330/) inkl. Anpassung von Dauer / Wiederholungen vor dem Start (/F440/)
+- [x] Favoriten (/F340/), Premium-Schloss-Symbol (/F360/), Premium-Inhalte in Stufe 1 trotzdem nutzbar (Schalter in den Entwicklereinstellungen, Standard: alles frei)
+- [x] Übungsdetail: Video in Schleife, stumm (/F400/), Schritte, Atemhinweis, Fehler (/F410/), Fokusbereiche als einfache Körpergrafik (SVG, /F420/), Varianten (/F430/)
 
 Demo: Suche "Brücke", Filter "ohne Boden", Übungsdetail mit Platzhalter-Video.
+
+Prototyp-Stand:
+
+- Suche und Filter rein funktional in `src/domain/library.ts`: Normalisierung (klein, ä = ae = a, ß = ss, Akzente und Satzzeichen entfernt), alle Suchwörter müssen vorkommen; durchsucht Name, Beschreibung und ID der Übungen auf DE und EN, Workouts über Titel und enthaltene Übungen. /T130/ ("Brücke", "BRUECKE", "bridge") als Unit- und UI-Test
+- Filter als Chips: Favoriten, ohne / mit Boden, mit / ohne Wand, Level, Dauer (bis 7 / 8–10 / über 10 Min.), Zielzone. Ein Workout gilt als "mit Boden" bzw. "mit Wand", sobald eine enthaltene Übung das tut. Bei aktiver Suche oder Filter werden Workouts und passende Übungen getrennt gelistet, sonst die Kategorien
+- Workout-Detail: Kennzahlen, Favorit (Herz), Button "Anpassen" mit +/- je Übung (Zeit in 5-s-Schritten 10 bis 180 s, Wiederholungen 1 bis 50), Übung antippen öffnet das Übungsdetail. "Workout starten" übergibt die angepasste Übungsliste an den Player
+- Übungsdetail (`/exercise?id=`): Video über `expo-video` in Schleife und stumm, Kennzeichen (Level, Dauer, Wand, Boden, Schwangerschaft), Schritte, Atmung, Fehler, Körpergrafik als SVG (Vorder- und Rückseite, Zonen in `accent`, neue Komponente `BodyMap`), Varianten leichter / schwerer verlinkt
+- Premium (/F360/): Schloss-Symbol in Listen und Details. Entwicklerschalter "Premium-Inhalte freigeschaltet" im Profil (Dev-Modus, gespeichert in `kv`, Standard an); aus = Premium-Workouts nicht startbar
+- Favoriten und Schalter liegen im Store `src/features/library/store.ts`; "Daten löschen" setzt ihn zurück
+- Bis Phase 6 öffnet "Workout starten" einen Platzhalter-Screen
 
 ## Phase 6: Workout-Player
 
 Kernstück; Logik strikt von UI trennen.
 
-- [ ] Player-Engine in `src/domain/player/` als reine Zustandsmaschine (Vorbereitung, Übung, Pause, fertig, abgebrochen) mit injizierbarer Uhr; Zeit über Zeitstempel berechnet, nicht über Ticks (/L060/)
-- [ ] Tests mit Fake-Uhr: /T030/ (läuft ohne Eingriff bis zum Ende), /T040/ (Pause überspringen), /T050/ (Halbzeit bei 15 s einer 30-s-Übung), +20 s, vorherige / nächste, Pause / Fortsetzen, Wiederholungsübung mit Weiter
-- [ ] Player-Screen gemäß 8.2: Video oben ca. 50 %, großer Timer, Fortschrittsbalken, Steuerung unten, lesbar aus 2 m (/F500/ bis /F530/, /F580/, /F590/)
-- [ ] Sprachausgabe mit expo-speech: Übungsname, Start, Halbzeit, letzte 3 Sekunden, Ende, nächste Übung (/F540/, /F550/), Sprache gemäß App-Sprache
-- [ ] Hintergrundmusik mit expo-audio, Ein / Aus, getrennte Lautstärken Stimme / Musik (/F560/); Audio-Modus so, dass fremde Musik geduckt statt gestoppt wird (/F570/, /T140/). Platzhalter-Musikdatei (lizenzfrei oder generierter Ton) verwenden
-- [ ] Display bleibt an (expo-keep-awake, /F600/)
-- [ ] Abbruchdialog (/F610/), Fortsetzen nach Neustart (/F620/, /T070/): Player-Zustand in DB sichern
-- [ ] Hintergrund / Sperre: Timer korrekt nach Rückkehr (Zeitstempel). Medienbenachrichtigung (/F630/) nur im Development Build, in Expo Go sauber deaktiviert; Umsetzung als eigener Punkt dokumentieren, falls nicht in dieser Phase möglich
+- [x] Player-Engine in `src/domain/player/` als reine Zustandsmaschine (Vorbereitung, Übung, Pause, fertig, abgebrochen) mit injizierbarer Uhr; Zeit über Zeitstempel berechnet, nicht über Ticks (/L060/)
+- [x] Tests mit Fake-Uhr: /T030/ (läuft ohne Eingriff bis zum Ende), /T040/ (Pause überspringen), /T050/ (Halbzeit bei 15 s einer 30-s-Übung), +20 s, vorherige / nächste, Pause / Fortsetzen, Wiederholungsübung mit Weiter
+- [x] Player-Screen gemäß 8.2: Video oben ca. 50 %, großer Timer, Fortschrittsbalken, Steuerung unten, lesbar aus 2 m (/F500/ bis /F530/, /F580/, /F590/)
+- [x] Sprachausgabe mit expo-speech: Übungsname, Start, Halbzeit, letzte 3 Sekunden, Ende, nächste Übung (/F540/, /F550/), Sprache gemäß App-Sprache
+- [x] Hintergrundmusik mit expo-audio, Ein / Aus, getrennte Lautstärken Stimme / Musik (/F560/); Audio-Modus so, dass fremde Musik geduckt statt gestoppt wird (/F570/, /T140/). Platzhalter-Musikdatei (lizenzfrei oder generierter Ton) verwenden
+- [x] Display bleibt an (expo-keep-awake, /F600/)
+- [x] Abbruchdialog (/F610/), Fortsetzen nach Neustart (/F620/, /T070/): Player-Zustand in DB sichern
+- [x] Hintergrund / Sperre: Timer korrekt nach Rückkehr (Zeitstempel). Medienbenachrichtigung (/F630/) nur im Development Build, in Expo Go sauber deaktiviert; Umsetzung als eigener Punkt dokumentieren, falls nicht in dieser Phase möglich
 
 Demo: ein komplettes Workout in Expo Go laufen lassen, ohne etwas anzufassen.
 
+Prototyp-Stand:
+
+- Engine `src/domain/player/engine.ts`: Phasen Vorbereitung, Übung, Pause, fertig; Zeit nur aus Zeitstempeln (`now` wird übergeben). `tick` holt nach Hintergrund / Sperre alle verpassten Phasenwechsel exakt nach. Aktionen: weiter / überspringen, vorherige, Pause / Fortsetzen, +20 s, Wiederholungen bestätigen. Ereignisse für Ansagen: Phasenwechsel, Halbzeit (ab 10-s-Übungen), Countdown 3 / 2 / 1, fertig. 13 Unit-Tests mit Fake-Uhr (/T030/, /T040/, /T050/, /T070/, Pause, +20 s, Navigation, Wiederholungen, Hintergrund)
+- "Abgebrochen" ist kein eigener Engine-Zustand: der Abbruch speichert eine Session mit `abgeschlossen = false` und Grund (neue Spalten `abbruch_grund`, `uebungen_gesamt`, Migration 0001) und sichert den pausierten Zustand
+- Player-Screen (`/player`, immer dunkel): Fortschrittsbalken, Video ca. 50 % der Höhe, Name, Timer im `timer`-Stil, Steuerung als `IconButton`s; Wiederholungsübung mit "Fertig, weiter"; Vorbereitung und Pause mit "Jetzt starten" / "Überspringen" und "+20 s". Wischgeste zurück ist im Player gesperrt, die Zurück-Taste (Android) öffnet den Abbruchdialog
+- Sprachausgabe (expo-speech, Sprache der App, Stimme / Lautstärke aus den Einstellungen): Vorbereitung mit erster Übung, Übungsstart mit Dauer bzw. Wiederholungen, Halbzeit, Pause mit nächster Übung, Abschluss. Letzte 3 Sekunden als Signalton
+- Musik (expo-audio): Platzhalter-Schleife und Signalton werden synthetisch von `npm run generate:audio` erzeugt (`assets/audio/`, lizenzfrei). Ton-Sheet im Player: Musik an / aus, Lautstärke Stimme und Musik getrennt (in den Einstellungen gespeichert). Audio-Modus `duckOthers`: fremde Musik läuft leiser weiter (/F570/)
+- Pausendauer kommt aus den Einstellungen (`pauseS`, Standard 10 s), nicht aus dem Workout, damit /F1130/ überall gilt; Countdown aus `countdownS`
+- Fortsetzen (/F620/): Zustand liegt bei jedem Phasenwechsel, beim Wechsel in den Hintergrund und beim Abbruch in `kv` (`player.resume`). Der Plan-Tab zeigt dann "Unterbrochenes Workout" mit Fortsetzen / Verwerfen; die Zeit seit dem Schließen zählt als Pause. Beim Abschluss wird dieselbe Session aktualisiert
+- Regulärer Abschluss: Session speichern (kcal aus tatsächlich trainierter Zeit je Übung), Plantag erledigt, Weiterleitung auf `/complete` (einfacher Abschlussbildschirm, Ausbau in Phase 7)
+- Offen: Medienbenachrichtigung und Weiterlaufen bei gesperrtem Bildschirm (/F630/, /T060/ Benachrichtigung) brauchen einen Development Build mit Hintergrund-Audio und sind nicht umgesetzt. Der Timer selbst stimmt nach Rückkehr, Ansagen während der Sperre entfallen
+- Offen: Sprachausgabe, Ducking und Musik sind nur in Jest (gemockt) geprüft, nicht auf einem Gerät
+
 ## Phase 7: Workout-Abschluss und Fortschritt
 
-- [ ] Automatischer Abschluss (/F700/), Session speichern, Plantag erledigt (/F750/)
-- [ ] Abschlussbildschirm: Dauer, Übungen, kcal (ggf. als Schätzung), Streak (/F710/), Feedback zu leicht / passend / zu schwer (/F720/) → adaptive Anpassung aus Phase 4 aufrufen, Gewicht eintragen (nur mit Einwilligung, /F730/)
-- [ ] Fortschritt-Tab: Gesamtstatistik (/F800/), Wochen-Balkendiagramm (/F810/), Kalender (/F820/), Streak (/F830/), Gewichtsverlauf mit Hinzufügen / Bearbeiten / Löschen (/F840/), BMI (/F850/, /T110/), Historie (/F860/)
-- [ ] CSV-Export über Teilen-Dialog (/F880/)
+- [x] Automatischer Abschluss (/F700/), Session speichern, Plantag erledigt (/F750/)
+- [x] Abschlussbildschirm: Dauer, Übungen, kcal (ggf. als Schätzung), Streak (/F710/), Feedback zu leicht / passend / zu schwer (/F720/) → adaptive Anpassung aus Phase 4 aufrufen, Gewicht eintragen (nur mit Einwilligung, /F730/)
+- [x] Fortschritt-Tab: Gesamtstatistik (/F800/), Wochen-Balkendiagramm (/F810/), Kalender (/F820/), Streak (/F830/), Gewichtsverlauf mit Hinzufügen / Bearbeiten / Löschen (/F840/), BMI (/F850/, /T110/), Historie (/F860/)
+- [x] CSV-Export über Teilen-Dialog (/F880/)
 
 Demo: Workout abschließen, Statistik und Kalender aktualisieren sich.
+
+Prototyp-Stand:
+
+- Abschluss (`/complete?session=`): großer grüner Haken, Dauer, Übungen, kcal (mit "~" und Hinweis bei Standardgewicht), aktueller Streak. Feedback als Chips (zu leicht / passend / zu schwer), wird in der Session gespeichert und bei Sessions eines persönlichen Plans einmalig an `applyFeedback` (/F270/, nächste 3 Trainingstage) übergeben. Gewicht eintragen nur mit Einwilligung; das Profilgewicht folgt dem jüngsten Eintrag. "Teilen" über den System-Teilen-Dialog (8.2), nur Text
+- Fortschritt-Tab: Workouts / Minuten / kcal gesamt (nur abgeschlossene), aktueller und bester Streak (Ruhetage aus allen Plänen überbrücken), Wochen-Balkendiagramm Mo bis So mit Wochenwechsel, Monatskalender mit Trainingstagen als gefüllte Kreise, Gewichtsverlauf als Liniendiagramm mit Hinzufügen / Bearbeiten / Löschen (Sheet mit Datum und Wert, kg oder lb), BMI mit Einordnung, Historie aller Sessions inkl. Abbrüche mit Detail-Sheet
+- Diagramme: eigene SVG-Komponenten `BarChart` und `LineChart` im Design-System (react-native-svg) statt react-native-gifted-charts. Grund: nur zwei einfache Diagramme nötig, volle Kontrolle über die Tokens (Schwarz / Grau, aktueller Wert in `accentText`), keine weitere Abhängigkeit mit Risiko für Expo Go. Abweichung von Pflichtenheft 3.3 (Bibliothekswahl), funktional gleich
+- CSV-Export (/F880/): Sessions und Gewicht, Semikolon-getrennt, über `expo-file-system` (Cache-Datei) und `expo-sharing`
+- Domäne `src/domain/progress.ts` (Summen, Trainingstage, Wochenminuten, Monatsraster, Gewichtsreihe, CSV, Gewichtseingabe mit Komma) mit Unit-Tests; UI-Tests für Abschluss, Feedback mit Plananpassung, Gewicht mit / ohne Einwilligung, /T110/, Export und Streak über Ruhetage (/T180/)
+- Offen: Widerruf der Einwilligung löscht Gewichtseinträge erst mit der Datenschutz-Seite in Phase 8 (/S100/); ohne Einwilligung werden vorhandene Einträge bereits nicht angezeigt
 
 ## Phase 8: Erinnerungen, Einstellungen, Datenschutz
 

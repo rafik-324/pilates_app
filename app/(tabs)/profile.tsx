@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View } from 'react-native';
+import { ensureLibraryLoaded, useLibrary } from '@/features/library/store';
 import { deleteAllLocalData } from '@/features/privacy/deleteAllData';
 import { useTranslation } from '@/i18n';
 import { useSettings } from '@/state/settings';
@@ -8,6 +9,11 @@ import { Chip, ListItem, Screen, Text } from '@/ui/components';
 import { useTheme } from '@/ui/theme';
 
 export default function ProfileScreen() {
+  const premiumFree = useLibrary((s) => s.premiumFree);
+  const setPremiumFree = useLibrary((s) => s.setPremiumFree);
+  useEffect(() => {
+    ensureLibraryLoaded();
+  }, []);
   const { t } = useTranslation();
   const { space } = useTheme();
   const { schema: scheme, sprache: language, setScheme, setLanguage } = useSettings();
@@ -47,6 +53,13 @@ export default function ProfileScreen() {
             title={t('profile.themePreview')}
             leftIcon="palette"
             onPress={() => router.push('/dev/theme-preview')}
+          />
+          <ListItem
+            title={t('profile.premiumFree')}
+            subtitle={premiumFree ? t('profile.on') : t('profile.off')}
+            leftIcon="lock"
+            showChevron={false}
+            onPress={() => setPremiumFree(!premiumFree)}
           />
           <ListItem
             title={t('profile.devReset')}
