@@ -2,14 +2,14 @@ import { router } from 'expo-router';
 import React from 'react';
 import { View } from 'react-native';
 import { useTranslation } from '@/i18n';
-import { usePrefs } from '@/state/prefs';
+import { useSettings } from '@/state/settings';
 import { Chip, ListItem, Screen, Text } from '@/ui/components';
 import { useTheme } from '@/ui/theme';
 
 export default function ProfileScreen() {
   const { t } = useTranslation();
   const { space } = useTheme();
-  const { scheme, language, setScheme, setLanguage } = usePrefs();
+  const { schema: scheme, sprache: language, setScheme, setLanguage } = useSettings();
 
   return (
     <Screen scroll>

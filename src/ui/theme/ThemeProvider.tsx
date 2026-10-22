@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import { useColorScheme } from 'react-native';
-import { usePrefs } from '@/state/prefs';
+import { useSettings } from '@/state/settings';
 import { DEFAULT_THEME_ID, themes } from './themes';
 import type { ColorScheme, Theme } from './tokens';
 
@@ -15,7 +15,7 @@ type Props = {
 
 export function ThemeProvider({ children, forceScheme, themeId = DEFAULT_THEME_ID }: Props) {
   const system = useColorScheme();
-  const pref = usePrefs((s) => s.scheme);
+  const pref = useSettings((s) => s.schema);
   const scheme: ColorScheme =
     forceScheme ?? (pref === 'system' ? (system === 'dark' ? 'dark' : 'light') : pref);
 

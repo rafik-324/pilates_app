@@ -4,7 +4,7 @@ import DiscoverScreen from '../app/(tabs)/discover';
 import ProfileScreen from '../app/(tabs)/profile';
 import ThemePreviewScreen from '../app/dev/theme-preview';
 import '@/i18n';
-import { usePrefs } from '@/state/prefs';
+import { useSettings } from '@/state/settings';
 import { ThemeProvider } from '@/ui/theme';
 
 jest.mock('@expo/vector-icons', () => ({ Feather: () => null }));
@@ -19,7 +19,7 @@ function wrap(node: React.ReactElement) {
 }
 
 describe('Smoke', () => {
-  beforeAll(() => usePrefs.getState().setLanguage('de'));
+  beforeAll(() => useSettings.getState().setLanguage('de'));
 
   it('rendert den Profil-Tab', async () => {
     await wrap(<ProfileScreen />);

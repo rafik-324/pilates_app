@@ -1,7 +1,7 @@
 import { getLocales } from 'expo-localization';
 import { createInstance } from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
-import { usePrefs, type LanguagePref } from '@/state/prefs';
+import { useSettings, type LanguagePref } from '@/state/settings';
 import de from './de.json';
 import en from './en.json';
 
@@ -17,16 +17,16 @@ export const i18n = createInstance();
 
 i18n.use(initReactI18next).init({
   resources: { de: { translation: de }, en: { translation: en } },
-  lng: resolveLanguage(usePrefs.getState().language),
+  lng: resolveLanguage(useSettings.getState().sprache),
   fallbackLng: 'de',
   interpolation: { escapeValue: false },
   returnNull: false,
 });
 
 // Sprachwechsel in den Einstellungen übernehmen
-usePrefs.subscribe((state, prev) => {
-  if (state.language !== prev.language) {
-    void i18n.changeLanguage(resolveLanguage(state.language));
+useSettings.subscribe((state, prev) => {
+  if (state.sprache !== prev.sprache) {
+    void i18n.changeLanguage(resolveLanguage(state.sprache));
   }
 });
 

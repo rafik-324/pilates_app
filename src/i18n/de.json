@@ -82,5 +82,8 @@
     "title": "Entdecken",
     "workouts": "{{count}} Workouts",
     "premium": "Premium"
+  },
+  "startup": {
+    "dbError": "Datenbank konnte nicht geöffnet werden"
   }
 }

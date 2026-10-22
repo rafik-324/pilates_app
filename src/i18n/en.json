@@ -82,5 +82,8 @@
     "title": "Discover",
     "workouts": "{{count}} workouts",
     "premium": "Premium"
+  },
+  "startup": {
+    "dbError": "The database could not be opened"
   }
 }

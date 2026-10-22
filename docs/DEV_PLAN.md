@@ -10,7 +10,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 |---|---|---|
 | 0 | Projekt-Setup (Expo, Tooling, Expo Go, CI) | erledigt (Prototyp) |
 | 1 | Inhaltsdaten und Platzhalter-Medien | erledigt (Prototyp) |
-| 2 | Lokale Datenbank und Domänenlogik | offen |
+| 2 | Lokale Datenbank und Domänenlogik | erledigt (Prototyp) |
 | 3 | Onboarding | offen |
 | 4 | Plan-Generator und Planansicht | offen |
 | 5 | Bibliothek, Suche, Übungsdetails | offen |
@@ -109,13 +109,25 @@ Demo: Entdecken-Tab zeigt alle Workouts je Kategorie mit Platzhalter-Thumbnails.
 
 ## Phase 2: Lokale Datenbank und Domänenlogik
 
-- [ ] expo-sqlite + Drizzle ORM, Migrationen, Tabellen für /D010/, /D040/, /D050/, /D060/, /D070/, /D080/, /D090/ sowie Favoriten
-- [ ] DB-Zugriff nur über Repositories in `src/data/`
-- [ ] Verschlüsselung (/S040/) vorbereiten: SQLCipher-Option in der Konfiguration, aktiv nur im Development Build; in Expo Go unverschlüsselt mit Log-Hinweis. Schlüssel in expo-secure-store
-- [ ] Domänenfunktionen mit Tests: kcal (inkl. Standardgewicht 65 kg und Schätzungs-Kennzeichen), BMI mit Einordnung, Streak (Ruhetage unterbrechen nicht, /F240/), Einheitenumrechnung kg/lb, cm/ft-in
-- [ ] Zustand-Stores für Profil und Einstellungen, persistiert über die DB
+- [x] expo-sqlite + Drizzle ORM, Migrationen, Tabellen für /D010/, /D040/, /D050/, /D060/, /D070/, /D080/, /D090/ sowie Favoriten
+- [x] DB-Zugriff nur über Repositories in `src/data/`
+- [x] Verschlüsselung (/S040/) vorbereiten: SQLCipher-Option in der Konfiguration, aktiv nur im Development Build; in Expo Go unverschlüsselt mit Log-Hinweis. Schlüssel in expo-secure-store
+- [x] Domänenfunktionen mit Tests: kcal (inkl. Standardgewicht 65 kg und Schätzungs-Kennzeichen), BMI mit Einordnung, Streak (Ruhetage unterbrechen nicht, /F240/), Einheitenumrechnung kg/lb, cm/ft-in
+- [x] Zustand-Stores für Profil und Einstellungen, persistiert über die DB
 
 Demo: keine sichtbare Änderung nötig; Tests grün.
+
+Prototyp-Stand:
+
+- Drizzle-Schema in `src/data/db/schema.ts`; Migrationen erzeugt `npm run db:generate` (drizzle-kit + `scripts/build-migrations.mjs`, bündelt die SQL-Dateien als `migrations.generated.ts`, damit kein Metro-SQL-Loader nötig ist). Migration beim Start über `drizzle-orm/expo-sqlite/migrator`
+- Tabellen: profile, plans, plan_days, sessions, weight_entries, reminders, settings, favorites, kv (Dev-Schalter, Zähler). Persönliche Pläne werden generiert und deshalb mit ihren Übungen als JSON in `plan_days` gespeichert
+- Repositories (`src/data/repositories/`) arbeiten gegen ein synchrones Drizzle-Interface und sind mit sql.js (In-Memory, echte Migrationen) getestet. `deleteAllData()` für /F1150/ ist vorbereitet. Größe / Gewicht werden ohne Einwilligung nie gespeichert (im Repository erzwungen)
+- Verschlüsselung (/S040/): Plugin `expo-sqlite` mit `useSQLCipher: true` in `app.json`; zur Laufzeit wird in Expo Go nur ein Hinweis geloggt, im Development Build wird ein zufälliger Schlüssel in expo-secure-store erzeugt und per `PRAGMA key` gesetzt
+- Stores: `useSettings` (Einstellungen /D090/ inkl. Farbschema und Sprache, ersetzt den Speicher-Store aus Phase 0) und `useProfile`; Start über `initData()` im Root-Layout (Splash bleibt bis DB und Schrift geladen sind)
+- Domäne: kcal, BMI, Streak (Ruhetage unterbrechen nicht), Einheiten, Datumshilfen, Altersprüfung; alle mit Unit-Tests
+- Offen: Verschlüsselung ist ohne Development Build nicht getestet. Ein Wechsel einer bereits unverschlüsselt angelegten DB auf SQLCipher (Migration) ist nicht umgesetzt; für das Prototyp-Stadium nicht nötig
+
+Demo: keine sichtbare Änderung; Tests grün. Hell / Dunkel und Sprache bleiben nach App-Neustart erhalten.
 
 ## Phase 3: Onboarding
 

@@ -4,3 +4,4 @@ dist
 assets/content/thumbs
 *.generated.ts
 package-lock.json
+drizzle
