@@ -1,6 +1,7 @@
-import { Tabs } from 'expo-router';
+import { Redirect, Tabs } from 'expo-router';
 import React from 'react';
 import { useTranslation } from '@/i18n';
+import { useProfile } from '@/state/profile';
 import { Icon, type IconName } from '@/ui/components';
 import { useTheme } from '@/ui/theme';
 
@@ -13,6 +14,8 @@ function tabIcon(name: IconName) {
 export default function TabsLayout() {
   const { t } = useTranslation();
   const { colors, typography, borderWidth } = useTheme();
+  const hasProfile = useProfile((s) => s.profile !== null);
+  if (!hasProfile) return <Redirect href="/onboarding" />;
   return (
     <Tabs
       screenOptions={{

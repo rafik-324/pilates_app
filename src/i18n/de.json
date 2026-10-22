@@ -85,5 +85,139 @@
   },
   "startup": {
     "dbError": "Datenbank konnte nicht geöffnet werden"
+  },
+  "onboarding": {
+    "skip": "Überspringen",
+    "finish": "Fertig",
+    "backLabel": "Zurück",
+    "welcome": {
+      "title": "Willkommen bei Pilates at Home",
+      "subtitle": "Dein Pilates-Plan für zu Hause, ohne Geräte, mit oder ohne Wand.",
+      "point1": "Persönlicher 30-Tage-Plan",
+      "point2": "Geführte Workouts mit Sprachansage",
+      "point3": "Dein Fortschritt immer im Blick",
+      "start": "Los geht's"
+    },
+    "goal": {
+      "title": "Was ist dein Ziel?",
+      "abnehmen": "Abnehmen",
+      "straffen": "Körper straffen",
+      "flexibilitaet": "Flexibler werden",
+      "haltung": "Haltung verbessern / Schmerzen lindern",
+      "stress": "Stress abbauen"
+    },
+    "gender": {
+      "title": "Wie ist dein Geschlecht?",
+      "subtitle": "Das hilft uns bei der Kalorienschätzung und Auswahl.",
+      "weiblich": "Weiblich",
+      "maennlich": "Männlich",
+      "divers": "Divers",
+      "keine_angabe": "Keine Angabe"
+    },
+    "birthyear": {
+      "title": "In welchem Jahr bist du geboren?",
+      "subtitle": "Die App ist ab 16 Jahren nutzbar.",
+      "label": "Geburtsjahr",
+      "placeholder": "z. B. 1990",
+      "invalid": "Bitte ein gültiges Geburtsjahr eingeben."
+    },
+    "underage": {
+      "title": "Leider noch nicht",
+      "text": "Die App ist erst ab 16 Jahren nutzbar. Es wurden keine Daten gespeichert.",
+      "correct": "Eingabe korrigieren"
+    },
+    "health": {
+      "title": "Wichtiger Hinweis",
+      "text": "Diese App ersetzt keine ärztliche Beratung. Sprich vor dem Training mit deiner Ärztin oder deinem Arzt, vor allem bei Schmerzen, Vorerkrankungen oder Schwangerschaft. Du trainierst auf eigene Verantwortung.",
+      "confirm": "Ich habe den Hinweis gelesen und verstanden."
+    },
+    "consent": {
+      "title": "Einwilligung zu Gesundheitsdaten",
+      "text": "Für Gewicht, Größe und BMI verarbeiten wir Gesundheitsdaten (Art. 9 DSGVO). Sie bleiben ausschließlich auf deinem Gerät. Die Einwilligung ist freiwillig und jederzeit in den Einstellungen widerrufbar. Ohne Einwilligung kannst du die App weiter nutzen; Kalorien werden dann geschätzt.",
+      "agree": "Ich willige ein",
+      "decline": "Ohne Körperdaten fortfahren"
+    },
+    "body": {
+      "title": "Deine Körperdaten",
+      "subtitle": "Optional. Sie bleiben auf deinem Gerät.",
+      "metric": "kg / cm",
+      "imperial": "lb / ft",
+      "height": "Größe",
+      "weight": "Gewicht",
+      "target": "Zielgewicht",
+      "cm": "cm",
+      "kg": "kg",
+      "lb": "lb",
+      "ft": "ft",
+      "in": "in",
+      "invalid": "Bitte plausible Werte eingeben."
+    },
+    "experience": {
+      "title": "Wie viel Pilates-Erfahrung hast du?",
+      "none": "Keine",
+      "noneHint": "Ich fange gerade an",
+      "some": "Etwas",
+      "someHint": "Ich kenne die Grundübungen",
+      "regular": "Regelmäßig",
+      "regularHint": "Ich trainiere schon länger"
+    },
+    "zones": {
+      "title": "Welche Zonen möchtest du trainieren?",
+      "subtitle": "Mehrfachauswahl möglich.",
+      "bauch": "Bauch",
+      "arme": "Arme",
+      "brust": "Brust",
+      "po": "Po",
+      "beine": "Beine",
+      "ganzkoerper": "Ganzkörper"
+    },
+    "limits": {
+      "title": "Hast du Einschränkungen?",
+      "subtitle": "Wir passen die Übungen an. Ohne Auswahl geht es einfach weiter.",
+      "knie": "Knie",
+      "ruecken": "Rücken",
+      "handgelenke": "Handgelenke",
+      "kein_boden": "Keine Bodenübungen",
+      "schwangerschaft": "Schwanger / kürzlich entbunden"
+    },
+    "pregnancy": {
+      "title": "Schwangerschaft",
+      "text": "Bitte lass dein Training vorab ärztlich abklären. Wir wählen nur Übungen, die als geeignet markiert sind. Das ersetzt keine ärztliche Beratung.",
+      "confirm": "Ich habe den Hinweis verstanden."
+    },
+    "schedule": {
+      "title": "Wann möchtest du trainieren?",
+      "daysLabel": "Trainingstage pro Woche",
+      "timeLabel": "Bevorzugte Uhrzeit",
+      "morning": "Morgens (7:00)",
+      "noon": "Mittags (12:00)",
+      "evening": "Abends (18:00)",
+      "night": "Spät (21:00)",
+      "none": "Keine Vorgabe"
+    },
+    "preview": {
+      "title": "Dein Plan ist bereit",
+      "subtitle": "30 Tage, abgestimmt auf dich.",
+      "days": "Tage",
+      "perWeek": "pro Woche",
+      "level": "Level",
+      "zones": "Fokus",
+      "bmi": "Dein BMI",
+      "forecastTitle": "Zielprognose",
+      "forecastWeeks": "Bei etwa 0,5 kg pro Woche erreichst du dein Ziel in ca. {{count}} Wochen.",
+      "forecastNone": "Dein Zielgewicht liegt nicht unter deinem aktuellen Gewicht. Wir fokussieren Kraft und Beweglichkeit.",
+      "forecastLow": "Das Zielgewicht liegt im Bereich Untergewicht. Sprich bitte mit einer Ärztin oder einem Arzt.",
+      "noWeight": "Ohne Körperdaten zeigen wir keine Gewichtsprognose. Kalorien werden geschätzt.",
+      "bmiUnderweight": "Untergewicht",
+      "bmiNormal": "Normalgewicht",
+      "bmiOverweight": "Übergewicht",
+      "bmiObese": "Adipositas"
+    },
+    "notifications": {
+      "title": "Erinnerungen aktivieren?",
+      "text": "Wir erinnern dich zu deiner Trainingszeit. Du kannst das jederzeit in den Einstellungen ändern.",
+      "allow": "Erlauben",
+      "later": "Später"
+    }
   }
 }

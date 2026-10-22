@@ -85,5 +85,139 @@
   },
   "startup": {
     "dbError": "The database could not be opened"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "finish": "Done",
+    "backLabel": "Back",
+    "welcome": {
+      "title": "Welcome to Pilates at Home",
+      "subtitle": "Your Pilates plan for home, no equipment needed, with or without a wall.",
+      "point1": "Personal 30-day plan",
+      "point2": "Guided workouts with voice prompts",
+      "point3": "Your progress at a glance",
+      "start": "Get started"
+    },
+    "goal": {
+      "title": "What is your goal?",
+      "abnehmen": "Lose weight",
+      "straffen": "Tone up",
+      "flexibilitaet": "Become more flexible",
+      "haltung": "Improve posture / ease pain",
+      "stress": "Reduce stress"
+    },
+    "gender": {
+      "title": "What is your gender?",
+      "subtitle": "This helps with calorie estimates and exercise selection.",
+      "weiblich": "Female",
+      "maennlich": "Male",
+      "divers": "Non-binary",
+      "keine_angabe": "Prefer not to say"
+    },
+    "birthyear": {
+      "title": "What year were you born?",
+      "subtitle": "The app is for ages 16 and up.",
+      "label": "Birth year",
+      "placeholder": "e.g. 1990",
+      "invalid": "Please enter a valid birth year."
+    },
+    "underage": {
+      "title": "Not yet",
+      "text": "The app can only be used from age 16. No data has been saved.",
+      "correct": "Correct my entry"
+    },
+    "health": {
+      "title": "Important notice",
+      "text": "This app does not replace medical advice. Talk to your doctor before training, especially if you have pain, health conditions or are pregnant. You train at your own responsibility.",
+      "confirm": "I have read and understood this notice."
+    },
+    "consent": {
+      "title": "Consent for health data",
+      "text": "For weight, height and BMI we process health data (Art. 9 GDPR). It stays on your device only. Consent is voluntary and can be withdrawn in settings at any time. Without consent you can keep using the app; calories will be estimated.",
+      "agree": "I consent",
+      "decline": "Continue without body data"
+    },
+    "body": {
+      "title": "Your body data",
+      "subtitle": "Optional. It stays on your device.",
+      "metric": "kg / cm",
+      "imperial": "lb / ft",
+      "height": "Height",
+      "weight": "Weight",
+      "target": "Target weight",
+      "cm": "cm",
+      "kg": "kg",
+      "lb": "lb",
+      "ft": "ft",
+      "in": "in",
+      "invalid": "Please enter plausible values."
+    },
+    "experience": {
+      "title": "How much Pilates experience do you have?",
+      "none": "None",
+      "noneHint": "I am just starting",
+      "some": "Some",
+      "someHint": "I know the basic exercises",
+      "regular": "Regular",
+      "regularHint": "I have trained for a while"
+    },
+    "zones": {
+      "title": "Which areas do you want to train?",
+      "subtitle": "You can select several.",
+      "bauch": "Abs",
+      "arme": "Arms",
+      "brust": "Chest",
+      "po": "Glutes",
+      "beine": "Legs",
+      "ganzkoerper": "Full body"
+    },
+    "limits": {
+      "title": "Do you have any limitations?",
+      "subtitle": "We adapt the exercises. Without a selection, just continue.",
+      "knie": "Knees",
+      "ruecken": "Back",
+      "handgelenke": "Wrists",
+      "kein_boden": "No floor exercises",
+      "schwangerschaft": "Pregnant / recently gave birth"
+    },
+    "pregnancy": {
+      "title": "Pregnancy",
+      "text": "Please have your training checked by a doctor first. We only pick exercises marked as suitable. This does not replace medical advice.",
+      "confirm": "I understand this notice."
+    },
+    "schedule": {
+      "title": "When do you want to train?",
+      "daysLabel": "Training days per week",
+      "timeLabel": "Preferred time",
+      "morning": "Morning (7:00)",
+      "noon": "Noon (12:00)",
+      "evening": "Evening (18:00)",
+      "night": "Late (21:00)",
+      "none": "No preference"
+    },
+    "preview": {
+      "title": "Your plan is ready",
+      "subtitle": "30 days, tailored to you.",
+      "days": "days",
+      "perWeek": "per week",
+      "level": "Level",
+      "zones": "Focus",
+      "bmi": "Your BMI",
+      "forecastTitle": "Goal forecast",
+      "forecastWeeks": "At about 0.5 kg per week you reach your goal in approx. {{count}} weeks.",
+      "forecastNone": "Your target weight is not below your current weight. We focus on strength and mobility.",
+      "forecastLow": "The target weight is in the underweight range. Please talk to a doctor.",
+      "noWeight": "Without body data we show no weight forecast. Calories are estimated.",
+      "bmiUnderweight": "Underweight",
+      "bmiNormal": "Normal weight",
+      "bmiOverweight": "Overweight",
+      "bmiObese": "Obese"
+    },
+    "notifications": {
+      "title": "Enable reminders?",
+      "text": "We remind you at your training time. You can change this in settings at any time.",
+      "allow": "Allow",
+      "later": "Later"
+    }
   }
 }

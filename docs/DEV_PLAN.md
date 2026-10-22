@@ -11,7 +11,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 0 | Projekt-Setup (Expo, Tooling, Expo Go, CI) | erledigt (Prototyp) |
 | 1 | Inhaltsdaten und Platzhalter-Medien | erledigt (Prototyp) |
 | 2 | Lokale Datenbank und Domänenlogik | erledigt (Prototyp) |
-| 3 | Onboarding | offen |
+| 3 | Onboarding | erledigt (Prototyp) |
 | 4 | Plan-Generator und Planansicht | offen |
 | 5 | Bibliothek, Suche, Übungsdetails | offen |
 | 6 | Workout-Player | offen |
@@ -133,14 +133,27 @@ Demo: keine sichtbare Änderung; Tests grün. Hell / Dunkel und Sprache bleiben 
 
 Umsetzung von /F010/ bis /F100/ (Paywall /F110/ entfällt in Stufe 1).
 
-- [ ] Ablauf eine Frage pro Bildschirm, Fortschrittsbalken, große Auswahlkarten (Pflichtenheft 8.2)
-- [ ] Reihenfolge: Begrüßung → Ziel → Geschlecht / Geburtsjahr → Altersprüfung (/F032/) → Gesundheitshinweis (/F035/) → Einwilligung Gesundheitsdaten (/F038/) → Körperdaten (/F040/, nur mit Einwilligung) → Erfahrung → Zielzonen → Einschränkungen inkl. Schwangerschaft (/F070/) → Trainingstage / Uhrzeit → Planvorschau (/F090/) → Benachrichtigungsberechtigung (/F100/)
-- [ ] Unter 16: Hinweis, keine Speicherung, Onboarding endet (/T150/)
-- [ ] Ohne Einwilligung: Körperdaten und BMI überspringen (/T160/)
-- [ ] Profil speichern, danach Weiterleitung zur Plan-Startseite; Onboarding nur beim ersten Start
-- [ ] Tests für Navigationslogik (welcher Schritt folgt auf welchen, abhängig von Antworten)
+- [x] Ablauf eine Frage pro Bildschirm, Fortschrittsbalken, große Auswahlkarten (Pflichtenheft 8.2)
+- [x] Reihenfolge: Begrüßung → Ziel → Geschlecht / Geburtsjahr → Altersprüfung (/F032/) → Gesundheitshinweis (/F035/) → Einwilligung Gesundheitsdaten (/F038/) → Körperdaten (/F040/, nur mit Einwilligung) → Erfahrung → Zielzonen → Einschränkungen inkl. Schwangerschaft (/F070/) → Trainingstage / Uhrzeit → Planvorschau (/F090/) → Benachrichtigungsberechtigung (/F100/)
+- [x] Unter 16: Hinweis, keine Speicherung, Onboarding endet (/T150/)
+- [x] Ohne Einwilligung: Körperdaten und BMI überspringen (/T160/)
+- [x] Profil speichern, danach Weiterleitung zur Plan-Startseite; Onboarding nur beim ersten Start
+- [x] Tests für Navigationslogik (welcher Schritt folgt auf welchen, abhängig von Antworten)
 
 Demo: Onboarding in Expo Go komplett durchklicken, beide Varianten (mit / ohne Einwilligung).
+
+Prototyp-Stand:
+
+- Ablauf als Zustandsmaschine in `src/domain/onboarding.ts` (`nextStep`, `stepProgress`), UI in `src/features/onboarding/`. Antworten liegen nur im Speicher; das Profil wird erst am Ende gespeichert, daher werden unter 16 (Schritt "underage") und bei Abbruch keine Daten gespeichert (/T150/)
+- Zusätzliche Entscheidungen: Geschlecht und Geburtsjahr sind zwei Bildschirme (eine Frage pro Bildschirm); bei Schwangerschaft folgt ein eigener Arzthinweis-Schritt, der bestätigt werden muss (/F070/); Trainingszeit als Auswahl (7 / 12 / 18 / 21 Uhr oder keine Vorgabe); Körperdaten sind auch mit Einwilligung überspringbar
+- Unter 16: "Eingabe korrigieren" führt zurück zum Geburtsjahr (nichts gespeichert); die Altersprüfung arbeitet jahrgangsgenau (Jahr minus Geburtsjahr >= 16)
+- Planvorschau (/F090/) zeigt Tage, Häufigkeit, Level, Fokus; mit Einwilligung zusätzlich BMI und Zielprognose (max. 0,5 kg pro Woche, Warnung bei Zielgewicht im Untergewicht), ohne Einwilligung einen Hinweis statt Prognose. Der eigentliche Plan wird in Phase 4 erzeugt
+- Onboarding nur beim ersten Start: Tabs leiten ohne Profil nach `/onboarding`, `/onboarding` leitet mit Profil nach `/`
+- Neue UI-Komponente `TextField` im Design-System
+- Tests: Navigationslogik, Prognose, `buildProfile`, UI-Durchläufe mit und ohne Einwilligung, unter 16, Schwangerschaft
+- Offen: Die Benachrichtigungsberechtigung wird abgefragt; das tatsächliche Anlegen einer Erinnerung zur gewählten Uhrzeit folgt in Phase 8
+
+Demo: Onboarding in Expo Go komplett durchklicken, beide Varianten (mit / ohne Einwilligung). Zum erneuten Starten die App-Daten löschen (Expo Go: Projekt entfernen oder App-Speicher leeren), bis Phase 8 die Funktion "Daten löschen" liefert.
 
 ## Phase 4: Plan-Generator und Planansicht
 

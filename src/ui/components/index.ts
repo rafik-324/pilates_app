@@ -10,6 +10,7 @@ export { Screen } from './Screen';
 export { SelectCard } from './SelectCard';
 export { Sheet } from './Sheet';
 export { StatTile } from './StatTile';
+export { TextField } from './TextField';
 export { Text } from './Text';
 export { Icon } from '../icons/Icon';
 export type { IconName } from '../icons/Icon';
