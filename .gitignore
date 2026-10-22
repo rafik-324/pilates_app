@@ -31,3 +31,4 @@ coverage/
 *.log
 npm-debug.*
 yarn-error.*
+*.mobileprovision

@@ -8,7 +8,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 
 | Phase | Thema | Status |
 |---|---|---|
-| 0 | Projekt-Setup (Expo, Tooling, Expo Go, CI) | offen |
+| 0 | Projekt-Setup (Expo, Tooling, Expo Go, CI) | erledigt (Prototyp) |
 | 1 | Inhaltsdaten und Platzhalter-Medien | offen |
 | 2 | Lokale Datenbank und Domänenlogik | offen |
 | 3 | Onboarding | offen |
@@ -37,10 +37,10 @@ Status-Werte: `offen`, `in Arbeit`, `erledigt (PR #n)`.
 
 Ziel: lauffähiges Expo-Grundgerüst, das man per QR-Code in Expo Go öffnen kann.
 
-- [ ] Expo-Projekt mit TypeScript im Repo-Root anlegen (`npx create-expo-app@latest` in einem temporären Ordner, dann Dateien in den Root übernehmen; vorhandene Dateien und `docs/` nicht überschreiben). Aktuelles SDK verwenden, das die aktuelle Expo-Go-App unterstützt
-- [ ] `app.json` / `app.config.ts`: Name "Pilates at Home" (Arbeitstitel), slug `pilates-app`, Schema `pilatesapp`, Bundle-ID / Package `de.rafik.pilatesapp` (vor Store-Release änderbar), Hochformat, Light und Dark Mode (`userInterfaceStyle: automatic`)
-- [ ] Expo Router mit vier Tabs gemäß Pflichtenheft 8.1: Plan, Entdecken, Fortschritt, Profil (je ein Platzhalter-Screen)
-- [ ] Ordnerstruktur:
+- [x] Expo-Projekt mit TypeScript im Repo-Root anlegen (`npx create-expo-app@latest` in einem temporären Ordner, dann Dateien in den Root übernehmen; vorhandene Dateien und `docs/` nicht überschreiben). Aktuelles SDK verwenden, das die aktuelle Expo-Go-App unterstützt
+- [x] `app.json` / `app.config.ts`: Name "Pilates at Home" (Arbeitstitel), slug `pilates-app`, Schema `pilatesapp`, Bundle-ID / Package `de.rafik.pilatesapp` (vor Store-Release änderbar), Hochformat, Light und Dark Mode (`userInterfaceStyle: automatic`)
+- [x] Expo Router mit vier Tabs gemäß Pflichtenheft 8.1: Plan, Entdecken, Fortschritt, Profil (je ein Platzhalter-Screen)
+- [x] Ordnerstruktur:
   - `app/` Routen (Expo Router)
   - `src/domain/` reine Logik ohne React (Plan-Generator, Player-Engine, kcal, BMI, Streak)
   - `src/data/` DB, Repositories, Content-Loader
@@ -48,16 +48,16 @@ Ziel: lauffähiges Expo-Grundgerüst, das man per QR-Code in Expo Go öffnen kan
   - `src/ui/` gemeinsame Komponenten und Theme
   - `src/i18n/` Übersetzungen
   - `assets/content/` Inhaltsdaten und Medien
-- [ ] Design-System gemäß `docs/DESIGN.md`: Theme-Struktur (`palette.ts`, `themes/mono.ts`, Registry, `ThemeProvider`, `useTheme`), Hell und Dunkel, Inter-Schrift, alle Basis-Komponenten aus Abschnitt 6, `Icon`-Wrapper
-- [ ] ESLint-Regel gegen Farbliterale außerhalb von `src/ui/theme/`; Test für WCAG-Kontraste der Theme-Tokens
-- [ ] Entwickler-Screen "Theme-Vorschau" mit allen Komponenten in Hell und Dunkel
-- [ ] i18n (expo-localization + i18next) mit `de.json` und `en.json`, Gerätesprache als Standard
-- [ ] Zustand installieren; Tooling: ESLint (`npx expo lint`), Prettier, TypeScript strict, Jest mit `jest-expo` und React Native Testing Library
-- [ ] npm-Skripte: `start`, `start:tunnel` (`expo start --tunnel`), `typecheck`, `lint`, `test`, `doctor`
-- [ ] Abhängigkeiten ausschließlich mit `npx expo install` hinzufügen (passende Versionen für Expo Go)
-- [ ] GitHub Actions Workflow: install, typecheck, lint, test bei Push und PR
-- [ ] `.gitignore` für Expo ergänzen (`.expo/`, `ios/`, `android/`, `dist/`, `web-build/`, `*.jks`, `*.p8`, `*.p12`, `*.mobileprovision`, `expo-env.d.ts`)
-- [ ] `README.md`: Voraussetzungen (Node LTS), Installation, Demo mit Expo Go (Schritt für Schritt, siehe unten), Skripte, verwendete SDK-Version
+- [x] Design-System gemäß `docs/DESIGN.md`: Theme-Struktur (`palette.ts`, `themes/mono.ts`, Registry, `ThemeProvider`, `useTheme`), Hell und Dunkel, Inter-Schrift, alle Basis-Komponenten aus Abschnitt 6, `Icon`-Wrapper
+- [x] ESLint-Regel gegen Farbliterale außerhalb von `src/ui/theme/`; Test für WCAG-Kontraste der Theme-Tokens
+- [x] Entwickler-Screen "Theme-Vorschau" mit allen Komponenten in Hell und Dunkel
+- [x] i18n (expo-localization + i18next) mit `de.json` und `en.json`, Gerätesprache als Standard
+- [x] Zustand installieren; Tooling: ESLint (`npx expo lint`), Prettier, TypeScript strict, Jest mit `jest-expo` und React Native Testing Library
+- [x] npm-Skripte: `start`, `start:tunnel` (`expo start --tunnel`), `typecheck`, `lint`, `test`, `doctor`
+- [x] Abhängigkeiten ausschließlich mit `npx expo install` hinzufügen (passende Versionen für Expo Go)
+- [x] GitHub Actions Workflow: install, typecheck, lint, test bei Push und PR
+- [x] `.gitignore` für Expo ergänzen (`.expo/`, `ios/`, `android/`, `dist/`, `web-build/`, `*.jks`, `*.p8`, `*.p12`, `*.mobileprovision`, `expo-env.d.ts`)
+- [x] `README.md`: Voraussetzungen (Node LTS), Installation, Demo mit Expo Go (Schritt für Schritt, siehe unten), Skripte, verwendete SDK-Version
 
 Demo: App in Expo Go öffnen, vier Tabs sichtbar, Wechsel Hell / Dunkel und DE / EN funktionieren.
 
@@ -66,6 +66,19 @@ Demo: App in Expo Go öffnen, vier Tabs sichtbar, Wechsel Hell / Dunkel und DE /
 2. Im Projektordner `npm install`, dann `npm start`
 3. Handy im selben WLAN: QR-Code mit Expo Go (Android) bzw. Kamera-App (iOS) scannen
 4. Anderes Netz oder Probleme: `npm run start:tunnel`
+
+Prototyp-Stand (Branch `prototype`):
+
+- Verwendet wird Expo SDK 58 (aktuelles `create-expo-app`-Template). Routen liegen im Root-Ordner `app/` (nicht `src/app`), Pfad-Alias `@/` zeigt auf `src/`
+- Zustand-Stores für Darstellung / Sprache sind in dieser Phase nur im Speicher; die Persistenz über die DB folgt in Phase 2
+- Hex-Codes nur in `src/ui/theme/palette.ts`; ESLint verbietet Farbliterale außerhalb von `src/ui/theme/` sowie feste Schriftgrößen / Abstände / Radien in `app/` und `src/features/`
+- Kontrasttest: für Rot als Text im Dunkelmodus gibt es zusätzlich den Token `dangerText` (`#FF4D5E`), weil `#E5172F` auf Schwarz die 4,5:1 nicht erreicht
+- Prüfung der App-Startfähigkeit: `expo export --platform android` bündelt fehlerfrei; Render-Smoke-Tests für Profil und Theme-Vorschau laufen in Jest
+- Offen: `npx expo-doctor` konnte in der Cloud-Umgebung zwei Netzwerk-Checks nicht ausführen (Expo-Config-Schema, React Native Directory; kein Zugriff auf exp.host / reactnative.directory). Alle 18 übrigen Checks sind grün. Lokal erneut prüfen
+- Offen: `npx expo install` kann in der Cloud-Umgebung die Kompatibilitätsliste nicht laden; Installation mit `EXPO_OFFLINE=1 npx expo install` (nutzt `bundledNativeModules.json` des SDK, gleiche Versionen)
+- Offen: App-Icon und Splash sind die Standard-Bilder des Expo-Templates (Platzhalter)
+
+Demo: App in Expo Go öffnen, vier Tabs sichtbar, im Tab "Profil" Hell / Dunkel und DE / EN umschalten, Theme-Vorschau öffnen.
 
 ## Phase 1: Inhaltsdaten und Platzhalter-Medien
 

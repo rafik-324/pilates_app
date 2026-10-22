@@ -1,0 +1,59 @@
+{
+  "app": { "name": "Pilates at Home" },
+  "tabs": { "plan": "Plan", "discover": "Discover", "progress": "Progress", "profile": "Profile" },
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "start": "Start",
+    "min": "{{count}} min",
+    "kcal": "{{count}} kcal",
+    "kcalEstimate": "approx. {{count}} kcal"
+  },
+  "placeholder": {
+    "plan": "Your personal plan will appear here.",
+    "discover": "Discover workouts and exercises.",
+    "progress": "Your progress will appear here."
+  },
+  "profile": {
+    "title": "Profile",
+    "appearance": "Appearance",
+    "scheme": "Color scheme",
+    "schemeSystem": "System",
+    "schemeLight": "Light",
+    "schemeDark": "Dark",
+    "language": "Language",
+    "languageSystem": "System",
+    "languageDe": "Deutsch",
+    "languageEn": "English",
+    "developer": "Developer",
+    "themePreview": "Theme preview"
+  },
+  "themePreview": {
+    "title": "Theme preview",
+    "buttons": "Buttons",
+    "cards": "Cards and selection",
+    "chips": "Chips",
+    "progress": "Progress",
+    "stats": "Stats",
+    "lists": "Lists",
+    "dialog": "Dialog",
+    "openDialog": "Open dialog",
+    "typography": "Typography",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "ghost": "Text",
+    "success": "Success",
+    "danger": "Delete",
+    "dayCard": "Day 3",
+    "dayCardMeta": "18 min · 9 exercises · approx. 64 kcal",
+    "selectA": "Lose weight",
+    "selectB": "Flexibility",
+    "dialogTitle": "Reset plan?",
+    "dialogMessage": "Your progress in the plan will be lost."
+  }
+}
