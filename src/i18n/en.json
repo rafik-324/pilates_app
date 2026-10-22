@@ -39,7 +39,10 @@
     "languageEn": "English",
     "developer": "Developer",
     "themePreview": "Theme preview",
-    "devReset": "Delete data, restart onboarding"
+    "devReset": "Delete data, restart onboarding",
+    "premiumFree": "Premium content unlocked",
+    "on": "On",
+    "off": "Off"
   },
   "themePreview": {
     "title": "Theme preview",
@@ -82,7 +85,21 @@
   "discover": {
     "title": "Discover",
     "workouts": "{{count}} workouts",
-    "premium": "Premium"
+    "premium": "Premium",
+    "search": "Search",
+    "searchPlaceholder": "Exercise or workout, e.g. bridge",
+    "favorites": "Favorites",
+    "withoutFloor": "No floor",
+    "withFloor": "Floor",
+    "withWall": "Wall",
+    "withoutWall": "No wall",
+    "duration_kurz": "up to 7 min",
+    "duration_mittel": "8–10 min",
+    "duration_lang": "over 10 min",
+    "reset": "Reset search and filters",
+    "resultWorkouts": "Workouts ({{count}})",
+    "resultExercises": "Exercises ({{count}})",
+    "noResults": "Nothing found. Try another term or fewer filters."
   },
   "startup": {
     "dbError": "The database could not be opened"
@@ -264,9 +281,43 @@
     "reps": "{{count}} reps",
     "seconds": "{{count}} s",
     "premium": "Premium",
-    "start": "Start",
+    "start": "Start workout",
     "kcalEstimateHint": "Calories are an estimate (default weight 65 kg).",
     "notFound": "Workout not found.",
-    "back": "Back"
+    "back": "Back",
+    "premiumLocked": "Premium content. Can be unlocked in the developer settings.",
+    "adjust": "Adjust",
+    "adjustDone": "Done",
+    "adjustHint": "Change duration or repetitions for this session.",
+    "less": "{{name}} less",
+    "more": "{{name}} more",
+    "playerSoon": "The workout player follows in phase 6."
+  },
+  "zones": {
+    "bauch": "Abs",
+    "arme": "Arms",
+    "brust": "Chest",
+    "po": "Glutes",
+    "beine": "Legs",
+    "ganzkoerper": "Full body",
+    "ruecken": "Back"
+  },
+  "exercise": {
+    "notFound": "Exercise not found.",
+    "easier": "Easier variation",
+    "harder": "Harder variation",
+    "wall": "Wall",
+    "floor": "Floor",
+    "noFloor": "No floor",
+    "notPregnancy": "Not during pregnancy",
+    "favorite": "Add to favorites",
+    "unfavorite": "Remove from favorites",
+    "video": "Video: {{name}}",
+    "steps": "How to",
+    "breathing": "Breathing",
+    "mistakes": "Common mistakes",
+    "focus": "Focus areas",
+    "focusLabel": "Body chart, trained: {{zones}}",
+    "variants": "Variations"
   }
 }

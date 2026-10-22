@@ -13,7 +13,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 2 | Lokale Datenbank und Domänenlogik | erledigt (Prototyp) |
 | 3 | Onboarding | erledigt (Prototyp) |
 | 4 | Plan-Generator und Planansicht | erledigt (Prototyp) |
-| 5 | Bibliothek, Suche, Übungsdetails | offen |
+| 5 | Bibliothek, Suche, Übungsdetails | erledigt (Prototyp) |
 | 6 | Workout-Player | offen |
 | 7 | Workout-Abschluss und Fortschritt | offen |
 | 8 | Erinnerungen, Einstellungen, Datenschutz | offen |
@@ -181,13 +181,23 @@ Demo: nach dem Onboarding erscheint der persönliche Plan; Challenge starten.
 
 ## Phase 5: Bibliothek, Suche, Übungsdetails
 
-- [ ] Entdecken-Tab mit Kategorien (/F300/), Filter nach Level, Dauer, Zielzone, Wand, Boden (/F310/)
-- [ ] Stichwortsuche über Workouts und Übungen, DE und EN, tolerant gegenüber Umlauten und Groß- / Kleinschreibung (/F320/, Test /T130/ mit "Brücke")
-- [ ] Workout-Detailseite (/F330/) inkl. Anpassung von Dauer / Wiederholungen vor dem Start (/F440/)
-- [ ] Favoriten (/F340/), Premium-Schloss-Symbol (/F360/), Premium-Inhalte in Stufe 1 trotzdem nutzbar (Schalter in den Entwicklereinstellungen, Standard: alles frei)
-- [ ] Übungsdetail: Video in Schleife, stumm (/F400/), Schritte, Atemhinweis, Fehler (/F410/), Fokusbereiche als einfache Körpergrafik (SVG, /F420/), Varianten (/F430/)
+- [x] Entdecken-Tab mit Kategorien (/F300/), Filter nach Level, Dauer, Zielzone, Wand, Boden (/F310/)
+- [x] Stichwortsuche über Workouts und Übungen, DE und EN, tolerant gegenüber Umlauten und Groß- / Kleinschreibung (/F320/, Test /T130/ mit "Brücke")
+- [x] Workout-Detailseite (/F330/) inkl. Anpassung von Dauer / Wiederholungen vor dem Start (/F440/)
+- [x] Favoriten (/F340/), Premium-Schloss-Symbol (/F360/), Premium-Inhalte in Stufe 1 trotzdem nutzbar (Schalter in den Entwicklereinstellungen, Standard: alles frei)
+- [x] Übungsdetail: Video in Schleife, stumm (/F400/), Schritte, Atemhinweis, Fehler (/F410/), Fokusbereiche als einfache Körpergrafik (SVG, /F420/), Varianten (/F430/)
 
 Demo: Suche "Brücke", Filter "ohne Boden", Übungsdetail mit Platzhalter-Video.
+
+Prototyp-Stand:
+
+- Suche und Filter rein funktional in `src/domain/library.ts`: Normalisierung (klein, ä = ae = a, ß = ss, Akzente und Satzzeichen entfernt), alle Suchwörter müssen vorkommen; durchsucht Name, Beschreibung und ID der Übungen auf DE und EN, Workouts über Titel und enthaltene Übungen. /T130/ ("Brücke", "BRUECKE", "bridge") als Unit- und UI-Test
+- Filter als Chips: Favoriten, ohne / mit Boden, mit / ohne Wand, Level, Dauer (bis 7 / 8–10 / über 10 Min.), Zielzone. Ein Workout gilt als "mit Boden" bzw. "mit Wand", sobald eine enthaltene Übung das tut. Bei aktiver Suche oder Filter werden Workouts und passende Übungen getrennt gelistet, sonst die Kategorien
+- Workout-Detail: Kennzahlen, Favorit (Herz), Button "Anpassen" mit +/- je Übung (Zeit in 5-s-Schritten 10 bis 180 s, Wiederholungen 1 bis 50), Übung antippen öffnet das Übungsdetail. "Workout starten" übergibt die angepasste Übungsliste an den Player
+- Übungsdetail (`/exercise?id=`): Video über `expo-video` in Schleife und stumm, Kennzeichen (Level, Dauer, Wand, Boden, Schwangerschaft), Schritte, Atmung, Fehler, Körpergrafik als SVG (Vorder- und Rückseite, Zonen in `accent`, neue Komponente `BodyMap`), Varianten leichter / schwerer verlinkt
+- Premium (/F360/): Schloss-Symbol in Listen und Details. Entwicklerschalter "Premium-Inhalte freigeschaltet" im Profil (Dev-Modus, gespeichert in `kv`, Standard an); aus = Premium-Workouts nicht startbar
+- Favoriten und Schalter liegen im Store `src/features/library/store.ts`; "Daten löschen" setzt ihn zurück
+- Bis Phase 6 öffnet "Workout starten" einen Platzhalter-Screen
 
 ## Phase 6: Workout-Player
 

@@ -14,3 +14,5 @@ export { TextField } from './TextField';
 export { Text } from './Text';
 export { Icon } from '../icons/Icon';
 export type { IconName } from '../icons/Icon';
+export { BodyMap, type BodyZone } from './BodyMap';
+export { LoopVideo } from './LoopVideo';

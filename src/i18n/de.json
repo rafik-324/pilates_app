@@ -39,7 +39,10 @@
     "languageEn": "English",
     "developer": "Entwickler",
     "themePreview": "Theme-Vorschau",
-    "devReset": "Daten löschen, Onboarding neu starten"
+    "devReset": "Daten löschen, Onboarding neu starten",
+    "premiumFree": "Premium-Inhalte freigeschaltet",
+    "on": "An",
+    "off": "Aus"
   },
   "themePreview": {
     "title": "Theme-Vorschau",
@@ -82,7 +85,21 @@
   "discover": {
     "title": "Entdecken",
     "workouts": "{{count}} Workouts",
-    "premium": "Premium"
+    "premium": "Premium",
+    "search": "Suche",
+    "searchPlaceholder": "Übung oder Workout, z. B. Brücke",
+    "favorites": "Favoriten",
+    "withoutFloor": "Ohne Boden",
+    "withFloor": "Mit Boden",
+    "withWall": "Mit Wand",
+    "withoutWall": "Ohne Wand",
+    "duration_kurz": "bis 7 Min.",
+    "duration_mittel": "8–10 Min.",
+    "duration_lang": "über 10 Min.",
+    "reset": "Suche und Filter zurücksetzen",
+    "resultWorkouts": "Workouts ({{count}})",
+    "resultExercises": "Übungen ({{count}})",
+    "noResults": "Nichts gefunden. Versuche einen anderen Begriff oder weniger Filter."
   },
   "startup": {
     "dbError": "Datenbank konnte nicht geöffnet werden"
@@ -264,9 +281,43 @@
     "reps": "{{count}} Wdh.",
     "seconds": "{{count}} s",
     "premium": "Premium",
-    "start": "Start",
+    "start": "Workout starten",
     "kcalEstimateHint": "Kalorien sind eine Schätzung (Standardgewicht 65 kg).",
     "notFound": "Workout nicht gefunden.",
-    "back": "Zurück"
+    "back": "Zurück",
+    "premiumLocked": "Premium-Inhalt. In den Entwicklereinstellungen freischaltbar.",
+    "adjust": "Anpassen",
+    "adjustDone": "Fertig",
+    "adjustHint": "Dauer oder Wiederholungen für dieses Training ändern.",
+    "less": "{{name}} weniger",
+    "more": "{{name}} mehr",
+    "playerSoon": "Der Workout-Player folgt in Phase 6."
+  },
+  "zones": {
+    "bauch": "Bauch",
+    "arme": "Arme",
+    "brust": "Brust",
+    "po": "Po",
+    "beine": "Beine",
+    "ganzkoerper": "Ganzkörper",
+    "ruecken": "Rücken"
+  },
+  "exercise": {
+    "notFound": "Übung nicht gefunden.",
+    "easier": "Leichtere Variante",
+    "harder": "Schwerere Variante",
+    "wall": "Wand",
+    "floor": "Boden",
+    "noFloor": "Ohne Boden",
+    "notPregnancy": "Nicht in der Schwangerschaft",
+    "favorite": "Zu Favoriten hinzufügen",
+    "unfavorite": "Aus Favoriten entfernen",
+    "video": "Video: {{name}}",
+    "steps": "Ausführung",
+    "breathing": "Atmung",
+    "mistakes": "Häufige Fehler",
+    "focus": "Fokusbereiche",
+    "focusLabel": "Körpergrafik, trainiert: {{zones}}",
+    "variants": "Varianten"
   }
 }
