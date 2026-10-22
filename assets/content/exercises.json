@@ -1,0 +1,2730 @@
+[
+  {
+    "id": "ex01_breathing_standing",
+    "name": {
+      "de": "Pilates-Atmung im Stand",
+      "en": "Standing Pilates Breathing"
+    },
+    "beschreibung": {
+      "de": "Sanfte Atemübung im Stand, die Rippen und Tiefenmuskulatur auf das Training einstimmt.",
+      "en": "A gentle standing breathing drill that prepares the ribs and deep core muscles for training."
+    },
+    "schritte": {
+      "de": [
+        "Hüftbreit hinstellen, Knie locker",
+        "Hände seitlich auf die unteren Rippen legen",
+        "Durch die Nase einatmen, die Rippen weiten sich in die Hände",
+        "Durch den Mund ausatmen, die Rippen ziehen sich zusammen"
+      ],
+      "en": [
+        "Stand hip-width apart with soft knees",
+        "Rest your hands on the sides of your lower ribs",
+        "Inhale through the nose and feel the ribs widen into your hands",
+        "Exhale through the mouth and let the ribs draw in"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen durch die Nase in die Seiten, ausatmen langsam durch den Mund.",
+      "en": "Inhale through the nose into the sides, exhale slowly through the mouth."
+    },
+    "fehler": {
+      "de": [
+        "Schultern hochziehen",
+        "Nur in den Bauch statt in die Rippen atmen"
+      ],
+      "en": [
+        "Lifting the shoulders",
+        "Breathing only into the belly instead of the ribs"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex02_shoulder_rolls",
+    "name": {
+      "de": "Schulterkreisen",
+      "en": "Shoulder Rolls"
+    },
+    "beschreibung": {
+      "de": "Lockert Nacken und Schultern und richtet die Haltung auf.",
+      "en": "Loosens neck and shoulders and sets an upright posture."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht stehen, Arme locker neben dem Körper",
+        "Beide Schultern langsam nach oben ziehen",
+        "Nach hinten und unten kreisen lassen",
+        "Nach einigen Kreisen die Richtung wechseln"
+      ],
+      "en": [
+        "Stand tall with relaxed arms",
+        "Slowly lift both shoulders up",
+        "Roll them back and down",
+        "After a few rolls switch direction"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Beim Hochziehen einatmen, beim Absenken ausatmen.",
+      "en": "Inhale as you lift, exhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Zu schnelle, ruckartige Bewegung",
+        "Kopf nach vorne schieben"
+      ],
+      "en": [
+        "Moving too fast or jerkily",
+        "Pushing the head forward"
+      ]
+    },
+    "zielzonen": [
+      "arme"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex03_pelvic_tilt",
+    "name": {
+      "de": "Beckenkippen",
+      "en": "Pelvic Tilt"
+    },
+    "beschreibung": {
+      "de": "Mobilisiert das Becken und aktiviert den tiefen Bauch, ideal zum Einstieg in Bodenübungen.",
+      "en": "Mobilizes the pelvis and activates the deep abs, ideal to start floor exercises."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Knie gebeugt, Füße hüftbreit am Boden",
+        "Arme lang neben den Körper legen",
+        "Ausatmend das Becken kippen und den unteren Rücken sanft in die Matte drücken",
+        "Einatmend zurück in die neutrale Position"
+      ],
+      "en": [
+        "Lie on your back with knees bent and feet flat, hip-width apart",
+        "Rest your arms long by your sides",
+        "Exhale, tilt the pelvis and press the lower back gently into the mat",
+        "Inhale and return to neutral"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Kippen, einatmen beim Lösen.",
+      "en": "Exhale as you tilt, inhale as you release."
+    },
+    "fehler": {
+      "de": [
+        "Mit den Beinen statt mit dem Bauch drücken",
+        "Das Gesäß stark anheben"
+      ],
+      "en": [
+        "Pushing with the legs instead of the abs",
+        "Lifting the buttocks too much"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex04_cat_cow",
+    "name": {
+      "de": "Katze-Kuh",
+      "en": "Cat-Cow"
+    },
+    "beschreibung": {
+      "de": "Mobilisiert die gesamte Wirbelsäule im Wechsel aus Rundung und Streckung.",
+      "en": "Mobilizes the whole spine by alternating between rounding and extension."
+    },
+    "schritte": {
+      "de": [
+        "Vierfüßlerstand: Handgelenke unter den Schultern, Knie unter den Hüften",
+        "Einatmend Brust und Steißbein heben (Kuh)",
+        "Ausatmend den Rücken zur Decke runden, Kopf sinken lassen (Katze)",
+        "Fließend zwischen beiden Positionen wechseln"
+      ],
+      "en": [
+        "Start on hands and knees, wrists under shoulders, knees under hips",
+        "Inhale and lift chest and tailbone (cow)",
+        "Exhale and round the spine toward the ceiling, head dropping (cat)",
+        "Flow smoothly between both positions"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen in die Kuh, ausatmen in die Katze.",
+      "en": "Inhale into cow, exhale into cat."
+    },
+    "fehler": {
+      "de": [
+        "Arme beugen",
+        "Nur den Nacken statt der ganzen Wirbelsäule bewegen"
+      ],
+      "en": [
+        "Bending the arms",
+        "Moving only the neck instead of the whole spine"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke",
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex05_standing_roll_down",
+    "name": {
+      "de": "Abrollen im Stand",
+      "en": "Standing Roll Down"
+    },
+    "beschreibung": {
+      "de": "Rollt die Wirbelsäule Wirbel für Wirbel ab und dehnt Rücken und Beinrückseite.",
+      "en": "Rolls the spine down vertebra by vertebra and stretches the back and hamstrings."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht stehen, Füße hüftbreit, Knie weich",
+        "Kinn zur Brust, langsam Wirbel für Wirbel abrollen",
+        "Arme hängen lassen, bis die Hände in Höhe der Schienbeine sind",
+        "Bauch einziehen und langsam wieder aufrollen"
+      ],
+      "en": [
+        "Stand tall, feet hip-width, knees soft",
+        "Nod the chin and slowly roll down vertebra by vertebra",
+        "Let the arms hang until the hands reach the shins",
+        "Draw the abs in and slowly roll back up"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend abrollen, einatmend unten verweilen, ausatmend aufrollen.",
+      "en": "Exhale rolling down, inhale at the bottom, exhale rolling up."
+    },
+    "fehler": {
+      "de": [
+        "Aus der Hüfte nach vorne klappen",
+        "Zu schnell abrollen"
+      ],
+      "en": [
+        "Folding forward from the hips",
+        "Rolling down too fast"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 6,
+    "wand": false,
+    "boden": false,
+    "belastungen": [
+      "ruecken"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5,
+    "variante_leicht_id": "ex36_wall_roll_down"
+  },
+  {
+    "id": "ex06_hundred_tabletop",
+    "name": {
+      "de": "Hundred (Tischposition)",
+      "en": "The Hundred (Tabletop)"
+    },
+    "beschreibung": {
+      "de": "Klassische Pilates-Übung für Bauchkraft und Ausdauer mit kleinen Armschwüngen.",
+      "en": "A classic Pilates exercise for core strength and stamina with small arm pumps."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Beine in der Tischposition (Knie 90 Grad)",
+        "Kopf und Schultern leicht anheben",
+        "Gestreckte Arme knapp über der Matte neben den Hüften halten",
+        "Arme in kleinen, schnellen Schlägen auf und ab pumpen"
+      ],
+      "en": [
+        "Lie on your back with legs in tabletop (knees at 90 degrees)",
+        "Lift head and shoulders slightly",
+        "Hold straight arms just above the mat beside the hips",
+        "Pump the arms up and down in small, quick beats"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Fünf Schläge lang einatmen, fünf Schläge lang ausatmen.",
+      "en": "Inhale for five beats, exhale for five beats."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz entstehen lassen",
+        "Nacken überstrecken oder Kinn zum Hals ziehen"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Straining the neck"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_leicht_id": "ex11_toe_taps",
+    "variante_schwer_id": "ex08_single_leg_stretch"
+  },
+  {
+    "id": "ex07_roll_up_modified",
+    "name": {
+      "de": "Roll Up (modifiziert)",
+      "en": "Modified Roll Up"
+    },
+    "beschreibung": {
+      "de": "Rollt die Wirbelsäule kontrolliert ab und auf und stärkt die gerade Bauchmuskulatur.",
+      "en": "Rolls the spine down and up with control and strengthens the rectus abdominis."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht sitzen, Knie gebeugt, Füße flach, Arme nach vorne gestreckt",
+        "Ausatmend das Becken kippen und mit rundem Rücken bis zur Hälfte nach hinten rollen",
+        "Kurz halten",
+        "Mit Bauchkraft wieder zum Sitzen aufrollen"
+      ],
+      "en": [
+        "Sit tall with knees bent, feet flat and arms reaching forward",
+        "Exhale, tilt the pelvis and roll halfway back with a rounded spine",
+        "Hold briefly",
+        "Use your abs to roll back up to sitting"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen zur Vorbereitung, ausatmen beim Abrollen, einatmen unten, ausatmen beim Aufrollen.",
+      "en": "Inhale to prepare, exhale rolling back, inhale at the bottom, exhale rolling up."
+    },
+    "fehler": {
+      "de": [
+        "Schwung aus den Armen holen",
+        "Füße vom Boden lösen"
+      ],
+      "en": [
+        "Using arm momentum",
+        "Lifting the feet off the floor"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "ruecken",
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex03_pelvic_tilt",
+    "variante_schwer_id": "ex17_teaser_modified"
+  },
+  {
+    "id": "ex08_single_leg_stretch",
+    "name": {
+      "de": "Single Leg Stretch",
+      "en": "Single Leg Stretch"
+    },
+    "beschreibung": {
+      "de": "Wechselnd ein Bein heranziehen und eines strecken: trainiert Bauch und Koordination.",
+      "en": "Alternately hugging one knee and extending the other leg trains abs and coordination."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Kopf und Schultern anheben",
+        "Ein Knie mit beiden Händen zur Brust ziehen, das andere Bein in 45 Grad strecken",
+        "Mit einem fließenden Wechsel die Beine tauschen",
+        "Becken ruhig halten, Rumpf stabil"
+      ],
+      "en": [
+        "Lie on your back, lift head and shoulders",
+        "Pull one knee to the chest with both hands and extend the other leg at 45 degrees",
+        "Switch legs with a smooth movement",
+        "Keep the pelvis still and the torso stable"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Zwei Atemzüge pro Seite: einatmen, ausatmen beim Wechsel.",
+      "en": "Two breaths per side: inhale, exhale as you switch."
+    },
+    "fehler": {
+      "de": [
+        "Unteren Rücken von der Matte abheben",
+        "Nackenspannung statt Bauchspannung"
+      ],
+      "en": [
+        "Letting the lower back lift off the mat",
+        "Pulling with the neck instead of the abs"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex12_dead_bug",
+    "variante_schwer_id": "ex09_double_leg_stretch"
+  },
+  {
+    "id": "ex09_double_leg_stretch",
+    "name": {
+      "de": "Double Leg Stretch",
+      "en": "Double Leg Stretch"
+    },
+    "beschreibung": {
+      "de": "Fordernde Bauchübung: Arme und Beine strecken sich gleichzeitig weg vom Körper und kehren zurück.",
+      "en": "A demanding core exercise: arms and legs extend away from the body together, then return."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Kopf anheben, beide Knie an die Brust ziehen",
+        "Arme über den Kopf und Beine in 45 Grad gleichzeitig strecken",
+        "Arme in einem großen Kreis zurückführen",
+        "Knie wieder umarmen"
+      ],
+      "en": [
+        "Lie on your back, head lifted, both knees pulled to the chest",
+        "Extend arms overhead and legs at 45 degrees at the same time",
+        "Circle the arms back around",
+        "Hug the knees in again"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend strecken, einatmend die Knie umarmen.",
+      "en": "Exhale as you extend, inhale as you hug the knees."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz beim Strecken",
+        "Beine zu tief absenken"
+      ],
+      "en": [
+        "Arching the back as you extend",
+        "Lowering the legs too far"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 3,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": true,
+    "met_wert": 4.0,
+    "variante_leicht_id": "ex08_single_leg_stretch"
+  },
+  {
+    "id": "ex10_criss_cross",
+    "name": {
+      "de": "Criss Cross",
+      "en": "Criss Cross"
+    },
+    "beschreibung": {
+      "de": "Rotation im Wechsel kräftigt die schrägen Bauchmuskeln.",
+      "en": "Alternating rotation strengthens the oblique abdominal muscles."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Hände hinter den Kopf, Schultern angehoben, Beine in der Tischposition",
+        "Oberkörper drehen, der rechte Ellbogen geht zum linken Knie, das rechte Bein streckt sich",
+        "Zur Mitte zurück",
+        "Zur anderen Seite wechseln"
+      ],
+      "en": [
+        "Lie on your back, hands behind the head, shoulders lifted, legs in tabletop",
+        "Rotate the torso to bring the right elbow to the left knee while the right leg extends",
+        "Return to center",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend drehen, einatmend zur Mitte.",
+      "en": "Exhale as you rotate, inhale back to center."
+    },
+    "fehler": {
+      "de": [
+        "Nur die Ellbogen bewegen statt den Brustkorb zu drehen",
+        "Am Kopf ziehen"
+      ],
+      "en": [
+        "Moving only the elbows instead of rotating the ribcage",
+        "Pulling on the head"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex08_single_leg_stretch",
+    "variante_schwer_id": "ex09_double_leg_stretch"
+  },
+  {
+    "id": "ex11_toe_taps",
+    "name": {
+      "de": "Toe Taps",
+      "en": "Toe Taps"
+    },
+    "beschreibung": {
+      "de": "Einfache Bauchübung: abwechselnd ein Fuß senkt sich zum Boden und kehrt zurück.",
+      "en": "A simple core exercise: one foot lowers to tap the floor and returns, alternating sides."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Beine in der Tischposition, Arme neben dem Körper",
+        "Unteren Rücken stabil halten",
+        "Einen Fuß langsam zum Boden senken, antippen und zurückführen",
+        "Seite wechseln"
+      ],
+      "en": [
+        "Lie on your back with legs in tabletop and arms by your sides",
+        "Keep the lower back stable",
+        "Slowly lower one foot to tap the floor and bring it back",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Senken, einatmen beim Zurückführen.",
+      "en": "Exhale as you lower, inhale as you return."
+    },
+    "fehler": {
+      "de": [
+        "Unteren Rücken abheben lassen",
+        "Zu schnelle Bewegung"
+      ],
+      "en": [
+        "Letting the lower back lift",
+        "Moving too quickly"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex12_dead_bug"
+  },
+  {
+    "id": "ex12_dead_bug",
+    "name": {
+      "de": "Dead Bug",
+      "en": "Dead Bug"
+    },
+    "beschreibung": {
+      "de": "Stabilisiert den Rumpf, während Arme und Beine gegengleich bewegt werden.",
+      "en": "Stabilizes the torso while arms and legs move in opposition."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Arme zur Decke, Beine in der Tischposition",
+        "Gegenüberliegenden Arm und Bein langsam strecken, das Bein knapp über dem Boden",
+        "Zurück zur Ausgangsposition",
+        "Seite wechseln"
+      ],
+      "en": [
+        "Lie on your back with arms toward the ceiling and legs in tabletop",
+        "Slowly extend the opposite arm and leg, leg hovering above the floor",
+        "Return to the start",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Strecken, einatmen beim Zurückführen.",
+      "en": "Exhale as you extend, inhale as you return."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz beim Strecken",
+        "Zu hohe Geschwindigkeit"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Moving too fast"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_leicht_id": "ex11_toe_taps",
+    "variante_schwer_id": "ex08_single_leg_stretch"
+  },
+  {
+    "id": "ex13_single_leg_circles",
+    "name": {
+      "de": "Beinkreisen liegend",
+      "en": "Single Leg Circles"
+    },
+    "beschreibung": {
+      "de": "Kreisende Beinbewegung bei ruhigem Becken trainiert Bauch und Hüftstabilität.",
+      "en": "Circling the leg while the pelvis stays still trains the core and hip stability."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, ein Bein zur Decke strecken, das andere Knie gebeugt mit dem Fuß am Boden",
+        "Becken ruhig halten",
+        "Mit dem gestreckten Bein langsam kontrollierte Kreise zeichnen",
+        "Nach einigen Kreisen Richtung und Bein wechseln"
+      ],
+      "en": [
+        "Lie on your back, one leg extended to the ceiling, the other knee bent with the foot on the floor",
+        "Keep the pelvis still",
+        "Slowly draw controlled circles with the raised leg",
+        "After a few circles switch direction and leg"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ein Kreis pro Atemzug.",
+      "en": "One circle per breath."
+    },
+    "fehler": {
+      "de": [
+        "Becken wippt mit",
+        "Zu große Kreise"
+      ],
+      "en": [
+        "Rocking the pelvis",
+        "Making the circles too big"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex14_rolling_like_a_ball",
+    "name": {
+      "de": "Rolling Like a Ball",
+      "en": "Rolling Like a Ball"
+    },
+    "beschreibung": {
+      "de": "Schaukelnde Rollbewegung, die den Rücken massiert und den Bauch fordert.",
+      "en": "A rocking roll that massages the back and challenges the abs."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Sitzknochen balancieren, Knie umarmen, Rücken rund, Füße schweben",
+        "Kinn zur Brust, Bauch einziehen",
+        "Nach hinten auf die Schulterblätter rollen",
+        "Mit Bauchkraft zurück in die Balance rollen, ohne die Füße abzusetzen"
+      ],
+      "en": [
+        "Balance on the sit bones, hug the knees, round the back, feet hovering",
+        "Nod the chin and draw the abs in",
+        "Roll back onto the shoulder blades",
+        "Roll back up to balance without touching the feet down"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmend zurückrollen, ausatmend aufrollen.",
+      "en": "Inhale rolling back, exhale rolling up."
+    },
+    "fehler": {
+      "de": [
+        "Auf den Nacken rollen",
+        "Rundung des Rückens aufgeben"
+      ],
+      "en": [
+        "Rolling onto the neck",
+        "Losing the rounded back"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "ruecken"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "ruecken"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": true,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex07_roll_up_modified"
+  },
+  {
+    "id": "ex15_spine_stretch_forward",
+    "name": {
+      "de": "Spine Stretch Forward",
+      "en": "Spine Stretch Forward"
+    },
+    "beschreibung": {
+      "de": "Streckt die Wirbelsäule im Sitzen und dehnt die Beinrückseite.",
+      "en": "Lengthens the spine in sitting and stretches the hamstrings."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht sitzen, Beine etwas weiter als hüftbreit, Füße angezogen, Arme auf Schulterhöhe nach vorne",
+        "Vom Kopf aus nach vorne runden und zu den Füßen greifen",
+        "Die Wirbelsäule langsam wieder aufrichten",
+        "Groß und lang sitzen"
+      ],
+      "en": [
+        "Sit tall, legs slightly wider than the hips, feet flexed, arms forward at shoulder height",
+        "Round forward from the head, reaching toward the feet",
+        "Slowly stack the spine back up",
+        "Sit tall and long"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend nach vorne runden, einatmend aufrichten.",
+      "en": "Exhale rounding forward, inhale to stack up."
+    },
+    "fehler": {
+      "de": [
+        "Im Becken nach hinten kippen",
+        "Schultern hochziehen"
+      ],
+      "en": [
+        "Collapsing backward through the pelvis",
+        "Raising the shoulders"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 6,
+    "wand": false,
+    "boden": true,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex16_saw"
+  },
+  {
+    "id": "ex16_saw",
+    "name": {
+      "de": "Säge",
+      "en": "Saw"
+    },
+    "beschreibung": {
+      "de": "Rotation mit Dehnung: kräftigt die Taille und öffnet den Rücken.",
+      "en": "Rotation with a stretch strengthens the waist and opens the back."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht sitzen, Beine breit, Arme seitlich gestreckt",
+        "Oberkörper zu einer Seite drehen",
+        "Mit der vorderen Hand in einer Sägebewegung am äußeren Fuß vorbeigreifen",
+        "Zur Mitte zurückkehren und die Seite wechseln"
+      ],
+      "en": [
+        "Sit tall with legs wide and arms extended to the sides",
+        "Rotate the torso to one side",
+        "Reach the front hand past the outside of the opposite foot in a sawing motion",
+        "Return to center and switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend in die Drehung, einatmend zur Mitte.",
+      "en": "Exhale into the twist, inhale back to center."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte mitdrehen",
+        "Beide Sitzbeinhöcker nicht am Boden halten"
+      ],
+      "en": [
+        "Letting the hips rotate too",
+        "Lifting a sit bone off the floor"
+      ]
+    },
+    "zielzonen": [
+      "ruecken",
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex15_spine_stretch_forward"
+  },
+  {
+    "id": "ex17_teaser_modified",
+    "name": {
+      "de": "Teaser (modifiziert)",
+      "en": "Modified Teaser"
+    },
+    "beschreibung": {
+      "de": "Fortgeschrittene Balanceübung für Bauch und Rumpfkontrolle in V-Position.",
+      "en": "An advanced balance exercise for core strength and torso control in a V-sit."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Knie in der Tischposition",
+        "Arme nach vorne strecken, parallel zu den Schienbeinen",
+        "Mit Bauchkraft in die V-Position aufrollen und kurz balancieren",
+        "Kontrolliert wieder abrollen"
+      ],
+      "en": [
+        "Lie on your back with knees in tabletop",
+        "Reach the arms forward parallel to the shins",
+        "Roll up into the V-sit and balance briefly",
+        "Roll back down with control"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmend aufrollen, ausatmend halten, einatmend abrollen.",
+      "en": "Inhale rolling up, exhale to hold, inhale rolling down."
+    },
+    "fehler": {
+      "de": [
+        "Mit Schwung aufrollen",
+        "Rücken durchhängen lassen"
+      ],
+      "en": [
+        "Using momentum",
+        "Letting the back collapse"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 3,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 6,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "ruecken"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": true,
+    "met_wert": 4.0,
+    "variante_leicht_id": "ex07_roll_up_modified"
+  },
+  {
+    "id": "ex18_swan_prep",
+    "name": {
+      "de": "Schwan (Vorstufe)",
+      "en": "Swan Prep"
+    },
+    "beschreibung": {
+      "de": "Sanfte Rückenstreckung in Bauchlage, die Rücken und Schultern kräftigt.",
+      "en": "A gentle back extension lying face down that strengthens the back and shoulders."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Bauch legen, Hände unter den Schultern, Ellbogen nah am Körper",
+        "Bauch leicht anspannen",
+        "Kopf und Brust mit langem Nacken ein Stück anheben",
+        "Langsam wieder absenken"
+      ],
+      "en": [
+        "Lie face down, hands under the shoulders, elbows close to the body",
+        "Gently engage the abs",
+        "Lift head and chest a little with a long neck",
+        "Slowly lower down"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmend anheben, ausatmend absenken.",
+      "en": "Inhale to lift, exhale to lower."
+    },
+    "fehler": {
+      "de": [
+        "Zu hoch hochdrücken",
+        "Nacken überstrecken"
+      ],
+      "en": [
+        "Pushing up too high",
+        "Overextending the neck"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "bauchlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex19_swimming"
+  },
+  {
+    "id": "ex19_swimming",
+    "name": {
+      "de": "Swimming",
+      "en": "Swimming"
+    },
+    "beschreibung": {
+      "de": "Gegengleiche Bewegung in Bauchlage für Rücken, Po und Schultern.",
+      "en": "Alternating arm and leg movement face down for back, glutes and shoulders."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Bauch legen, Arme nach vorne gestreckt",
+        "Arme, Brust und Beine leicht anheben",
+        "Gegengleich Arm und Bein in kleinen Bewegungen auf und ab bewegen",
+        "Nacken lang halten"
+      ],
+      "en": [
+        "Lie face down with arms extended forward",
+        "Lift arms, chest and legs slightly",
+        "Flutter opposite arm and leg up and down in small movements",
+        "Keep the neck long"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ruhig weiteratmen, fünf Schläge ein, fünf Schläge aus.",
+      "en": "Keep breathing steadily: five beats in, five beats out."
+    },
+    "fehler": {
+      "de": [
+        "Zu hoch anheben und Rücken überstrecken",
+        "Atem anhalten"
+      ],
+      "en": [
+        "Lifting too high and overarching the back",
+        "Holding the breath"
+      ]
+    },
+    "zielzonen": [
+      "ruecken",
+      "po"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "bauchlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex18_swan_prep"
+  },
+  {
+    "id": "ex20_bird_dog",
+    "name": {
+      "de": "Bird Dog",
+      "en": "Bird Dog"
+    },
+    "beschreibung": {
+      "de": "Stabilisiert Rumpf und Rücken durch gegengleiches Strecken von Arm und Bein.",
+      "en": "Stabilizes the torso and back by extending the opposite arm and leg."
+    },
+    "schritte": {
+      "de": [
+        "Vierfüßlerstand, Rücken gerade",
+        "Rechten Arm nach vorne und linkes Bein nach hinten bis auf Hüfthöhe strecken",
+        "Kurz halten und zurückführen",
+        "Seite wechseln"
+      ],
+      "en": [
+        "Start on hands and knees with a flat back",
+        "Extend the right arm forward and the left leg back to hip height",
+        "Hold briefly and return",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Strecken, einatmen beim Zurückführen.",
+      "en": "Exhale as you extend, inhale as you return."
+    },
+    "fehler": {
+      "de": [
+        "Bein zu hoch heben, Hohlkreuz",
+        "Becken kippt zur Seite"
+      ],
+      "en": [
+        "Lifting the leg too high and arching the back",
+        "Letting the pelvis tilt sideways"
+      ]
+    },
+    "zielzonen": [
+      "ruecken",
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke",
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_leicht_id": "ex04_cat_cow"
+  },
+  {
+    "id": "ex21_bridge",
+    "name": {
+      "de": "Schulterbrücke",
+      "en": "Glute Bridge"
+    },
+    "beschreibung": {
+      "de": "Kräftigt Po, Beinrückseite und unteren Rücken.",
+      "en": "Strengthens glutes, hamstrings and lower back."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Knie gebeugt, Füße hüftbreit, Arme neben dem Körper",
+        "Ausatmend das Becken anheben, bis Schultern, Hüfte und Knie eine Linie bilden",
+        "Kurz halten, Po anspannen",
+        "Wirbel für Wirbel wieder abrollen"
+      ],
+      "en": [
+        "Lie on your back, knees bent, feet hip-width, arms by your sides",
+        "Exhale and lift the hips until shoulders, hips and knees form a line",
+        "Hold briefly, squeezing the glutes",
+        "Roll the spine back down vertebra by vertebra"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Anheben, einatmen beim Absenken.",
+      "en": "Exhale as you lift, inhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz beim Anheben",
+        "Knie fallen nach außen"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Letting the knees fall outward"
+      ]
+    },
+    "zielzonen": [
+      "po",
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex22_bridge_leg_lift"
+  },
+  {
+    "id": "ex22_bridge_leg_lift",
+    "name": {
+      "de": "Schulterbrücke mit Beinheben",
+      "en": "Single Leg Bridge"
+    },
+    "beschreibung": {
+      "de": "Einbeinige Brücke, die Po und Rumpfstabilität stark fordert.",
+      "en": "Single-leg bridge that strongly challenges glutes and core stability."
+    },
+    "schritte": {
+      "de": [
+        "In der Schulterbrücke Hüfte anheben",
+        "Ein Bein gestreckt zur Decke heben, Hüfte bleibt waagerecht",
+        "Bein senken und Fuß absetzen, Hüfte bleibt oben",
+        "Seite wechseln"
+      ],
+      "en": [
+        "Lift the hips into a bridge",
+        "Raise one leg straight toward the ceiling, keeping the hips level",
+        "Lower the leg and place the foot down, hips staying lifted",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Beinheben, einatmen beim Absetzen.",
+      "en": "Exhale as the leg lifts, inhale as you set it down."
+    },
+    "fehler": {
+      "de": [
+        "Becken kippt zur Seite",
+        "Hüfte sinkt ab"
+      ],
+      "en": [
+        "Letting the pelvis tilt",
+        "Letting the hips sag"
+      ]
+    },
+    "zielzonen": [
+      "po",
+      "beine"
+    ],
+    "level": 3,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": true,
+    "met_wert": 4.0,
+    "variante_leicht_id": "ex21_bridge"
+  },
+  {
+    "id": "ex23_side_leg_lift",
+    "name": {
+      "de": "Seitliches Beinheben",
+      "en": "Side-Lying Leg Lift"
+    },
+    "beschreibung": {
+      "de": "Kräftigt Außenseite von Hüfte und Oberschenkel in Seitenlage.",
+      "en": "Strengthens the outer hips and thighs lying on your side."
+    },
+    "schritte": {
+      "de": [
+        "Auf die Seite legen, Kopf auf dem unteren Arm, Beine lang und übereinander",
+        "Rumpf stabil halten",
+        "Oberes Bein bis Hüfthöhe anheben",
+        "Langsam und kontrolliert senken"
+      ],
+      "en": [
+        "Lie on your side, head resting on the lower arm, legs long and stacked",
+        "Keep the torso stable",
+        "Lift the top leg to hip height",
+        "Lower slowly with control"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Senken.",
+      "en": "Exhale as you lift, inhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Bein zu hoch heben",
+        "Becken nach hinten kippen"
+      ],
+      "en": [
+        "Lifting the leg too high",
+        "Rolling the pelvis backward"
+      ]
+    },
+    "zielzonen": [
+      "beine",
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_leicht_id": "ex38_wall_side_leg_lift",
+    "variante_schwer_id": "ex25_side_kick"
+  },
+  {
+    "id": "ex24_clamshell",
+    "name": {
+      "de": "Clamshell",
+      "en": "Clamshell"
+    },
+    "beschreibung": {
+      "de": "Aktiviert die seitlichen Gesäßmuskeln mit kleiner, präziser Bewegung.",
+      "en": "Activates the side glutes with a small, precise movement."
+    },
+    "schritte": {
+      "de": [
+        "Auf die Seite legen, Knie 45 Grad gebeugt, Füße zusammen",
+        "Becken stabil halten",
+        "Oberes Knie wie eine Muschel öffnen, Füße bleiben zusammen",
+        "Langsam schließen"
+      ],
+      "en": [
+        "Lie on your side, knees bent at 45 degrees, feet together",
+        "Keep the pelvis stable",
+        "Open the top knee like a clamshell while the feet stay together",
+        "Close slowly"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Öffnen, einatmen beim Schließen.",
+      "en": "Exhale as you open, inhale as you close."
+    },
+    "fehler": {
+      "de": [
+        "Becken rollt nach hinten",
+        "Füße lösen sich voneinander"
+      ],
+      "en": [
+        "Rolling the pelvis backward",
+        "Letting the feet separate"
+      ]
+    },
+    "zielzonen": [
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 15,
+    "wand": false,
+    "boden": true,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex25_side_kick",
+    "name": {
+      "de": "Side Kick",
+      "en": "Side Kick Front/Back"
+    },
+    "beschreibung": {
+      "de": "Beinschwünge in Seitenlage für Hüfte, Taille und Oberschenkel.",
+      "en": "Leg swings lying on your side for hips, waist and thighs."
+    },
+    "schritte": {
+      "de": [
+        "Seitlage, auf den Unterarm gestützt, Beine lang",
+        "Oberes Bein auf Hüfthöhe mit gebeugtem Fuß nach vorne schwingen",
+        "Gestreckt mit gestrecktem Fuß nach hinten führen",
+        "Zur Mitte zurück, Rumpf bleibt ruhig"
+      ],
+      "en": [
+        "Lie on your side propped on the forearm, legs long",
+        "Swing the top leg forward at hip height with a flexed foot",
+        "Sweep it back with a pointed foot",
+        "Return to center, torso staying still"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen beim Vorschwingen, ausatmen beim Zurückführen.",
+      "en": "Inhale swinging forward, exhale sweeping back."
+    },
+    "fehler": {
+      "de": [
+        "Oberkörper wackelt",
+        "Hohlkreuz beim Rückschwung"
+      ],
+      "en": [
+        "Wobbling the torso",
+        "Arching the back on the back swing"
+      ]
+    },
+    "zielzonen": [
+      "beine",
+      "po"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": false,
+    "boden": true,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex23_side_leg_lift"
+  },
+  {
+    "id": "ex26_donkey_kick",
+    "name": {
+      "de": "Donkey Kick",
+      "en": "Donkey Kick"
+    },
+    "beschreibung": {
+      "de": "Kräftigt den Po im Vierfüßlerstand durch hochgedrücktes, gebeugtes Bein.",
+      "en": "Strengthens the glutes on all fours by pressing a bent leg up."
+    },
+    "schritte": {
+      "de": [
+        "Vierfüßlerstand, Rücken gerade",
+        "Ein Bein gebeugt nach hinten oben drücken, Fußsohle zeigt zur Decke",
+        "Po fest anspannen",
+        "Bein ohne Absetzen wieder senken"
+      ],
+      "en": [
+        "Start on hands and knees with a flat back",
+        "Press one bent leg back and up, sole toward the ceiling",
+        "Squeeze the glute",
+        "Lower without touching the floor"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Senken.",
+      "en": "Exhale as you lift, inhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz beim Anheben",
+        "Hüfte dreht auf"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Opening the hip"
+      ]
+    },
+    "zielzonen": [
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke",
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_leicht_id": "ex42_wall_kickback"
+  },
+  {
+    "id": "ex27_fire_hydrant",
+    "name": {
+      "de": "Fire Hydrant",
+      "en": "Fire Hydrant"
+    },
+    "beschreibung": {
+      "de": "Hebt das gebeugte Knie seitlich an und kräftigt Hüfte und Po.",
+      "en": "Lifts the bent knee out to the side to strengthen hips and glutes."
+    },
+    "schritte": {
+      "de": [
+        "Vierfüßlerstand, Rücken gerade",
+        "Ein gebeugtes Knie seitlich bis Hüfthöhe anheben",
+        "Becken bleibt waagerecht",
+        "Bein senken"
+      ],
+      "en": [
+        "Start on hands and knees with a flat back",
+        "Lift one bent knee out to the side to hip height",
+        "Keep the pelvis level",
+        "Lower the leg"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Senken.",
+      "en": "Exhale as you lift, inhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Oberkörper kippt zur Seite",
+        "Zu hohes Anheben"
+      ],
+      "en": [
+        "Tilting the torso sideways",
+        "Lifting too high"
+      ]
+    },
+    "zielzonen": [
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke",
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex28_forearm_plank",
+    "name": {
+      "de": "Unterarmstütz",
+      "en": "Forearm Plank"
+    },
+    "beschreibung": {
+      "de": "Ganzkörperstütz, der Bauch, Schultern und Rücken stabilisiert.",
+      "en": "A full-body hold that stabilizes the abs, shoulders and back."
+    },
+    "schritte": {
+      "de": [
+        "Unterarme auf die Matte, Ellbogen unter den Schultern",
+        "Beine strecken, Körper bildet eine Linie von Kopf bis Fersen",
+        "Bauch und Po anspannen",
+        "Position halten und ruhig weiteratmen"
+      ],
+      "en": [
+        "Place the forearms on the mat, elbows under the shoulders",
+        "Extend the legs so the body forms a line from head to heels",
+        "Engage abs and glutes",
+        "Hold and keep breathing calmly"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Gleichmäßig weiteratmen, Atem nicht anhalten.",
+      "en": "Keep breathing evenly; do not hold the breath."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte hängt durch oder ragt hoch",
+        "Schultern sinken ein"
+      ],
+      "en": [
+        "Letting the hips sag or pike up",
+        "Letting the shoulders sink"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "ganzkoerper"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "ruecken"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex40_wall_plank",
+    "variante_schwer_id": "ex31_leg_pull_front"
+  },
+  {
+    "id": "ex29_side_plank_knee",
+    "name": {
+      "de": "Seitstütz auf dem Knie",
+      "en": "Kneeling Side Plank"
+    },
+    "beschreibung": {
+      "de": "Seitstütz mit Knie als Stütze für die seitliche Rumpfmuskulatur.",
+      "en": "A side plank supported on the knee for the lateral core muscles."
+    },
+    "schritte": {
+      "de": [
+        "Seitlich auf den Unterarm stützen, unteres Knie am Boden",
+        "Hüfte anheben, Körper in einer Linie",
+        "Oberen Arm zur Decke strecken",
+        "Halten, dann Seite wechseln"
+      ],
+      "en": [
+        "Prop up on one forearm with the lower knee on the floor",
+        "Lift the hips so the body is in line",
+        "Reach the top arm to the ceiling",
+        "Hold, then switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ruhig und gleichmäßig atmen.",
+      "en": "Breathe calmly and evenly."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte sinkt nach unten",
+        "Schulter rutscht zum Ohr"
+      ],
+      "en": [
+        "Letting the hips drop",
+        "Shrugging the shoulder toward the ear"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.5
+  },
+  {
+    "id": "ex30_pushup_knees",
+    "name": {
+      "de": "Pilates-Liegestütz (Knie)",
+      "en": "Kneeling Pilates Push-up"
+    },
+    "beschreibung": {
+      "de": "Liegestütz auf den Knien für Arme, Brust und Rumpf.",
+      "en": "Kneeling push-up for arms, chest and core."
+    },
+    "schritte": {
+      "de": [
+        "Kniestütz, Hände unter den Schultern, Körper gerade von Kopf bis Knie",
+        "Ellbogen nah am Körper beugen und die Brust absenken",
+        "Mit Kraft wieder hochdrücken",
+        "Bauch bleibt angespannt"
+      ],
+      "en": [
+        "Kneeling plank with hands under the shoulders and body straight from head to knees",
+        "Bend the elbows close to the ribs and lower the chest",
+        "Press back up",
+        "Keep the abs engaged"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen beim Absenken, ausatmen beim Hochdrücken.",
+      "en": "Inhale lowering, exhale pressing up."
+    },
+    "fehler": {
+      "de": [
+        "Ellbogen flattern nach außen",
+        "Hüfte nach hinten schieben"
+      ],
+      "en": [
+        "Flaring the elbows out",
+        "Pushing the hips back"
+      ]
+    },
+    "zielzonen": [
+      "arme",
+      "brust"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke",
+      "knie"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex35_wall_pushup"
+  },
+  {
+    "id": "ex31_leg_pull_front",
+    "name": {
+      "de": "Leg Pull Front",
+      "en": "Leg Pull Front"
+    },
+    "beschreibung": {
+      "de": "Anspruchsvoller Stütz mit Beinheben für Schultern, Bauch und Po.",
+      "en": "A demanding plank with leg lifts for shoulders, abs and glutes."
+    },
+    "schritte": {
+      "de": [
+        "Hoher Stütz auf gestreckten Armen, Körper in einer Linie",
+        "Ein gestrecktes Bein knapp von der Matte heben",
+        "Bein senken und Seite wechseln",
+        "Rumpf bleibt stabil"
+      ],
+      "en": [
+        "High plank on straight arms with the body in one line",
+        "Lift one straight leg a little off the mat",
+        "Lower it and switch legs",
+        "Keep the torso stable"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Gleichmäßig atmen, beim Heben ausatmen.",
+      "en": "Breathe evenly, exhale as you lift."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte wackelt",
+        "Schultern sinken zwischen die Arme"
+      ],
+      "en": [
+        "Wobbling the hips",
+        "Letting the shoulders sink between the arms"
+      ]
+    },
+    "zielzonen": [
+      "ganzkoerper"
+    ],
+    "level": 3,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "handgelenke"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": true,
+    "met_wert": 4.0,
+    "variante_leicht_id": "ex28_forearm_plank"
+  },
+  {
+    "id": "ex32_wall_bridge",
+    "name": {
+      "de": "Wand-Brücke",
+      "en": "Wall Bridge"
+    },
+    "beschreibung": {
+      "de": "Brücke mit den Füßen an der Wand: Po und Beine arbeiten gegen den Widerstand.",
+      "en": "A bridge with the feet on the wall: glutes and legs work against the resistance."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Füße flach an die Wand, Knie 90 Grad",
+        "Durch die Füße drücken und das Becken anheben",
+        "Kurz halten",
+        "Wirbel für Wirbel wieder abrollen"
+      ],
+      "en": [
+        "Lie on your back with feet flat on the wall, knees at 90 degrees",
+        "Press through the feet and lift the hips",
+        "Hold briefly",
+        "Roll the spine back down vertebra by vertebra"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Anheben, einatmen beim Absenken.",
+      "en": "Exhale as you lift, inhale as you lower."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz",
+        "Füße rutschen an der Wand ab"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Letting the feet slide on the wall"
+      ]
+    },
+    "zielzonen": [
+      "po",
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": true,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex33_wall_bridge_march"
+  },
+  {
+    "id": "ex33_wall_bridge_march",
+    "name": {
+      "de": "Wand-Brücke mit Marschieren",
+      "en": "Wall Bridge March"
+    },
+    "beschreibung": {
+      "de": "Wand-Brücke mit abwechselndem Fußheben für Po und tiefen Bauch.",
+      "en": "Wall bridge with alternating foot lifts for glutes and deep abs."
+    },
+    "schritte": {
+      "de": [
+        "In der Wand-Brücke Hüfte anheben",
+        "Einen Fuß von der Wand zur Brust heranziehen",
+        "Fuß zurücksetzen",
+        "Anderen Fuß heben, Hüfte bleibt waagerecht"
+      ],
+      "en": [
+        "Lift the hips into the wall bridge",
+        "Draw one foot off the wall toward the chest",
+        "Place it back",
+        "Lift the other foot, keeping the hips level"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben des Fußes, einatmen beim Absetzen.",
+      "en": "Exhale lifting the foot, inhale placing it back."
+    },
+    "fehler": {
+      "de": [
+        "Becken kippt seitlich",
+        "Zu schnelles Wechseln"
+      ],
+      "en": [
+        "Letting the pelvis tilt",
+        "Switching too fast"
+      ]
+    },
+    "zielzonen": [
+      "po",
+      "bauch"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": true,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.5,
+    "variante_leicht_id": "ex32_wall_bridge"
+  },
+  {
+    "id": "ex34_wall_sit",
+    "name": {
+      "de": "Wandsitzen",
+      "en": "Wall Sit"
+    },
+    "beschreibung": {
+      "de": "Statisches Sitzen an der Wand kräftigt Oberschenkel und Po.",
+      "en": "A static wall sit strengthens thighs and glutes."
+    },
+    "schritte": {
+      "de": [
+        "Mit dem Rücken an die Wand lehnen",
+        "Hinuntergleiten, bis die Knie etwa 90 Grad gebeugt sind",
+        "Arme vor der Brust verschränken",
+        "Position halten"
+      ],
+      "en": [
+        "Lean your back against the wall",
+        "Slide down until your knees are bent to about 90 degrees",
+        "Cross the arms over the chest",
+        "Hold the position"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Gleichmäßig weiteratmen.",
+      "en": "Keep breathing evenly."
+    },
+    "fehler": {
+      "de": [
+        "Knie vor die Zehen schieben",
+        "Hände auf die Oberschenkel stützen"
+      ],
+      "en": [
+        "Letting the knees go past the toes",
+        "Pushing the hands onto the thighs"
+      ]
+    },
+    "zielzonen": [
+      "beine"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": true,
+    "boden": false,
+    "belastungen": [
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.5
+  },
+  {
+    "id": "ex35_wall_pushup",
+    "name": {
+      "de": "Wand-Liegestütz",
+      "en": "Wall Push-up"
+    },
+    "beschreibung": {
+      "de": "Sanfter Liegestütz an der Wand für Arme, Brust und Schultern.",
+      "en": "A gentle push-up against the wall for arms, chest and shoulders."
+    },
+    "schritte": {
+      "de": [
+        "Eine Armlänge von der Wand stehen, Hände auf Schulterhöhe an die Wand",
+        "Ellbogen beugen und die Brust zur Wand führen",
+        "Körper bleibt eine gerade Linie",
+        "Wieder wegdrücken"
+      ],
+      "en": [
+        "Stand an arm's length from the wall, hands at shoulder height",
+        "Bend the elbows and bring the chest toward the wall",
+        "Keep the body in a straight line",
+        "Press away"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen beim Annähern, ausatmen beim Wegdrücken.",
+      "en": "Inhale approaching, exhale pressing away."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte kippt nach hinten",
+        "Ellbogen flattern"
+      ],
+      "en": [
+        "Pushing the hips back",
+        "Flaring the elbows"
+      ]
+    },
+    "zielzonen": [
+      "arme",
+      "brust"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex30_pushup_knees"
+  },
+  {
+    "id": "ex36_wall_roll_down",
+    "name": {
+      "de": "Abrollen an der Wand",
+      "en": "Wall Roll Down"
+    },
+    "beschreibung": {
+      "de": "Abrollen mit dem Rücken an der Wand: gibt Orientierung für die Wirbelsäule.",
+      "en": "Rolling down with your back on the wall gives the spine clear feedback."
+    },
+    "schritte": {
+      "de": [
+        "Mit dem Rücken an die Wand lehnen, Füße einen Schritt davor",
+        "Kinn zur Brust, Wirbel für Wirbel von der Wand lösen",
+        "Entspannt nach unten hängen lassen",
+        "Wirbel für Wirbel wieder an die Wand rollen"
+      ],
+      "en": [
+        "Lean your back on the wall with feet a step away",
+        "Nod the chin and peel the spine off the wall vertebra by vertebra",
+        "Hang down relaxed",
+        "Roll back up, pressing each vertebra into the wall"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmend abrollen, einatmend aufrollen.",
+      "en": "Exhale rolling down, inhale rolling up."
+    },
+    "fehler": {
+      "de": [
+        "Zu schnell abrollen",
+        "Knie komplett durchstrecken"
+      ],
+      "en": [
+        "Rolling down too fast",
+        "Locking the knees"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 6,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5,
+    "variante_schwer_id": "ex05_standing_roll_down"
+  },
+  {
+    "id": "ex37_wall_leg_slides",
+    "name": {
+      "de": "Beinscheren an der Wand",
+      "en": "Wall Leg Slides"
+    },
+    "beschreibung": {
+      "de": "Beinscheren an der Wand trainieren den unteren Bauch mit wenig Belastung.",
+      "en": "Wall leg slides train the lower abs with little strain."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Hüfte nah an der Wand, Beine gestreckt an der Wand",
+        "Ein Bein langsam an der Wand nach unten gleiten lassen",
+        "Wieder nach oben führen",
+        "Anderes Bein im Wechsel"
+      ],
+      "en": [
+        "Lie on your back with hips close to the wall and both legs up the wall",
+        "Slowly slide one leg down the wall",
+        "Bring it back up",
+        "Alternate legs like scissors"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Absenken, einatmen beim Zurückführen.",
+      "en": "Exhale lowering, inhale returning."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz",
+        "Beine zu weit absenken"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Lowering the leg too far"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": true,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex38_wall_side_leg_lift",
+    "name": {
+      "de": "Seitliches Beinheben an der Wand",
+      "en": "Wall Side Leg Lift"
+    },
+    "beschreibung": {
+      "de": "Seitliches Beinheben im Stand mit Wandstütze für Hüfte und Po.",
+      "en": "Standing side leg lifts with wall support for hips and glutes."
+    },
+    "schritte": {
+      "de": [
+        "Seitlich zur Wand stehen, eine Hand an der Wand",
+        "Äußeres Bein gestreckt seitlich anheben",
+        "Oberkörper bleibt aufrecht",
+        "Langsam senken, dann Seite wechseln"
+      ],
+      "en": [
+        "Stand side-on to the wall with one hand on it",
+        "Lift the outer leg straight out to the side",
+        "Keep the torso upright",
+        "Lower slowly, then switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Senken.",
+      "en": "Exhale lifting, inhale lowering."
+    },
+    "fehler": {
+      "de": [
+        "Oberkörper lehnt zur Seite",
+        "Bein schwingt statt zu heben"
+      ],
+      "en": [
+        "Leaning the torso sideways",
+        "Swinging the leg instead of lifting"
+      ]
+    },
+    "zielzonen": [
+      "po",
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex23_side_leg_lift"
+  },
+  {
+    "id": "ex39_wall_calf_raises",
+    "name": {
+      "de": "Wadenheben an der Wand",
+      "en": "Wall Calf Raises"
+    },
+    "beschreibung": {
+      "de": "Wadenheben mit Fingerspitzen an der Wand für Wade und Balance.",
+      "en": "Calf raises with fingertips on the wall for calves and balance."
+    },
+    "schritte": {
+      "de": [
+        "Der Wand zugewandt stehen, Fingerspitzen an der Wand",
+        "Langsam auf die Fußballen heben",
+        "Kurz oben halten",
+        "Fersen kontrolliert absenken"
+      ],
+      "en": [
+        "Face the wall with fingertips touching it",
+        "Slowly rise onto the balls of the feet",
+        "Hold briefly at the top",
+        "Lower the heels with control"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Senken.",
+      "en": "Exhale rising, inhale lowering."
+    },
+    "fehler": {
+      "de": [
+        "Fußgelenke knicken nach außen",
+        "Zu schnelles Absenken"
+      ],
+      "en": [
+        "Letting the ankles roll outward",
+        "Dropping down too quickly"
+      ]
+    },
+    "zielzonen": [
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 15,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex40_wall_plank",
+    "name": {
+      "de": "Schrägstütz an der Wand",
+      "en": "Wall Plank"
+    },
+    "beschreibung": {
+      "de": "Schräger Stütz an der Wand: leichter Einstieg in Plank-Übungen.",
+      "en": "An incline wall plank: an easy entry to plank exercises."
+    },
+    "schritte": {
+      "de": [
+        "Der Wand zugewandt, Hände auf Brusthöhe an die Wand",
+        "Füße zurücksetzen, Körper bildet eine schräge Linie",
+        "Bauch und Po anspannen",
+        "Position halten"
+      ],
+      "en": [
+        "Face the wall with hands at chest height",
+        "Step the feet back so the body forms a diagonal line",
+        "Engage abs and glutes",
+        "Hold the position"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ruhig und gleichmäßig atmen.",
+      "en": "Breathe calmly and evenly."
+    },
+    "fehler": {
+      "de": [
+        "Hüfte hängt durch",
+        "Schultern zum Ohr gezogen"
+      ],
+      "en": [
+        "Letting the hips sag",
+        "Shrugging the shoulders"
+      ]
+    },
+    "zielzonen": [
+      "bauch",
+      "arme"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": true,
+    "boden": false,
+    "belastungen": [
+      "handgelenke"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex28_forearm_plank"
+  },
+  {
+    "id": "ex41_wall_angels",
+    "name": {
+      "de": "Wall Angels",
+      "en": "Wall Angels"
+    },
+    "beschreibung": {
+      "de": "Arme gleiten an der Wand auf und ab: mobilisiert Schultern und Brustwirbelsäule.",
+      "en": "Arms slide up and down the wall: mobilizes shoulders and thoracic spine."
+    },
+    "schritte": {
+      "de": [
+        "Mit Rücken, Kopf und Armen an die Wand lehnen, Ellbogen 90 Grad",
+        "Arme an der Wand nach oben schieben",
+        "Ohne den Kontakt zu verlieren wieder absenken",
+        "Rippen bleiben unten"
+      ],
+      "en": [
+        "Lean back, head and arms against the wall, elbows at 90 degrees",
+        "Slide the arms up the wall",
+        "Lower them without losing contact",
+        "Keep the ribs down"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen beim Hochschieben, ausatmen beim Absenken.",
+      "en": "Inhale sliding up, exhale lowering."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz",
+        "Handrücken lösen sich von der Wand"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Letting the backs of the hands leave the wall"
+      ]
+    },
+    "zielzonen": [
+      "ruecken",
+      "arme"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 10,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex42_wall_kickback",
+    "name": {
+      "de": "Po-Kickback an der Wand",
+      "en": "Wall Glute Kickback"
+    },
+    "beschreibung": {
+      "de": "Po-Kickback mit Wandstütze für Gesäßmuskeln und Balance.",
+      "en": "Glute kickback with wall support for glutes and balance."
+    },
+    "schritte": {
+      "de": [
+        "Der Wand zugewandt, Hände auf Brusthöhe, leichte Vorlage",
+        "Ein gestrecktes Bein nach hinten führen",
+        "Po anspannen",
+        "Bein zurückführen, Seite wechseln"
+      ],
+      "en": [
+        "Face the wall with hands at chest height and a slight lean",
+        "Kick one straight leg back",
+        "Squeeze the glute",
+        "Return and switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Kick, einatmen beim Zurückführen.",
+      "en": "Exhale kicking back, inhale returning."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz",
+        "Bein schwingt mit Schwung"
+      ],
+      "en": [
+        "Arching the back",
+        "Swinging the leg with momentum"
+      ]
+    },
+    "zielzonen": [
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": true,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0,
+    "variante_schwer_id": "ex26_donkey_kick"
+  },
+  {
+    "id": "ex43_standing_knee_to_elbow",
+    "name": {
+      "de": "Knie zum Ellbogen im Stand",
+      "en": "Standing Knee-to-Elbow Crunch"
+    },
+    "beschreibung": {
+      "de": "Stehende Rumpfübung mit Diagonalbewegung für Bauch und Gleichgewicht.",
+      "en": "A standing core exercise with a diagonal movement for abs and balance."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht stehen, Hände hinter dem Kopf",
+        "Ein Knie diagonal zum gegenüberliegenden Ellbogen heben",
+        "Leicht eindrehen",
+        "Zurück zur Mitte, Seite wechseln"
+      ],
+      "en": [
+        "Stand tall with hands behind the head",
+        "Lift one knee diagonally toward the opposite elbow",
+        "Rotate slightly",
+        "Return to center and switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ausatmen beim Heben, einatmen beim Absetzen.",
+      "en": "Exhale lifting, inhale lowering."
+    },
+    "fehler": {
+      "de": [
+        "Am Kopf ziehen",
+        "Oberkörper stark nach vorne beugen"
+      ],
+      "en": [
+        "Pulling on the head",
+        "Folding the torso forward"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex44_standing_side_bend",
+    "name": {
+      "de": "Seitbeuge im Stand",
+      "en": "Standing Side Bend"
+    },
+    "beschreibung": {
+      "de": "Seitbeuge im Stand dehnt die Flanken und mobilisiert die Wirbelsäule.",
+      "en": "Standing side bend stretches the flanks and mobilizes the spine."
+    },
+    "schritte": {
+      "de": [
+        "Hüftbreit stehen, einen Arm über den Kopf strecken",
+        "Oberkörper zur Gegenseite neigen",
+        "Zur Mitte zurückkehren",
+        "Seite wechseln"
+      ],
+      "en": [
+        "Stand hip-width and reach one arm overhead",
+        "Bend the torso to the opposite side",
+        "Return to center",
+        "Switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen in der Mitte, ausatmen in die Seitbeuge.",
+      "en": "Inhale in the middle, exhale into the side bend."
+    },
+    "fehler": {
+      "de": [
+        "Nach vorne oder hinten kippen",
+        "Hüfte schiebt zur Seite"
+      ],
+      "en": [
+        "Tipping forward or backward",
+        "Pushing the hip out sideways"
+      ]
+    },
+    "zielzonen": [
+      "bauch"
+    ],
+    "level": 1,
+    "rolle": "aufwaermen",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.5
+  },
+  {
+    "id": "ex45_plie_squat",
+    "name": {
+      "de": "Plié-Kniebeuge",
+      "en": "Plié Squat"
+    },
+    "beschreibung": {
+      "de": "Kniebeuge in Ballett-Stellung für Innen- und Außenseite der Oberschenkel sowie Po.",
+      "en": "A ballet-style squat for inner and outer thighs and glutes."
+    },
+    "schritte": {
+      "de": [
+        "Breiter Stand, Zehen nach außen, Hände vor der Brust",
+        "Knie über den Zehen nach außen beugen",
+        "Rücken bleibt aufrecht",
+        "Mit Kraft aus den Beinen wieder aufrichten"
+      ],
+      "en": [
+        "Stand wide with toes turned out, hands at the chest",
+        "Bend the knees outward over the toes",
+        "Keep the back upright",
+        "Press up through the legs"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Einatmen beim Beugen, ausatmen beim Aufrichten.",
+      "en": "Inhale bending, exhale rising."
+    },
+    "fehler": {
+      "de": [
+        "Knie fallen nach innen",
+        "Oberkörper beugt sich nach vorne"
+      ],
+      "en": [
+        "Letting the knees fall inward",
+        "Leaning the torso forward"
+      ]
+    },
+    "zielzonen": [
+      "beine",
+      "po"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 12,
+    "wand": false,
+    "boden": false,
+    "belastungen": [
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex46_standing_leg_circles",
+    "name": {
+      "de": "Beinkreisen im Stand",
+      "en": "Standing Leg Circles"
+    },
+    "beschreibung": {
+      "de": "Kontrollierte Beinkreise im Stand für Hüfte, Po und Gleichgewicht.",
+      "en": "Controlled standing leg circles for hips, glutes and balance."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht stehen, Hände an die Hüften",
+        "Ein gestrecktes Bein leicht nach vorne anheben",
+        "Langsam einen kleinen Kreis zeichnen",
+        "Absetzen, Richtung und Seite wechseln"
+      ],
+      "en": [
+        "Stand tall with hands on the hips",
+        "Lift one straight leg slightly forward",
+        "Slowly draw a small circle",
+        "Set it down, switch direction and side"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ein Kreis pro Atemzug.",
+      "en": "One circle per breath."
+    },
+    "fehler": {
+      "de": [
+        "Standbein einknicken",
+        "Becken kippt mit"
+      ],
+      "en": [
+        "Letting the standing leg sag",
+        "Tilting the pelvis"
+      ]
+    },
+    "zielzonen": [
+      "beine",
+      "po"
+    ],
+    "level": 2,
+    "rolle": "haupt",
+    "typ": "wiederholung",
+    "standard_wdh": 8,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.5
+  },
+  {
+    "id": "ex47_arm_circles",
+    "name": {
+      "de": "Armkreisen",
+      "en": "Arm Circles"
+    },
+    "beschreibung": {
+      "de": "Kleine Armkreise für Schultern und Oberarme.",
+      "en": "Small arm circles for shoulders and upper arms."
+    },
+    "schritte": {
+      "de": [
+        "Aufrecht stehen, Arme seitlich auf Schulterhöhe strecken",
+        "Kleine, kontrollierte Kreise nach vorne zeichnen",
+        "Nach der Hälfte der Zeit die Richtung wechseln",
+        "Schultern bleiben tief"
+      ],
+      "en": [
+        "Stand tall with arms extended to the sides at shoulder height",
+        "Draw small, controlled circles forward",
+        "Switch direction halfway",
+        "Keep the shoulders low"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Gleichmäßig weiteratmen.",
+      "en": "Keep breathing evenly."
+    },
+    "fehler": {
+      "de": [
+        "Schultern hochziehen",
+        "Hohlkreuz"
+      ],
+      "en": [
+        "Raising the shoulders",
+        "Arching the back"
+      ]
+    },
+    "zielzonen": [
+      "arme"
+    ],
+    "level": 1,
+    "rolle": "haupt",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 3.0
+  },
+  {
+    "id": "ex48_childs_pose",
+    "name": {
+      "de": "Kindhaltung",
+      "en": "Child's Pose"
+    },
+    "beschreibung": {
+      "de": "Entspannende Dehnung für Rücken und Hüften zum Abschluss.",
+      "en": "A relaxing stretch for the back and hips to finish."
+    },
+    "schritte": {
+      "de": [
+        "Auf die Knie, auf den Fersen sitzen",
+        "Oberkörper nach vorne ablegen, Stirn auf die Matte",
+        "Arme nach vorne strecken",
+        "Ruhig atmen und loslassen"
+      ],
+      "en": [
+        "Kneel and sit back on the heels",
+        "Fold forward and rest the forehead on the mat",
+        "Extend the arms forward",
+        "Breathe slowly and let go"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Tief in den Rücken atmen, lang ausatmen.",
+      "en": "Breathe deep into the back, exhale long."
+    },
+    "fehler": {
+      "de": [
+        "Das Gesäß hebt von den Fersen ab",
+        "Schultern angespannt"
+      ],
+      "en": [
+        "Lifting the buttocks from the heels",
+        "Tensing the shoulders"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "cooldown",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "knie"
+    ],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.3
+  },
+  {
+    "id": "ex49_supine_twist",
+    "name": {
+      "de": "Wirbelsäulendrehung liegend",
+      "en": "Supine Spinal Twist"
+    },
+    "beschreibung": {
+      "de": "Sanfte Drehung in Rückenlage löst den Rücken.",
+      "en": "A gentle twist lying on your back releases the back."
+    },
+    "schritte": {
+      "de": [
+        "Auf den Rücken legen, Arme in T-Form, Knie gebeugt zusammen",
+        "Beide Knie langsam zu einer Seite ablegen",
+        "Kopf in die Gegenrichtung drehen und halten",
+        "Zur Mitte zurück, Seite wechseln"
+      ],
+      "en": [
+        "Lie on your back with arms in a T, knees bent together",
+        "Slowly lower both knees to one side",
+        "Turn the head the other way and hold",
+        "Return to center and switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Langsam und tief atmen, beim Ausatmen weiter lösen.",
+      "en": "Breathe slowly and deeply, release further on each exhale."
+    },
+    "fehler": {
+      "de": [
+        "Schulter hebt vom Boden ab",
+        "Gegen Schmerzen in die Dehnung drücken"
+      ],
+      "en": [
+        "Lifting the shoulder off the floor",
+        "Forcing the stretch through pain"
+      ]
+    },
+    "zielzonen": [
+      "ruecken"
+    ],
+    "level": 1,
+    "rolle": "cooldown",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": true,
+    "belastungen": [
+      "rueckenlage"
+    ],
+    "schwangerschaft_geeignet": false,
+    "premium": false,
+    "met_wert": 2.3
+  },
+  {
+    "id": "ex50_standing_hip_flexor_stretch",
+    "name": {
+      "de": "Hüftbeuger-Dehnung im Stand",
+      "en": "Standing Hip Flexor Stretch"
+    },
+    "beschreibung": {
+      "de": "Dehnt die Vorderseite der Hüfte im Stand.",
+      "en": "Stretches the front of the hip while standing."
+    },
+    "schritte": {
+      "de": [
+        "In Schrittstellung stehen, hintere Ferse angehoben, Hände an den Hüften",
+        "Becken leicht nach hinten kippen",
+        "Etwas nach vorne verlagern, bis die Dehnung vorne an der Hüfte spürbar ist",
+        "Halten, dann Seite wechseln"
+      ],
+      "en": [
+        "Stand in a split stance with the back heel lifted and hands on the hips",
+        "Tuck the pelvis slightly",
+        "Shift forward slightly until you feel a stretch at the front of the back hip",
+        "Hold, then switch sides"
+      ]
+    },
+    "atemhinweis": {
+      "de": "Ruhig in die Dehnung atmen.",
+      "en": "Breathe calmly into the stretch."
+    },
+    "fehler": {
+      "de": [
+        "Hohlkreuz",
+        "Zu weit nach vorne lehnen"
+      ],
+      "en": [
+        "Arching the lower back",
+        "Leaning too far forward"
+      ]
+    },
+    "zielzonen": [
+      "beine"
+    ],
+    "level": 1,
+    "rolle": "cooldown",
+    "typ": "zeit",
+    "standard_dauer_s": 30,
+    "wand": false,
+    "boden": false,
+    "belastungen": [],
+    "schwangerschaft_geeignet": true,
+    "premium": false,
+    "met_wert": 2.3
+  }
+]

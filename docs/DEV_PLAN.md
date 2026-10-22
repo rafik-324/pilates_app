@@ -9,7 +9,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | Phase | Thema | Status |
 |---|---|---|
 | 0 | Projekt-Setup (Expo, Tooling, Expo Go, CI) | erledigt (Prototyp) |
-| 1 | Inhaltsdaten und Platzhalter-Medien | offen |
+| 1 | Inhaltsdaten und Platzhalter-Medien | erledigt (Prototyp) |
 | 2 | Lokale Datenbank und Domänenlogik | offen |
 | 3 | Onboarding | offen |
 | 4 | Plan-Generator und Planansicht | offen |
@@ -84,16 +84,28 @@ Demo: App in Expo Go öffnen, vier Tabs sichtbar, im Tab "Profil" Hell / Dunkel 
 
 Ziel: alle 50 Übungen und ein Satz Workouts als Daten, mit Platzhaltern statt Videos.
 
-- [ ] TypeScript-Typen und Zod-Schemas für Übung (/D020/) und Workout (/D030/)
-- [ ] `assets/content/exercises.json` mit allen 50 Übungen aus `docs/higgsfield_video_prompts.md` Abschnitt 5.1 (IDs, Zielzonen, Level, Rolle, Typ, Standarddauer / -wiederholungen, boden, wand, belastungen, schwangerschaft_geeignet, premium, MET). Texte (Name, Beschreibung, 3 bis 5 Schritte, Atemhinweis, 2 bis 3 häufige Fehler) auf DE und EN, fachlich sinnvoll formuliert. Varianten leichter / schwerer verknüpfen, wo eine passende Übung in der Liste existiert
-- [ ] `assets/content/workouts.json` mit mindestens 16 Workouts verteilt auf die Kategorien aus /F300/ (Wall Pilates, Ganzkörper, Bauch, Po & Beine, Arme, Rücken / Haltung, Stretching, Anfänger), je 5 bis 20 Minuten, `premium` gemäß /F1200/
-- [ ] `assets/content/challenges.json`: Wall Pilates 28 Tage (gratis), Bauch 14 Tage (Premium)
-- [ ] Platzhalter-Medien: Skript `scripts/generate-placeholders` erzeugt pro Übung `assets/content/thumbs/<id>.jpg` (Graustufen-Fläche mit Übungsname, siehe `docs/DESIGN.md` Abschnitt 8) und verwendet für alle Übungen ein kleines gemeinsames Platzhalter-Loop-Video. Ersatz durch echte Videos darf keine Codeänderung erfordern
-- [ ] Skript erzeugt `src/data/content/media.generated.ts` (Zuordnung ID → `require(...)`), weil Metro nur statische `require`-Pfade bündelt; das Skript bevorzugt `videos/<id>.mp4`, falls vorhanden, sonst den Platzhalter
-- [ ] Content-Loader mit Validierung beim Start (im Dev-Modus Fehler bei ungültigen Daten)
-- [ ] Tests: Schema-Validierung aller Dateien, 50 eindeutige IDs, alle in Workouts referenzierten Übungen existieren, Varianten-Verweise gültig, mindestens 15 Übungen mit `boden = false`
+- [x] TypeScript-Typen und Zod-Schemas für Übung (/D020/) und Workout (/D030/)
+- [x] `assets/content/exercises.json` mit allen 50 Übungen aus `docs/higgsfield_video_prompts.md` Abschnitt 5.1 (IDs, Zielzonen, Level, Rolle, Typ, Standarddauer / -wiederholungen, boden, wand, belastungen, schwangerschaft_geeignet, premium, MET). Texte (Name, Beschreibung, 3 bis 5 Schritte, Atemhinweis, 2 bis 3 häufige Fehler) auf DE und EN, fachlich sinnvoll formuliert. Varianten leichter / schwerer verknüpfen, wo eine passende Übung in der Liste existiert
+- [x] `assets/content/workouts.json` mit mindestens 16 Workouts verteilt auf die Kategorien aus /F300/ (Wall Pilates, Ganzkörper, Bauch, Po & Beine, Arme, Rücken / Haltung, Stretching, Anfänger), je 5 bis 20 Minuten, `premium` gemäß /F1200/
+- [x] `assets/content/challenges.json`: Wall Pilates 28 Tage (gratis), Bauch 14 Tage (Premium)
+- [x] Platzhalter-Medien: Skript `scripts/generate-placeholders` erzeugt pro Übung `assets/content/thumbs/<id>.jpg` (Graustufen-Fläche mit Übungsname, siehe `docs/DESIGN.md` Abschnitt 8) und verwendet für alle Übungen ein kleines gemeinsames Platzhalter-Loop-Video. Ersatz durch echte Videos darf keine Codeänderung erfordern
+- [x] Skript erzeugt `src/data/content/media.generated.ts` (Zuordnung ID → `require(...)`), weil Metro nur statische `require`-Pfade bündelt; das Skript bevorzugt `videos/<id>.mp4`, falls vorhanden, sonst den Platzhalter
+- [x] Content-Loader mit Validierung beim Start (im Dev-Modus Fehler bei ungültigen Daten)
+- [x] Tests: Schema-Validierung aller Dateien, 50 eindeutige IDs, alle in Workouts referenzierten Übungen existieren, Varianten-Verweise gültig, mindestens 15 Übungen mit `boden = false`
 
 Demo: Entdecken-Tab zeigt eine einfache Liste aller Workouts mit Platzhalter-Thumbnails.
+
+Prototyp-Stand:
+
+- Schemas verwenden die deutschen Feldnamen aus /D020/ und /D030/; Texte als `{ de, en }`. Ein zusätzliches Feld `zielzonen: rücken` ("ruecken") ergänzt die Zonen-Liste, weil die Übungsliste Rücken als Zielzone führt
+- 21 Workouts (alle 8 Kategorien, 5 bis 13 Minuten). `premium` folgt /F1200/ (Anfänger, Ganzkörper, Wall Pilates frei, Rest Premium); freie Workouts enthalten keine Premium-Übungen (Test)
+- Geschätzte Dauer: Zeitübungen nach `dauer_s`, Wiederholungsübungen mit 4 s pro Wiederholung, plus Pausen (10 s)
+- Zwei Challenges: Wall Pilates 28 Tage (gratis, 6 Ruhetage, Tag 28 ist ein Trainingstag) und Bauch 14 Tage (Premium, 3 Ruhetage)
+- Platzhalter: 50 Graustufen-Thumbnails (512 x 512) und ein gemeinsames Loop-Video (`assets/content/videos/placeholder.mp4`, 4 s) sind eingecheckt; `npm run generate:placeholders` erzeugt fehlende Dateien und `media.generated.ts` neu und bevorzugt `videos/<id>.mp4`
+- Der Content-Loader wirft im Dev-Modus bei ungültigen Daten, in Produktion wird nur geloggt
+- Die fachlichen Texte (Schritte, Fehler, Atemhinweise) sind eine Erstfassung und müssen fachlich freigegeben werden (siehe auch Hinweis zu Belastungen im Übungsverzeichnis)
+
+Demo: Entdecken-Tab zeigt alle Workouts je Kategorie mit Platzhalter-Thumbnails.
 
 ## Phase 2: Lokale Datenbank und Domänenlogik
 

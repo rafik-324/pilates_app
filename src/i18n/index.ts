@@ -31,3 +31,9 @@ usePrefs.subscribe((state, prev) => {
 });
 
 export { useTranslation };
+
+/** Aktuelle App-Sprache, reagiert auf Sprachwechsel. */
+export function useLang(): AppLanguage {
+  const { i18n: instance } = useTranslation();
+  return instance.language === 'en' ? 'en' : 'de';
+}

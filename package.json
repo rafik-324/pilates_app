@@ -12,7 +12,8 @@
     "lint": "expo lint",
     "test": "jest",
     "format": "prettier --write .",
-    "doctor": "expo-doctor"
+    "doctor": "expo-doctor",
+    "generate:placeholders": "node scripts/generate-placeholders.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.4.2",
@@ -53,6 +54,7 @@
     "jest-expo": "~58.0.12",
     "prettier": "^3.9.10",
     "react-test-renderer": "^19.3.0",
+    "sharp": "^0.35.5",
     "typescript": "^6.0.3"
   },
   "jest": {

@@ -1,6 +1,13 @@
 {
-  "app": { "name": "Pilates at Home" },
-  "tabs": { "plan": "Plan", "discover": "Discover", "progress": "Progress", "profile": "Profile" },
+  "app": {
+    "name": "Pilates at Home"
+  },
+  "tabs": {
+    "plan": "Plan",
+    "discover": "Discover",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
   "common": {
     "continue": "Continue",
     "back": "Back",
@@ -55,5 +62,25 @@
     "selectB": "Flexibility",
     "dialogTitle": "Reset plan?",
     "dialogMessage": "Your progress in the plan will be lost."
+  },
+  "categories": {
+    "wall_pilates": "Wall Pilates",
+    "ganzkoerper": "Full Body",
+    "bauch": "Abs",
+    "po_beine": "Glutes & Legs",
+    "arme": "Arms",
+    "ruecken_haltung": "Back / Posture",
+    "stretching": "Stretching",
+    "anfaenger": "Beginner"
+  },
+  "levels": {
+    "1": "Beginner",
+    "2": "Intermediate",
+    "3": "Advanced"
+  },
+  "discover": {
+    "title": "Discover",
+    "workouts": "{{count}} workouts",
+    "premium": "Premium"
   }
 }

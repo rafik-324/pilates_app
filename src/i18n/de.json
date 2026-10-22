@@ -1,5 +1,7 @@
 {
-  "app": { "name": "Pilates at Home" },
+  "app": {
+    "name": "Pilates at Home"
+  },
   "tabs": {
     "plan": "Plan",
     "discover": "Entdecken",
@@ -60,5 +62,25 @@
     "selectB": "Flexibilität",
     "dialogTitle": "Plan zurücksetzen?",
     "dialogMessage": "Dein Fortschritt im Plan geht verloren."
+  },
+  "categories": {
+    "wall_pilates": "Wall Pilates",
+    "ganzkoerper": "Ganzkörper",
+    "bauch": "Bauch",
+    "po_beine": "Po & Beine",
+    "arme": "Arme",
+    "ruecken_haltung": "Rücken / Haltung",
+    "stretching": "Stretching",
+    "anfaenger": "Anfänger"
+  },
+  "levels": {
+    "1": "Anfänger",
+    "2": "Mittel",
+    "3": "Fortgeschritten"
+  },
+  "discover": {
+    "title": "Entdecken",
+    "workouts": "{{count}} Workouts",
+    "premium": "Premium"
   }
 }

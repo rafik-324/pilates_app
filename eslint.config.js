@@ -26,7 +26,7 @@ module.exports = defineConfig([
   { ignores: ['dist/*', '.expo/*', 'node_modules/*', 'src/data/content/media.generated.ts'] },
   {
     files: ['**/*.{ts,tsx,js}'],
-    ignores: ['src/ui/theme/**', '**/*.test.{ts,tsx}', 'eslint.config.js'],
+    ignores: ['src/ui/theme/**', '**/*.test.{ts,tsx}', 'eslint.config.js', 'scripts/**'],
     rules: { 'no-restricted-syntax': ['error', ...colorLiteral] },
   },
   {
