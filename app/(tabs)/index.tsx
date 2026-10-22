@@ -1,13 +1,3 @@
-import React from 'react';
-import { useTranslation } from '@/i18n';
-import { Screen, Text } from '@/ui/components';
+import { PlanScreen } from '@/features/plan/PlanScreen';
 
-export default function PlanScreen() {
-  const { t } = useTranslation();
-  return (
-    <Screen scroll>
-      <Text variant="title1">{t('tabs.plan')}</Text>
-      <Text tone="muted">{t('placeholder.plan')}</Text>
-    </Screen>
-  );
-}
+export default PlanScreen;

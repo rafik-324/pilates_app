@@ -12,7 +12,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 1 | Inhaltsdaten und Platzhalter-Medien | erledigt (Prototyp) |
 | 2 | Lokale Datenbank und Domänenlogik | erledigt (Prototyp) |
 | 3 | Onboarding | erledigt (Prototyp) |
-| 4 | Plan-Generator und Planansicht | offen |
+| 4 | Plan-Generator und Planansicht | erledigt (Prototyp) |
 | 5 | Bibliothek, Suche, Übungsdetails | offen |
 | 6 | Workout-Player | offen |
 | 7 | Workout-Abschluss und Fortschritt | offen |
@@ -157,12 +157,25 @@ Demo: Onboarding in Expo Go komplett durchklicken, beide Varianten (mit / ohne E
 
 ## Phase 4: Plan-Generator und Planansicht
 
-- [ ] Plan-Generator in `src/domain/` gemäß Pflichtenheft Kapitel 10 und Tabelle "Abbildung Einschränkung auf Übung" (Kapitel 5): filtern, Aufwärmen / Hauptteil / Cool-down, Zielzonen gewichtet, Progression alle 5 bis 7 Tage ca. 10 %, Ruhetage. Deterministisch über Seed (testbar)
-- [ ] Tests: /T010/ (30 Tage), /T020/ (kein Boden), /T170/ (Schwangerschaft), jede Kombination der drei Level erzeugt gültige Pläne, keine leeren Tage
-- [ ] Freischaltung und Ruhetage nach /F230/ und /F240/, Test /T180/
-- [ ] Plan-Tab: Karte "Tag X" mit Dauer, Übungsanzahl, kcal (/F220/), Raster der 30 Tage mit Status (/F210/), Button "Ruhetag abschließen"
-- [ ] Challenges auswählen und starten (/F260/), Plan zurücksetzen / neu generieren mit Bestätigung (/F250/)
-- [ ] Adaptive Anpassung (/F270/): Funktion vorbereiten, die Feedback der letzten Session auf Folgetage anwendet (wird in Phase 7 aufgerufen)
+- [x] Plan-Generator in `src/domain/` gemäß Pflichtenheft Kapitel 10 und Tabelle "Abbildung Einschränkung auf Übung" (Kapitel 5): filtern, Aufwärmen / Hauptteil / Cool-down, Zielzonen gewichtet, Progression alle 5 bis 7 Tage ca. 10 %, Ruhetage. Deterministisch über Seed (testbar)
+- [x] Tests: /T010/ (30 Tage), /T020/ (kein Boden), /T170/ (Schwangerschaft), jede Kombination der drei Level erzeugt gültige Pläne, keine leeren Tage
+- [x] Freischaltung und Ruhetage nach /F230/ und /F240/, Test /T180/
+- [x] Plan-Tab: Karte "Tag X" mit Dauer, Übungsanzahl, kcal (/F220/), Raster der 30 Tage mit Status (/F210/), Button "Ruhetag abschließen"
+- [x] Challenges auswählen und starten (/F260/), Plan zurücksetzen / neu generieren mit Bestätigung (/F250/)
+- [x] Adaptive Anpassung (/F270/): Funktion vorbereiten, die Feedback der letzten Session auf Folgetage anwendet (wird in Phase 7 aufgerufen)
+
+Demo: nach dem Onboarding erscheint der persönliche Plan; Challenge starten.
+
+Prototyp-Stand:
+
+- Generator in `src/domain/plan/` (rein, seed-basiert): Pool nach Einschränkungen (Kapitel 5) und Level filtern; pro Trainingstag 2 Aufwärmübungen, Hauptteil in zwei Runden (4 / 5 / 6 Übungen je Level, nach Zielzonen gewichtet, Vortagsübungen seltener), 1 bis 2 Cool-downs. Progression: alle 6 Tage x1,1 auf Dauer / Wiederholungen. Übungen mit höherem Level fließen erst in der zweiten Planhälfte ein. Persönliche Pläne enthalten bewusst auch Übungen mit `premium = true` (Stufe 1: alles frei; Zuordnung für Stufe 2 offen)
+- Ruhetage: jeder 4. Tag (bei 2 Trainingstagen / Woche jeder 3., ab 5 jeder 5. Tag); Tag 30 ist immer ein Trainingstag. Ein Ruhetag wird mit "Ruhetag abschließen" oder automatisch am nächsten Kalendertag erledigt und auf den Folgetag des vorherigen Abschlusses datiert, damit der Streak nicht reißt (/T180/)
+- Freischaltung (/F230/): nur der erste nicht erledigte Tag ist offen, kein Kalendersperre
+- Adaptive Anpassung (/F270/): `adaptUpcomingDays` wirkt auf die nächsten 3 Trainingstage (zu schwer: -10 % und leichtere Variante, zu leicht: +10 % und schwerere Variante, höchstens ein Level über dem Profil, Einschränkungen bleiben maßgeblich); `applyFeedback` im Plan-Service wird in Phase 7 aufgerufen
+- Plan-Service (`src/features/plan/service.ts`) orchestriert Repositories, Generator, Ruhetage, Challenges; getestet gegen echte SQLite-Migrationen (sql.js)
+- Plan-Tab: Tageskarte (inverse) mit Dauer, Übungen, kcal (Schätzung gekennzeichnet), Raster mit 30 Tagen, Fortschritt, Challenges starten / beenden, Plan zurücksetzen mit Bestätigung. Challenges sind in Stufe 1 trotz Premium-Kennzeichnung startbar
+- Der Start-Button öffnet vorerst die Workout-Detailseite (`/workout`), der Player folgt in Phase 6
+- Zusätzlich (für Tests des Prototyps): im Profil-Tab im Dev-Modus "Daten löschen, Onboarding neu starten" (`deleteAllLocalData`, wird in Phase 8 für /F1150/ weiterverwendet)
 
 Demo: nach dem Onboarding erscheint der persönliche Plan; Challenge starten.
 

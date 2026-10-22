@@ -38,7 +38,8 @@
     "languageDe": "Deutsch",
     "languageEn": "English",
     "developer": "Developer",
-    "themePreview": "Theme preview"
+    "themePreview": "Theme preview",
+    "devReset": "Delete data, restart onboarding"
   },
   "themePreview": {
     "title": "Theme preview",
@@ -219,5 +220,53 @@
       "allow": "Allow",
       "later": "Later"
     }
+  },
+  "plan": {
+    "title": "Plan",
+    "day": "Day {{n}}",
+    "restDay": "Rest day",
+    "restHint": "Your body recovers today. It is part of the plan.",
+    "completeRest": "Complete rest day",
+    "start": "Start",
+    "exercises": "{{count}} exercises",
+    "allDone": "Plan completed",
+    "allDoneHint": "Great work! Create a new plan to keep going.",
+    "newPlan": "Create new plan",
+    "progress": "{{done}} of {{total}} days done",
+    "gridTitle": "All days",
+    "myPlan": "My plan",
+    "challenges": "Challenges",
+    "challengeDays": "{{count}} days",
+    "challengeStart": "Start",
+    "challengeActive": "Active",
+    "challengeEnd": "End challenge",
+    "challengeEndTitle": "End challenge?",
+    "challengeEndMessage": "Your progress in this challenge will be lost.",
+    "challengeStartTitle": "Start challenge?",
+    "challengeStartMessage": "A running challenge will be replaced.",
+    "reset": "Reset plan",
+    "resetTitle": "Regenerate plan?",
+    "resetMessage": "Your progress in the current plan will be lost. A new 30-day plan will be created.",
+    "resetConfirm": "Regenerate",
+    "stateDone": "done",
+    "stateLocked": "locked",
+    "stateCurrent": "current",
+    "stateRest": "rest day",
+    "estimate": "approx. {{count}} kcal",
+    "kcal": "{{count}} kcal"
+  },
+  "workout": {
+    "title": "Workout",
+    "duration": "Duration",
+    "exercises": "Exercises",
+    "kcal": "kcal",
+    "exerciseList": "Exercises",
+    "reps": "{{count}} reps",
+    "seconds": "{{count}} s",
+    "premium": "Premium",
+    "start": "Start",
+    "kcalEstimateHint": "Calories are an estimate (default weight 65 kg).",
+    "notFound": "Workout not found.",
+    "back": "Back"
   }
 }

@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import React from 'react';
 import { View } from 'react-native';
+import { deleteAllLocalData } from '@/features/privacy/deleteAllData';
 import { useTranslation } from '@/i18n';
 import { useSettings } from '@/state/settings';
 import { Chip, ListItem, Screen, Text } from '@/ui/components';
@@ -46,6 +47,12 @@ export default function ProfileScreen() {
             title={t('profile.themePreview')}
             leftIcon="palette"
             onPress={() => router.push('/dev/theme-preview')}
+          />
+          <ListItem
+            title={t('profile.devReset')}
+            tone="danger"
+            leftIcon="trash"
+            onPress={deleteAllLocalData}
           />
         </View>
       ) : null}

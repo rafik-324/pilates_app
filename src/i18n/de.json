@@ -38,7 +38,8 @@
     "languageDe": "Deutsch",
     "languageEn": "English",
     "developer": "Entwickler",
-    "themePreview": "Theme-Vorschau"
+    "themePreview": "Theme-Vorschau",
+    "devReset": "Daten löschen, Onboarding neu starten"
   },
   "themePreview": {
     "title": "Theme-Vorschau",
@@ -219,5 +220,53 @@
       "allow": "Erlauben",
       "later": "Später"
     }
+  },
+  "plan": {
+    "title": "Plan",
+    "day": "Tag {{n}}",
+    "restDay": "Ruhetag",
+    "restHint": "Heute erholt sich dein Körper. Das gehört zum Plan.",
+    "completeRest": "Ruhetag abschließen",
+    "start": "Start",
+    "exercises": "{{count}} Übungen",
+    "allDone": "Plan abgeschlossen",
+    "allDoneHint": "Starke Leistung! Erzeuge einen neuen Plan, um weiterzumachen.",
+    "newPlan": "Neuen Plan erzeugen",
+    "progress": "{{done}} von {{total}} Tagen erledigt",
+    "gridTitle": "Alle Tage",
+    "myPlan": "Mein Plan",
+    "challenges": "Challenges",
+    "challengeDays": "{{count}} Tage",
+    "challengeStart": "Starten",
+    "challengeActive": "Aktiv",
+    "challengeEnd": "Challenge beenden",
+    "challengeEndTitle": "Challenge beenden?",
+    "challengeEndMessage": "Dein Fortschritt in dieser Challenge geht verloren.",
+    "challengeStartTitle": "Challenge starten?",
+    "challengeStartMessage": "Eine laufende Challenge wird ersetzt.",
+    "reset": "Plan zurücksetzen",
+    "resetTitle": "Plan neu generieren?",
+    "resetMessage": "Dein Fortschritt im aktuellen Plan geht verloren. Es wird ein neuer 30-Tage-Plan erzeugt.",
+    "resetConfirm": "Neu generieren",
+    "stateDone": "erledigt",
+    "stateLocked": "gesperrt",
+    "stateCurrent": "aktuell",
+    "stateRest": "Ruhetag",
+    "estimate": "ca. {{count}} kcal",
+    "kcal": "{{count}} kcal"
+  },
+  "workout": {
+    "title": "Workout",
+    "duration": "Dauer",
+    "exercises": "Übungen",
+    "kcal": "kcal",
+    "exerciseList": "Übungen",
+    "reps": "{{count}} Wdh.",
+    "seconds": "{{count}} s",
+    "premium": "Premium",
+    "start": "Start",
+    "kcalEstimateHint": "Kalorien sind eine Schätzung (Standardgewicht 65 kg).",
+    "notFound": "Workout nicht gefunden.",
+    "back": "Zurück"
   }
 }
