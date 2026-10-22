@@ -1,24 +1,33 @@
 # Dependencies
 node_modules/
-.pnp*
 
-# Builds
-dist/
-build/
+# Expo / React Native
 .expo/
-.next/
-ios/Pods/
-android/.gradle/
+dist/
+web-build/
+expo-env.d.ts
+ios/
+android/
 
-# Env & secrets
+# Signing & secrets
 .env
 .env.*
 !.env.example
 *.pem
+*.jks
 *.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Tests
+coverage/
 
 # OS / Editor
 .DS_Store
 .idea/
 .vscode/
 *.log
+npm-debug.*
+yarn-error.*

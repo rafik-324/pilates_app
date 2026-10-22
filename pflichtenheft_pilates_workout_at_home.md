@@ -1,7 +1,7 @@
 # Pilates Workout at Home (EZ Health)
 ## App-Analyse und Pflichtenheft
 
-Stand: 21.10.2026
+Stand: 22.10.2026 (Version 1.1, Änderungen siehe Kapitel 15)
 Grundlage: Google Play Store Eintrag, Nutzerbewertungen, Drittquellen (APK-Portale, Testberichte).
 Hinweis: Die App wurde nicht selbst installiert. Aussagen sind gekennzeichnet:
 
@@ -178,7 +178,15 @@ Typische, nicht explizit belegte Player-Funktionen **[A]**:
 ## 1. Zielbestimmung
 
 ### 1.1 Ausgangslage
-Es soll eine mobile Fitness-App für Pilates und Wall Pilates zu Hause entwickelt werden, die funktional der analysierten App entspricht und deren bekannte Schwächen behebt.
+Es soll eine mobile Fitness-App für Pilates und Wall Pilates zu Hause entwickelt werden, die funktional mit der analysierten App vergleichbar ist und deren bekannte Schwächen behebt. Name, Texte, Bilder und Videos sind eigene Inhalte; von der analysierten App werden keine Inhalte, Marken oder Assets übernommen.
+
+### 1.1a Ausbaustufen
+Die Umsetzung erfolgt in zwei Ausbaustufen. Der detaillierte Phasenplan steht in `docs/DEV_PLAN.md`.
+
+| Stufe | Inhalt |
+|---|---|
+| **Stufe 1 (MVP, lokal)** | React-Native-App (Expo) ohne Backend, vorführbar über Expo Go: Onboarding, Plan, Bibliothek, Player, Abschluss, Fortschritt, Erinnerungen, Einstellungen, Datenschutzfunktionen. Inhalte (Übungen, Workouts) als JSON im App-Bundle, Daten lokal in SQLite. Entwicklung mit Platzhalter-Medien. |
+| **Stufe 2 (Ausbau)** | Backend, optionales Konto und Sync, Monetarisierung (/M09/: Werbung, Abo), Health Connect / Apple Health, eigene Workouts, Wissensartikel, Auslieferung der Videos per CDN. |
 
 ### 1.2 Musskriterien
 - /M01/ Onboarding mit Fragebogen und Generierung eines personalisierten Plans
@@ -189,8 +197,8 @@ Es soll eine mobile Fitness-App für Pilates und Wall Pilates zu Hause entwickel
 - /M06/ Automatischer Workout-Abschluss mit Zusammenfassung
 - /M07/ Fortschrittstracker (Historie, Kalender, Streak, Minuten, kcal, Gewichtsverlauf, BMI)
 - /M08/ Tägliche Erinnerungen per Push
-- /M09/ Freemium-Modell mit Werbung und Premium-Abo
-- /M10/ DSGVO-konformer Datenschutz inkl. Datenlöschung
+- /M09/ Freemium-Modell mit Werbung und Premium-Abo (Stufe 2; in Stufe 1 nur Premium-Kennzeichnung der Inhalte vorbereitet)
+- /M10/ DSGVO-konformer Datenschutz inkl. Einwilligung für Gesundheitsdaten und Datenlöschung
 - /M11/ Offline-Nutzung bereits geladener Workouts
 
 ### 1.3 Wunschkriterien
@@ -234,29 +242,45 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 ### 3.1 Software
 | Komponente | Anforderung |
 |---|---|
-| Android | ab Android 8.0 (API 26) |
-| iOS | ab iOS 15 (optional, Wunschkriterium) |
-| Backend | REST API, Content-Delivery (CDN) für Videos |
-| Abrechnung | Google Play Billing, StoreKit 2 |
-| Push | Lokale Benachrichtigungen (Erinnerungen), FCM für Kampagnen |
-| Werbung | AdMob (Banner, Interstitial nach Workout, Rewarded optional) |
+| Android | ab Android 8.0 (API 26), Zielplattform Stufe 1 |
+| iOS | ab iOS 15; gleiche Codebasis (React Native / Expo), Veröffentlichung nach Android |
+| Backend | REST API, Content-Delivery (CDN) für Videos (Stufe 2) |
+| Abrechnung | Google Play Billing, StoreKit 2 (Stufe 2) |
+| Push | Lokale Benachrichtigungen (Erinnerungen, Stufe 1), FCM für Kampagnen (Stufe 2) |
+| Werbung | AdMob (Banner, Interstitial nach Workout, Rewarded optional) (Stufe 2) |
 
 ### 3.2 Hardware
 - Smartphone oder Tablet, mind. 2 GB RAM
 - Lautsprecher oder Kopfhörer für Sprachausgabe
 - Speicherbedarf App ca. 80 MB, zusätzlich Video-Cache
 
-### 3.3 Technologievorschlag
-| Schicht | Vorschlag |
+### 3.3 Technologieentscheidung
+Entschieden am 22.10.2026: **React Native mit Expo (TypeScript)**. Gründe: eine Codebasis für Android und iOS, Demos ohne Store-Build direkt über die App **Expo Go** (QR-Code scannen).
+
+**Grundregel Expo Go:** Alle Funktionen der Stufe 1 laufen in Expo Go, mit zwei Ausnahmen, die einen Development Build (EAS Build) brauchen: Verschlüsselung der lokalen DB (/S040/) und Steuerung über den Sperrbildschirm (/F630/). Beide werden so eingebaut, dass die App in Expo Go ohne sie startet (Erkennung über `expo-constants`, Fallback: unverschlüsselte DB, keine Medienbenachrichtigung). Es werden nur Bibliotheken verwendet, die in Expo Go enthalten sind, außer für diese beiden Ausnahmen.
+
+| Schicht | Entscheidung |
 |---|---|
-| Frontend | Flutter oder Kotlin (Jetpack Compose) |
-| Lokale DB | SQLite (Room / Drift) |
-| Backend | Java Spring Boot oder Node.js |
-| Datenbank Server | PostgreSQL |
-| Medien | Objektspeicher (S3-kompatibel) + CDN, Videos als MP4 / HLS |
-| TTS | System-TTS (Android TextToSpeech / AVSpeechSynthesizer) |
-| Analytics | datensparsam, Opt-in |
-| Deployment | Docker |
+| Frontend | React Native über Expo (aktuelles SDK, passend zur aktuellen Expo-Go-App), TypeScript strict |
+| Navigation | Expo Router (dateibasiert, Tabs für die Bottom Navigation) |
+| State Management | Zustand |
+| Lokale DB | expo-sqlite mit Drizzle ORM und Migrationen; Verschlüsselung per SQLCipher-Option von expo-sqlite nur im Development Build (/S040/) |
+| Inhalte Stufe 1 | JSON-Dateien und Medien im Projekt (`assets/content/`), Platzhalter-Medien bis die echten Videos vorliegen. Medien werden über eine generierte Zuordnungsdatei (`require`) eingebunden, damit Expo sie bündelt |
+| Video | expo-video (Schleife, stumm) |
+| Sprachausgabe | expo-speech |
+| Musik | expo-audio; Audio-Modus mit Ducking statt Unterbrechung fremder Musik |
+| Display an | expo-keep-awake |
+| Timer | zeitstempelbasiert (nicht tickbasiert), damit er nach Hintergrund / Sperre korrekt weiterläuft (/L060/) |
+| Erinnerungen | expo-notifications (nur lokale, geplante Benachrichtigungen; in Expo Go nutzbar) |
+| Diagramme | react-native-gifted-charts (basiert auf react-native-svg, in Expo Go enthalten) |
+| Lokalisierung | expo-localization + i18next, DE und EN |
+| Tests | Jest (jest-expo) + React Native Testing Library; Domänenlogik ohne UI testbar |
+| Qualität | ESLint, Prettier, `tsc --noEmit`, GitHub Actions |
+| Demos | `npx expo start` (lokal, ggf. `--tunnel`) und QR-Code in Expo Go scannen; später optional EAS Update für Demo-Links ohne laufenden Rechner |
+| Builds (Stufe 1 Ende / Stufe 2) | EAS Build (Development Build, Store-Builds) |
+| Backend (Stufe 2) | offen, Vorschlag Node.js (TypeScript) + PostgreSQL, Docker |
+| Medien (Stufe 2) | Objektspeicher (S3-kompatibel) + CDN, MP4 / HLS |
+| Analytics | datensparsam, Opt-in (Stufe 2) |
 
 ## 4. Produktfunktionen
 
@@ -266,14 +290,17 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | /F010/ | Begrüßungsbildschirme mit Nutzenversprechen |
 | /F020/ | Abfrage Ziel: Abnehmen, Straffen, Flexibilität, Haltung / Schmerzlinderung, Stress abbauen |
 | /F030/ | Abfrage Geschlecht, Alter (Geburtsjahr) |
-| /F040/ | Abfrage Größe, aktuelles Gewicht, Zielgewicht; Einheiten kg/cm oder lb/ft wählbar |
+| /F032/ | Altersprüfung: Mindestalter 16 Jahre (/S080/). Bei jünger: Hinweisbildschirm, Onboarding endet, es werden keine Daten gespeichert |
+| /F035/ | Gesundheitshinweis (/S090/): kein Ersatz für ärztliche Beratung, bei Schmerzen, Vorerkrankungen oder Schwangerschaft vorher Arzt fragen. Muss bestätigt werden |
+| /F038/ | Einwilligung zur Verarbeitung von Gesundheitsdaten nach Art. 9 DSGVO (/S010/), separat, nicht vorausgewählt, jederzeit widerrufbar. Ohne Einwilligung werden /F040/ und /F090/ übersprungen |
+| /F040/ | Abfrage Größe, aktuelles Gewicht, Zielgewicht; Einheiten kg/cm oder lb/ft wählbar (nur mit Einwilligung /F038/) |
 | /F050/ | Abfrage Pilates-Erfahrung: keine, etwas, regelmäßig |
 | /F060/ | Abfrage Zielzonen (Mehrfachauswahl): Bauch, Arme, Brust, Po, Beine, Ganzkörper |
-| /F070/ | Abfrage Einschränkungen: Knie, Rücken, Handgelenke, keine Bodenübungen (Wunsch /W03/) |
+| /F070/ | Abfrage Einschränkungen (Mehrfachauswahl): Knie, Rücken, Handgelenke, keine Bodenübungen, schwanger / kürzlich entbunden (Wunsch /W03/). Bei Schwangerschaft erneuter Arzthinweis |
 | /F080/ | Abfrage Trainingstage pro Woche und bevorzugte Uhrzeit |
-| /F090/ | Berechnung BMI und Anzeige einer Planvorschau mit realistischer Zielprognose |
+| /F090/ | Berechnung BMI und Anzeige einer Planvorschau mit realistischer Zielprognose (nur mit Einwilligung; ohne Einwilligung Planvorschau ohne Gewichtsprognose) |
 | /F100/ | Anfrage Benachrichtigungsberechtigung |
-| /F110/ | Anzeige der Paywall mit Option "Weiter kostenlos" (gut sichtbar) |
+| /F110/ | Anzeige der Paywall mit Option "Weiter kostenlos" (gut sichtbar) (Stufe 2) |
 
 ### 4.2 Planverwaltung
 | ID | Funktion |
@@ -281,8 +308,8 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | /F200/ | Generierung eines 30-Tage-Plans aus Profil (Level, Zielzonen, Einschränkungen) |
 | /F210/ | Planansicht mit Tagen 1 bis 30, Status: offen, erledigt, gesperrt, Ruhetag |
 | /F220/ | Anzeige des aktuellen Tages auf der Startseite mit Dauer, Übungsanzahl, kcal |
-| /F230/ | Tagesweise Freischaltung, nächster Tag frühestens nach Abschluss des vorherigen |
-| /F240/ | Ruhetage im Plan (z. B. jeder 4. Tag) |
+| /F230/ | Tagesweise Freischaltung: Ein Tag wird freigeschaltet, sobald der vorherige Tag erledigt ist. Es gibt keine Sperre nach Kalendertag; mehrere Tage an einem Kalendertag sind erlaubt |
+| /F240/ | Ruhetage im Plan (z. B. jeder 4. Tag). Ein Ruhetag gilt als erledigt, wenn der Nutzer "Ruhetag abschließen" tippt oder automatisch beim ersten App-Start an einem späteren Kalendertag als dem Abschluss des vorherigen Tages. Ruhetage unterbrechen den Streak nicht |
 | /F250/ | Plan zurücksetzen oder neu generieren (/W05/) |
 | /F260/ | Auswahl weiterer Challenges (z. B. Wall Pilates 28 Tage, Bauch 14 Tage) |
 | /F270/ | Adaptive Anpassung: Feedback "zu leicht / zu schwer" nach Workout beeinflusst Folgetage |
@@ -377,7 +404,7 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 ### 4.11 Monetarisierung
 | ID | Funktion |
 |---|---|
-| /F1200/ | Gratisversion: Grundplan, Teil der Bibliothek, Werbung |
+| /F1200/ | Gratisversion mit Werbung: persönlicher 30-Tage-Plan vollständig, alle Übungsdetails, Bibliothek mit den Kategorien Anfänger, Ganzkörper und Wall Pilates (Workouts mit `premium = false`), eine Challenge. Alle anderen Workouts und Challenges sind Premium. Die Zuordnung erfolgt ausschließlich über das Feld `premium` in den Inhaltsdaten |
 | /F1210/ | Premium Monats- und Jahresabo, optional kostenlose Testphase |
 | /F1220/ | Premium: werbefrei, alle Pläne, Challenges, Bibliothek, Varianten |
 | /F1230/ | Käufe wiederherstellen |
@@ -388,8 +415,8 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 
 | ID | Entität | Attribute |
 |---|---|---|
-| /D010/ | Nutzerprofil | id, geschlecht, geburtsjahr, groesse_cm, gewicht_kg, zielgewicht_kg, ziel, level, zielzonen[], einschraenkungen[], trainingstage, einheitensystem, sprache, erstellt_am |
-| /D020/ | Übung | id, name, beschreibung, schritte[], atemhinweis, fehler[], video_url, thumbnail_url, zielzonen[], level, typ (zeit / wiederholung), standard_dauer_s, standard_wdh, wand (bool), boden (bool), met_wert, variante_leicht_id, variante_schwer_id, premium (bool) |
+| /D010/ | Nutzerprofil | id, geschlecht, geburtsjahr, groesse_cm?, gewicht_kg?, zielgewicht_kg?, ziel, level, zielzonen[], einschraenkungen[] (knie, ruecken, handgelenke, kein_boden, schwangerschaft), trainingstage, einheitensystem, sprache, gesundheitshinweis_bestaetigt_am, einwilligung_gesundheitsdaten (bool), einwilligung_am, erstellt_am |
+| /D020/ | Übung | id, name, beschreibung, schritte[], atemhinweis, fehler[], video_url, thumbnail_url, zielzonen[], level, rolle (aufwaermen / haupt / cooldown), typ (zeit / wiederholung), standard_dauer_s, standard_wdh, wand (bool), boden (bool), belastungen[] (knie, ruecken, handgelenke, bauchlage, rueckenlage), schwangerschaft_geeignet (bool), met_wert, variante_leicht_id, variante_schwer_id, premium (bool) |
 | /D030/ | Workout | id, titel, kategorie, level, zielzonen[], uebungen[] (uebung_id, dauer_s / wdh, reihenfolge), pause_s, geschaetzte_dauer, premium |
 | /D040/ | Plan | id, nutzer_id, typ (persoenlich / challenge), startdatum, tage[] |
 | /D050/ | Plantag | plan_id, tag_nr, workout_id, ruhetag (bool), status, erledigt_am |
@@ -400,7 +427,17 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | /D100/ | Abo | nutzer_id, produkt_id, status, ablauf, plattform, beleg |
 | /D110/ | Artikel | id, titel, inhalt, bild, sprache |
 
-**Kalorienberechnung:** kcal = MET × Gewicht (kg) × Dauer (h). Pilates MET ca. 3,0 (leicht) bis 4,0 (mittel).
+**Kalorienberechnung:** kcal = MET × Gewicht (kg) × Dauer (h). Pilates MET ca. 3,0 (leicht) bis 4,0 (mittel). Ohne Gewichtsangabe (keine Einwilligung) wird ein Standardgewicht von 65 kg verwendet und der Wert als Schätzung gekennzeichnet.
+
+**Abbildung Einschränkung auf Übung (Plan-Generator, Filter):**
+
+| Einschränkung (D010) | Ausgeschlossen werden Übungen mit |
+|---|---|
+| knie | `belastungen` enthält knie |
+| ruecken | `belastungen` enthält ruecken |
+| handgelenke | `belastungen` enthält handgelenke |
+| kein_boden | `boden = true` |
+| schwangerschaft | `schwangerschaft_geeignet = false` (u. a. alle Übungen in Bauchlage und intensive Bauchübungen in Rückenlage) |
 
 ## 6. Produktleistungen (nichtfunktionale Anforderungen)
 
@@ -463,8 +500,9 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | /S050/ | Keine Weitergabe von Gesundheitsdaten an Werbenetzwerke |
 | /S060/ | Consent-Dialog für personalisierte Werbung (UMP / TCF) |
 | /S070/ | Datenexport und Löschung auf Anfrage direkt in der App |
-| /S080/ | Altersgrenze für Kontoerstellung beachten (mind. 16 Jahre ohne Einwilligung Erziehungsberechtigter) |
-| /S090/ | Hinweis: kein Ersatz für ärztliche Beratung, vor allem bei Schmerzen und Schwangerschaft |
+| /S080/ | Mindestalter 16 Jahre für die Nutzung der App (Prüfung im Onboarding /F032/). Store-Altersfreigabe entsprechend setzen |
+| /S090/ | Hinweis: kein Ersatz für ärztliche Beratung, vor allem bei Schmerzen und Schwangerschaft. Pflichtbestätigung im Onboarding (/F035/), dauerhaft abrufbar in den Einstellungen |
+| /S100/ | Widerruf der Einwilligung (/F038/) in den Einstellungen: Körperdaten und Gewichtseinträge werden gelöscht, App bleibt ohne Gewichtsfunktionen nutzbar |
 
 ## 10. Systemarchitektur (Überblick)
 
@@ -507,15 +545,30 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | /T120/ | Datenlöschung ausführen | alle lokalen und Serverdaten gelöscht |
 | /T130/ | Suche "Brücke" | passende Übungen werden gefunden |
 | /T140/ | Eigene Musik läuft, Workout starten | Musik wird bei Ansagen leiser, nicht gestoppt |
+| /T150/ | Geburtsjahr ergibt Alter unter 16 | Hinweis, Onboarding endet, keine Daten gespeichert |
+| /T160/ | Einwilligung Gesundheitsdaten abgelehnt | Keine Körperdatenabfrage, Plan wird erzeugt, kcal als Schätzung gekennzeichnet |
+| /T170/ | Einschränkung "schwanger" gewählt | Plan enthält keine Übung mit schwangerschaft_geeignet = false |
+| /T180/ | Ruhetag, App am nächsten Kalendertag öffnen | Ruhetag erledigt, nächster Tag freigeschaltet, Streak bleibt |
 
 ## 12. Abnahmekriterien
-- Alle Musskriterien /M01/ bis /M11/ erfüllt
-- Alle Testfälle /T010/ bis /T120/ bestanden
+
+**Stufe 1 (MVP)**
+- Musskriterien /M01/ bis /M08/, /M10/ und /M11/ erfüllt
+- Testfälle /T010/ bis /T090/, /T110/ bis /T180/ bestanden
 - Keine kritischen Fehler offen
 - Datenschutzerklärung und Data-Safety-Angaben vollständig
-- Mindestens 100 Übungen mit Video und 30-Tage-Plan für jedes Level vorhanden
+- **50 Übungen** mit Video (siehe `docs/higgsfield_video_prompts.md`) und ein generierbarer 30-Tage-Plan für jedes Level. Während der Entwicklung werden Platzhalter-Medien verwendet; vor Veröffentlichung werden sie durch die finalen Videos ersetzt
 
-## 13. Glossar
+**Stufe 2**
+- /M09/ erfüllt, Testfall /T100/ bestanden
+
+## 13. Content-Produktion
+- Umfang Stufe 1: 50 Übungen, Liste und Metadaten in `docs/higgsfield_video_prompts.md` (verbindlich für die Inhaltsdaten).
+- Videos werden mit Higgsfield (KI-Videogenerierung) erzeugt: 1:1, 1080 × 1080 px, 6 bis 8 s, nahtlose Schleife, ohne Ton und Text.
+- Jedes Video wird vor Freigabe von einer Pilates-Trainerin oder einem Pilates-Trainer auf korrekte Ausführung geprüft. KI-Videos können anatomische Fehler enthalten.
+- Bis zur Freigabe verwendet die App Platzhalter-Medien mit identischen Dateinamen (`assets/content/videos/<id>.mp4`, `assets/content/thumbs/<id>.jpg`), sodass der Austausch keine Codeänderung erfordert.
+
+## 14. Glossar
 
 | Begriff | Erklärung |
 |---|---|
@@ -527,6 +580,13 @@ Selbstständiges Pilates-Training zu Hause, im Büro oder draußen, ohne Geräte
 | Paywall | Bildschirm mit Kaufangebot für Premium |
 | TTS | Text-to-Speech, Sprachausgabe |
 | Health Connect | Gesundheitsdaten-Schnittstelle von Android |
+
+## 15. Änderungshistorie
+
+| Version | Datum | Änderung |
+|---|---|---|
+| 1.0 | 21.10.2026 | Erstfassung |
+| 1.1 | 22.10.2026 | React Native mit Expo festgelegt (Demos über Expo Go); Ausbaustufen 1 / 2 eingeführt (Backend, Monetarisierung später); Übungsumfang auf 50 reduziert, Platzhalter-Medien für die Entwicklung; Widersprüche aufgelöst: Einwilligung Gesundheitsdaten vor Körperdaten (/F038/), Altersgrenze 16 (/F032/, /S080/), Schwangerschaft als Einschränkung (/F070/), Regeln für Freischaltung und Ruhetage (/F230/, /F240/), Gratis- / Premium-Abgrenzung (/F1200/); Datenmodell um belastungen, rolle, schwangerschaft_geeignet und Einwilligung ergänzt; Testfälle /T150/ bis /T180/ |
 
 ---
 
