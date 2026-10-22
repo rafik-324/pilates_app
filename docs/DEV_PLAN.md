@@ -15,7 +15,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 4 | Plan-Generator und Planansicht | erledigt (Prototyp) |
 | 5 | Bibliothek, Suche, Übungsdetails | erledigt (Prototyp) |
 | 6 | Workout-Player | erledigt (Prototyp) |
-| 7 | Workout-Abschluss und Fortschritt | offen |
+| 7 | Workout-Abschluss und Fortschritt | erledigt (Prototyp) |
 | 8 | Erinnerungen, Einstellungen, Datenschutz | offen |
 | 9 | Feinschliff und MVP-Abnahme | offen |
 
@@ -229,12 +229,21 @@ Prototyp-Stand:
 
 ## Phase 7: Workout-Abschluss und Fortschritt
 
-- [ ] Automatischer Abschluss (/F700/), Session speichern, Plantag erledigt (/F750/)
-- [ ] Abschlussbildschirm: Dauer, Übungen, kcal (ggf. als Schätzung), Streak (/F710/), Feedback zu leicht / passend / zu schwer (/F720/) → adaptive Anpassung aus Phase 4 aufrufen, Gewicht eintragen (nur mit Einwilligung, /F730/)
-- [ ] Fortschritt-Tab: Gesamtstatistik (/F800/), Wochen-Balkendiagramm (/F810/), Kalender (/F820/), Streak (/F830/), Gewichtsverlauf mit Hinzufügen / Bearbeiten / Löschen (/F840/), BMI (/F850/, /T110/), Historie (/F860/)
-- [ ] CSV-Export über Teilen-Dialog (/F880/)
+- [x] Automatischer Abschluss (/F700/), Session speichern, Plantag erledigt (/F750/)
+- [x] Abschlussbildschirm: Dauer, Übungen, kcal (ggf. als Schätzung), Streak (/F710/), Feedback zu leicht / passend / zu schwer (/F720/) → adaptive Anpassung aus Phase 4 aufrufen, Gewicht eintragen (nur mit Einwilligung, /F730/)
+- [x] Fortschritt-Tab: Gesamtstatistik (/F800/), Wochen-Balkendiagramm (/F810/), Kalender (/F820/), Streak (/F830/), Gewichtsverlauf mit Hinzufügen / Bearbeiten / Löschen (/F840/), BMI (/F850/, /T110/), Historie (/F860/)
+- [x] CSV-Export über Teilen-Dialog (/F880/)
 
 Demo: Workout abschließen, Statistik und Kalender aktualisieren sich.
+
+Prototyp-Stand:
+
+- Abschluss (`/complete?session=`): großer grüner Haken, Dauer, Übungen, kcal (mit "~" und Hinweis bei Standardgewicht), aktueller Streak. Feedback als Chips (zu leicht / passend / zu schwer), wird in der Session gespeichert und bei Sessions eines persönlichen Plans einmalig an `applyFeedback` (/F270/, nächste 3 Trainingstage) übergeben. Gewicht eintragen nur mit Einwilligung; das Profilgewicht folgt dem jüngsten Eintrag. "Teilen" über den System-Teilen-Dialog (8.2), nur Text
+- Fortschritt-Tab: Workouts / Minuten / kcal gesamt (nur abgeschlossene), aktueller und bester Streak (Ruhetage aus allen Plänen überbrücken), Wochen-Balkendiagramm Mo bis So mit Wochenwechsel, Monatskalender mit Trainingstagen als gefüllte Kreise, Gewichtsverlauf als Liniendiagramm mit Hinzufügen / Bearbeiten / Löschen (Sheet mit Datum und Wert, kg oder lb), BMI mit Einordnung, Historie aller Sessions inkl. Abbrüche mit Detail-Sheet
+- Diagramme: eigene SVG-Komponenten `BarChart` und `LineChart` im Design-System (react-native-svg) statt react-native-gifted-charts. Grund: nur zwei einfache Diagramme nötig, volle Kontrolle über die Tokens (Schwarz / Grau, aktueller Wert in `accentText`), keine weitere Abhängigkeit mit Risiko für Expo Go. Abweichung von Pflichtenheft 3.3 (Bibliothekswahl), funktional gleich
+- CSV-Export (/F880/): Sessions und Gewicht, Semikolon-getrennt, über `expo-file-system` (Cache-Datei) und `expo-sharing`
+- Domäne `src/domain/progress.ts` (Summen, Trainingstage, Wochenminuten, Monatsraster, Gewichtsreihe, CSV, Gewichtseingabe mit Komma) mit Unit-Tests; UI-Tests für Abschluss, Feedback mit Plananpassung, Gewicht mit / ohne Einwilligung, /T110/, Export und Streak über Ruhetage (/T180/)
+- Offen: Widerruf der Einwilligung löscht Gewichtseinträge erst mit der Datenschutz-Seite in Phase 8 (/S100/); ohne Einwilligung werden vorhandene Einträge bereits nicht angezeigt
 
 ## Phase 8: Erinnerungen, Einstellungen, Datenschutz
 

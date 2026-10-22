@@ -16,3 +16,5 @@ export { Icon } from '../icons/Icon';
 export type { IconName } from '../icons/Icon';
 export { BodyMap, type BodyZone } from './BodyMap';
 export { LoopVideo } from './LoopVideo';
+export { BarChart } from './BarChart';
+export { LineChart } from './LineChart';

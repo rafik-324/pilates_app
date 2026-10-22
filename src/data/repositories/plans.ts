@@ -140,6 +140,16 @@ export function createPlanRepository(db: AppDb) {
         .where(and(eq(planDays.planId, planId), eq(planDays.tagNr, tagNr)))
         .run();
     },
+    /** Abschlussdaten aller erledigten Ruhetage (für den Streak, /F240/). */
+    listCompletedRestDates(): string[] {
+      return db
+        .select({ erledigtAm: planDays.erledigtAm })
+        .from(planDays)
+        .where(and(eq(planDays.ruhetag, true), eq(planDays.status, 'erledigt')))
+        .all()
+        .map((r) => r.erledigtAm)
+        .filter((d): d is string => !!d);
+    },
     deactivate(planId: number): void {
       db.update(plans).set({ aktiv: false }).where(eq(plans.id, planId)).run();
     },

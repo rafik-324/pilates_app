@@ -37,16 +37,12 @@ import {
 } from '@/ui/components';
 import { ThemeProvider, useTheme } from '@/ui/theme';
 import { useAudioCues } from './audio';
+import { formatClock } from './format';
 import type { ResumeSnapshot } from './service';
 import { getPlayerService } from './store';
 import { usePlayerController } from './usePlayerController';
 
 const REASONS: AbortReason[] = ['zu_schwer', 'keine_zeit', 'sonstiges'];
-
-export function formatClock(seconds: number): string {
-  const s = Math.max(0, Math.ceil(seconds));
-  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
-}
 
 /** Workout-Player (/F500/ bis /F630/), immer im dunklen Farbschema. */
 export function PlayerScreen() {

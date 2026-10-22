@@ -25,7 +25,9 @@ npm start
 2. Handy und Rechner müssen im selben WLAN sein
 3. Anderes Netz oder Verbindungsprobleme: `npm run start:tunnel`
 
-Hell / Dunkel und Deutsch / Englisch lassen sich im Tab "Profil" umschalten. Dort gibt es im Entwicklungsmodus auch die Theme-Vorschau.
+Hell / Dunkel und Deutsch / Englisch lassen sich im Tab "Profil" umschalten. Dort gibt es im Entwicklungsmodus auch die Theme-Vorschau, den Premium-Schalter und "Daten löschen, Onboarding neu starten".
+
+Demo-Ablauf (Stand Phase 7): Onboarding durchklicken → Plan-Tab "Start" → Workout-Details (optional "Anpassen") → "Workout starten" → Player läuft ohne Eingriff bis zum Abschluss → Feedback / Gewicht → Fortschritt-Tab zeigt Statistik, Kalender und Verlauf. Entdecken: Suche "Brücke", Filter "Ohne Boden", Übung antippen für Video und Details.
 
 ## Demo mit Expo Go (Schritt für Schritt)
 
@@ -44,6 +46,7 @@ Hell / Dunkel und Deutsch / Englisch lassen sich im Tab "Profil" umschalten. Dor
 | `npm run lint` | ESLint (inkl. Regeln gegen feste Farben / Abstände im Feature-Code) |
 | `npm test` | Jest (jest-expo) |
 | `npm run doctor` | `expo-doctor` |
+| `npm run generate:audio` | Platzhalter-Musik und Signalton erzeugen (`assets/audio/`) |
 
 Abhängigkeiten immer mit `npx expo install <paket>` hinzufügen.
 
