@@ -4,6 +4,8 @@ import { View } from 'react-native';
 import { getContent } from '@/data/content/loader';
 import { localized } from '@/domain/content';
 import { useLang, useTranslation } from '@/i18n';
+import { getPlayerService } from '@/features/player/store';
+import type { ResumeSnapshot } from '@/features/player/service';
 import { refToParams } from '@/features/workout/resolve';
 import { useProfile } from '@/state/profile';
 import {
@@ -35,9 +37,13 @@ export function PlanScreen() {
   const [tab, setTab] = useState<'personal' | 'challenge'>('personal');
   const [confirm, setConfirm] = useState<Confirm>(null);
 
+  const [resumable, setResumable] = useState<ResumeSnapshot | null>(null);
+  const [discardOpen, setDiscardOpen] = useState(false);
+
   useFocusEffect(
     useCallback(() => {
       refresh();
+      setResumable(getPlayerService().loadSnapshot());
     }, [refresh]),
   );
 
@@ -99,6 +105,29 @@ export function PlanScreen() {
             onPress={() => setTab('challenge')}
           />
         </View>
+      ) : null}
+
+      {resumable ? (
+        <Card>
+          <Text variant="title3">{t('player.resumeTitle')}</Text>
+          <Text tone="muted">
+            {resumable.workout.title
+              ? localized(resumable.workout.title, lang)
+              : t('plan.day', { n: resumable.workout.tagNr })}
+          </Text>
+          <Button
+            title={t('player.resumeAction')}
+            variant="secondary"
+            fullWidth
+            onPress={() => router.push({ pathname: '/player', params: { resume: '1' } })}
+          />
+          <Button
+            title={t('player.resumeDiscard')}
+            variant="ghost"
+            fullWidth
+            onPress={() => setDiscardOpen(true)}
+          />
+        </Card>
       ) : null}
 
       {current ? (
@@ -208,6 +237,21 @@ export function PlanScreen() {
           onPress={() => setConfirm({ kind: 'reset' })}
         />
       </View>
+
+      <Dialog
+        visible={discardOpen}
+        title={t('player.discardTitle')}
+        message={t('player.discardMessage')}
+        confirmLabel={t('player.resumeDiscard')}
+        cancelLabel={t('common.cancel')}
+        destructive
+        onConfirm={() => {
+          getPlayerService().clearSnapshot();
+          setResumable(null);
+          setDiscardOpen(false);
+        }}
+        onCancel={() => setDiscardOpen(false)}
+      />
 
       <Dialog
         visible={confirm !== null}

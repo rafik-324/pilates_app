@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "doctor": "expo-doctor",
     "generate:placeholders": "node scripts/generate-placeholders.mjs",
-    "db:generate": "drizzle-kit generate && node scripts/build-migrations.mjs"
+    "db:generate": "drizzle-kit generate && node scripts/build-migrations.mjs",
+    "generate:audio": "node scripts/generate-audio.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.4.2",

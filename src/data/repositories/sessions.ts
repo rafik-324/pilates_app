@@ -17,7 +17,11 @@ export type SessionRecord = {
   abgeschlossen: boolean;
   uebungenErledigt: number;
   feedback: FeedbackValue | null;
+  uebungenGesamt: number;
+  abbruchGrund: AbortReason | null;
 };
+
+export type AbortReason = 'zu_schwer' | 'keine_zeit' | 'sonstiges';
 
 export type NewSession = Omit<SessionRecord, 'id'>;
 
@@ -31,6 +35,9 @@ export function createSessionRepository(db: AppDb) {
         (db.select().from(sessions).where(eq(sessions.id, id)).get() as
           SessionRecord | undefined) ?? null
       );
+    },
+    update(id: number, patch: Partial<NewSession>): void {
+      db.update(sessions).set(patch).where(eq(sessions.id, id)).run();
     },
     setFeedback(id: number, feedback: FeedbackValue): void {
       db.update(sessions).set({ feedback }).where(eq(sessions.id, id)).run();

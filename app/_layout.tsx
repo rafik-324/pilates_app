@@ -24,7 +24,11 @@ function Shell() {
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       <Stack
         screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.background } }}
-      />
+      >
+        {/* Player und Abschluss nicht per Wischgeste verlassen (Abbruchdialog /F610/) */}
+        <Stack.Screen name="player" options={{ gestureEnabled: false, animation: 'fade' }} />
+        <Stack.Screen name="complete" options={{ gestureEnabled: false }} />
+      </Stack>
     </>
   );
 }

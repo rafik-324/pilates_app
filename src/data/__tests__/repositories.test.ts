@@ -139,6 +139,8 @@ describe('Sessions', () => {
       abgeschlossen: true,
       uebungenErledigt: 10,
       feedback: null,
+      uebungenGesamt: 10,
+      abbruchGrund: null,
     };
     const a = ctx.repos.sessions.add(s);
     ctx.repos.sessions.add({ ...s, start: '2026-10-25T08:00:00.000Z' });

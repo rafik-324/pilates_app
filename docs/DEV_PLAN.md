@@ -14,7 +14,7 @@ Dieser Plan wird Phase für Phase von Claude-Cloud-Sessions abgearbeitet. Regeln
 | 3 | Onboarding | erledigt (Prototyp) |
 | 4 | Plan-Generator und Planansicht | erledigt (Prototyp) |
 | 5 | Bibliothek, Suche, Übungsdetails | erledigt (Prototyp) |
-| 6 | Workout-Player | offen |
+| 6 | Workout-Player | erledigt (Prototyp) |
 | 7 | Workout-Abschluss und Fortschritt | offen |
 | 8 | Erinnerungen, Einstellungen, Datenschutz | offen |
 | 9 | Feinschliff und MVP-Abnahme | offen |
@@ -203,16 +203,29 @@ Prototyp-Stand:
 
 Kernstück; Logik strikt von UI trennen.
 
-- [ ] Player-Engine in `src/domain/player/` als reine Zustandsmaschine (Vorbereitung, Übung, Pause, fertig, abgebrochen) mit injizierbarer Uhr; Zeit über Zeitstempel berechnet, nicht über Ticks (/L060/)
-- [ ] Tests mit Fake-Uhr: /T030/ (läuft ohne Eingriff bis zum Ende), /T040/ (Pause überspringen), /T050/ (Halbzeit bei 15 s einer 30-s-Übung), +20 s, vorherige / nächste, Pause / Fortsetzen, Wiederholungsübung mit Weiter
-- [ ] Player-Screen gemäß 8.2: Video oben ca. 50 %, großer Timer, Fortschrittsbalken, Steuerung unten, lesbar aus 2 m (/F500/ bis /F530/, /F580/, /F590/)
-- [ ] Sprachausgabe mit expo-speech: Übungsname, Start, Halbzeit, letzte 3 Sekunden, Ende, nächste Übung (/F540/, /F550/), Sprache gemäß App-Sprache
-- [ ] Hintergrundmusik mit expo-audio, Ein / Aus, getrennte Lautstärken Stimme / Musik (/F560/); Audio-Modus so, dass fremde Musik geduckt statt gestoppt wird (/F570/, /T140/). Platzhalter-Musikdatei (lizenzfrei oder generierter Ton) verwenden
-- [ ] Display bleibt an (expo-keep-awake, /F600/)
-- [ ] Abbruchdialog (/F610/), Fortsetzen nach Neustart (/F620/, /T070/): Player-Zustand in DB sichern
-- [ ] Hintergrund / Sperre: Timer korrekt nach Rückkehr (Zeitstempel). Medienbenachrichtigung (/F630/) nur im Development Build, in Expo Go sauber deaktiviert; Umsetzung als eigener Punkt dokumentieren, falls nicht in dieser Phase möglich
+- [x] Player-Engine in `src/domain/player/` als reine Zustandsmaschine (Vorbereitung, Übung, Pause, fertig, abgebrochen) mit injizierbarer Uhr; Zeit über Zeitstempel berechnet, nicht über Ticks (/L060/)
+- [x] Tests mit Fake-Uhr: /T030/ (läuft ohne Eingriff bis zum Ende), /T040/ (Pause überspringen), /T050/ (Halbzeit bei 15 s einer 30-s-Übung), +20 s, vorherige / nächste, Pause / Fortsetzen, Wiederholungsübung mit Weiter
+- [x] Player-Screen gemäß 8.2: Video oben ca. 50 %, großer Timer, Fortschrittsbalken, Steuerung unten, lesbar aus 2 m (/F500/ bis /F530/, /F580/, /F590/)
+- [x] Sprachausgabe mit expo-speech: Übungsname, Start, Halbzeit, letzte 3 Sekunden, Ende, nächste Übung (/F540/, /F550/), Sprache gemäß App-Sprache
+- [x] Hintergrundmusik mit expo-audio, Ein / Aus, getrennte Lautstärken Stimme / Musik (/F560/); Audio-Modus so, dass fremde Musik geduckt statt gestoppt wird (/F570/, /T140/). Platzhalter-Musikdatei (lizenzfrei oder generierter Ton) verwenden
+- [x] Display bleibt an (expo-keep-awake, /F600/)
+- [x] Abbruchdialog (/F610/), Fortsetzen nach Neustart (/F620/, /T070/): Player-Zustand in DB sichern
+- [x] Hintergrund / Sperre: Timer korrekt nach Rückkehr (Zeitstempel). Medienbenachrichtigung (/F630/) nur im Development Build, in Expo Go sauber deaktiviert; Umsetzung als eigener Punkt dokumentieren, falls nicht in dieser Phase möglich
 
 Demo: ein komplettes Workout in Expo Go laufen lassen, ohne etwas anzufassen.
+
+Prototyp-Stand:
+
+- Engine `src/domain/player/engine.ts`: Phasen Vorbereitung, Übung, Pause, fertig; Zeit nur aus Zeitstempeln (`now` wird übergeben). `tick` holt nach Hintergrund / Sperre alle verpassten Phasenwechsel exakt nach. Aktionen: weiter / überspringen, vorherige, Pause / Fortsetzen, +20 s, Wiederholungen bestätigen. Ereignisse für Ansagen: Phasenwechsel, Halbzeit (ab 10-s-Übungen), Countdown 3 / 2 / 1, fertig. 13 Unit-Tests mit Fake-Uhr (/T030/, /T040/, /T050/, /T070/, Pause, +20 s, Navigation, Wiederholungen, Hintergrund)
+- "Abgebrochen" ist kein eigener Engine-Zustand: der Abbruch speichert eine Session mit `abgeschlossen = false` und Grund (neue Spalten `abbruch_grund`, `uebungen_gesamt`, Migration 0001) und sichert den pausierten Zustand
+- Player-Screen (`/player`, immer dunkel): Fortschrittsbalken, Video ca. 50 % der Höhe, Name, Timer im `timer`-Stil, Steuerung als `IconButton`s; Wiederholungsübung mit "Fertig, weiter"; Vorbereitung und Pause mit "Jetzt starten" / "Überspringen" und "+20 s". Wischgeste zurück ist im Player gesperrt, die Zurück-Taste (Android) öffnet den Abbruchdialog
+- Sprachausgabe (expo-speech, Sprache der App, Stimme / Lautstärke aus den Einstellungen): Vorbereitung mit erster Übung, Übungsstart mit Dauer bzw. Wiederholungen, Halbzeit, Pause mit nächster Übung, Abschluss. Letzte 3 Sekunden als Signalton
+- Musik (expo-audio): Platzhalter-Schleife und Signalton werden synthetisch von `npm run generate:audio` erzeugt (`assets/audio/`, lizenzfrei). Ton-Sheet im Player: Musik an / aus, Lautstärke Stimme und Musik getrennt (in den Einstellungen gespeichert). Audio-Modus `duckOthers`: fremde Musik läuft leiser weiter (/F570/)
+- Pausendauer kommt aus den Einstellungen (`pauseS`, Standard 10 s), nicht aus dem Workout, damit /F1130/ überall gilt; Countdown aus `countdownS`
+- Fortsetzen (/F620/): Zustand liegt bei jedem Phasenwechsel, beim Wechsel in den Hintergrund und beim Abbruch in `kv` (`player.resume`). Der Plan-Tab zeigt dann "Unterbrochenes Workout" mit Fortsetzen / Verwerfen; die Zeit seit dem Schließen zählt als Pause. Beim Abschluss wird dieselbe Session aktualisiert
+- Regulärer Abschluss: Session speichern (kcal aus tatsächlich trainierter Zeit je Übung), Plantag erledigt, Weiterleitung auf `/complete` (einfacher Abschlussbildschirm, Ausbau in Phase 7)
+- Offen: Medienbenachrichtigung und Weiterlaufen bei gesperrtem Bildschirm (/F630/, /T060/ Benachrichtigung) brauchen einen Development Build mit Hintergrund-Audio und sind nicht umgesetzt. Der Timer selbst stimmt nach Rückkehr, Ansagen während der Sperre entfallen
+- Offen: Sprachausgabe, Ducking und Musik sind nur in Jest (gemockt) geprüft, nicht auf einem Gerät
 
 ## Phase 7: Workout-Abschluss und Fortschritt
 
