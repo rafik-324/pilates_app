@@ -7,6 +7,7 @@ Mobile Pilates- und Wall-Pilates-App für zu Hause. React Native mit Expo, TypeS
 - `pflichtenheft_pilates_workout_at_home.md`: Anforderungen. IDs wie /F500/, /D020/, /T030/ verweisen dorthin
 - `docs/DEV_PLAN.md`: Phasenplan Stufe 1 mit Status und Checkboxen
 - `docs/higgsfield_video_prompts.md`: verbindliche Liste der 50 Übungen (IDs, Flags) und Videoproduktion
+- `docs/DESIGN.md`: Design-System (Schwarz-Weiß, Lila-Akzent, Grün / Rot nur für Status), Theme-Architektur
 
 ## Arbeitsweise für Cloud-Sessions
 
@@ -24,6 +25,7 @@ Mobile Pilates- und Wall-Pilates-App für zu Hause. React Native mit Expo, TypeS
 - Keine nativen Ordner (`ios/`, `android/`) einchecken; Konfiguration nur über `app.json` / `app.config.ts` und Config Plugins
 - Domänenlogik (`src/domain/`) ohne React- und Expo-Importe, vollständig mit Jest testbar
 - Timer zeitstempelbasiert, nie über gezählte Intervalle
+- **UI austauschbar halten:** Feature-Code nutzt nur `src/ui/components/` und `useTheme()`. Hex-Codes nur in `src/ui/theme/palette.ts`, keine festen Farben, Schriftgrößen oder Abstände in `app/` oder `src/features/`. Details in `docs/DESIGN.md`
 - Alle UI-Texte über i18n (`src/i18n/de.json`, `en.json`)
 - Medien nur über `src/data/content/media.generated.ts` einbinden (wird von `scripts/generate-placeholders` erzeugt)
 - Gesundheitsdaten (Gewicht, Größe) nur speichern, wenn die Einwilligung /F038/ erteilt ist

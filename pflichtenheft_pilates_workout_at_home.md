@@ -485,7 +485,10 @@ Entschieden am 22.10.2026: **React Native mit Expo (TypeScript)**. Gründe: eine
 | Paywall | Vorteile, Preise, Schließen-Button sichtbar |
 
 ### 8.3 Gestaltung
-- Ruhige, helle Farbwelt, Dark Mode optional
+Verbindliches Design-System: `docs/DESIGN.md`.
+- Minimalistisch in Schwarz-Weiß; Lila als einzige Akzentfarbe für die wichtigste Aktion, Grün nur für Erfolg / Bestätigung, Rot nur für Fehler / Abbruch / Löschen
+- Hell- und Dunkelmodus nach Systemeinstellung (/W10/ damit umgesetzt), Player immer dunkel
+- Theme über Design-Tokens austauschbar, ohne Feature-Code zu ändern
 - Große Touch-Ziele (mind. 48 dp)
 - Nach Ablauf aller Übungen kein Bedienschritt nötig
 

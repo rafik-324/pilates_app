@@ -27,6 +27,7 @@ Status-Werte: `offen`, `in Arbeit`, `erledigt (PR #n)`.
 - `npx expo-doctor` meldet keine Fehler
 - Neue Domänenlogik hat Unit-Tests; genannte Testfälle aus dem Pflichtenheft sind als automatisierte Tests umgesetzt, soweit ohne Gerät möglich
 - Alle sichtbaren Texte über i18n (DE und EN), keine fest eingebauten Strings
+- UI nur aus Komponenten und Tokens des Design-Systems (`docs/DESIGN.md`), keine festen Farben, Größen oder Abstände im Feature-Code
 - App startet in Expo Go (keine Bibliothek ohne Expo-Go-Unterstützung, außer den Ausnahmen in Pflichtenheft 3.3)
 - Checkboxen dieser Phase abgehakt, Statustabelle aktualisiert, Abschnitt "Demo" der Phase ausgefüllt
 
@@ -47,7 +48,9 @@ Ziel: lauffähiges Expo-Grundgerüst, das man per QR-Code in Expo Go öffnen kan
   - `src/ui/` gemeinsame Komponenten und Theme
   - `src/i18n/` Übersetzungen
   - `assets/content/` Inhaltsdaten und Medien
-- [ ] Theme mit hellem und dunklem Farbschema, ruhige helle Farbwelt (Pflichtenheft 8.3), Touch-Ziele mindestens 48 dp
+- [ ] Design-System gemäß `docs/DESIGN.md`: Theme-Struktur (`palette.ts`, `themes/mono.ts`, Registry, `ThemeProvider`, `useTheme`), Hell und Dunkel, Inter-Schrift, alle Basis-Komponenten aus Abschnitt 6, `Icon`-Wrapper
+- [ ] ESLint-Regel gegen Farbliterale außerhalb von `src/ui/theme/`; Test für WCAG-Kontraste der Theme-Tokens
+- [ ] Entwickler-Screen "Theme-Vorschau" mit allen Komponenten in Hell und Dunkel
 - [ ] i18n (expo-localization + i18next) mit `de.json` und `en.json`, Gerätesprache als Standard
 - [ ] Zustand installieren; Tooling: ESLint (`npx expo lint`), Prettier, TypeScript strict, Jest mit `jest-expo` und React Native Testing Library
 - [ ] npm-Skripte: `start`, `start:tunnel` (`expo start --tunnel`), `typecheck`, `lint`, `test`, `doctor`
@@ -72,7 +75,7 @@ Ziel: alle 50 Übungen und ein Satz Workouts als Daten, mit Platzhaltern statt V
 - [ ] `assets/content/exercises.json` mit allen 50 Übungen aus `docs/higgsfield_video_prompts.md` Abschnitt 5.1 (IDs, Zielzonen, Level, Rolle, Typ, Standarddauer / -wiederholungen, boden, wand, belastungen, schwangerschaft_geeignet, premium, MET). Texte (Name, Beschreibung, 3 bis 5 Schritte, Atemhinweis, 2 bis 3 häufige Fehler) auf DE und EN, fachlich sinnvoll formuliert. Varianten leichter / schwerer verknüpfen, wo eine passende Übung in der Liste existiert
 - [ ] `assets/content/workouts.json` mit mindestens 16 Workouts verteilt auf die Kategorien aus /F300/ (Wall Pilates, Ganzkörper, Bauch, Po & Beine, Arme, Rücken / Haltung, Stretching, Anfänger), je 5 bis 20 Minuten, `premium` gemäß /F1200/
 - [ ] `assets/content/challenges.json`: Wall Pilates 28 Tage (gratis), Bauch 14 Tage (Premium)
-- [ ] Platzhalter-Medien: Skript `scripts/generate-placeholders` erzeugt pro Übung `assets/content/thumbs/<id>.jpg` (farbige Fläche mit Übungsname, Farbe nach Zielzone) und verwendet für alle Übungen ein kleines gemeinsames Platzhalter-Loop-Video. Ersatz durch echte Videos darf keine Codeänderung erfordern
+- [ ] Platzhalter-Medien: Skript `scripts/generate-placeholders` erzeugt pro Übung `assets/content/thumbs/<id>.jpg` (Graustufen-Fläche mit Übungsname, siehe `docs/DESIGN.md` Abschnitt 8) und verwendet für alle Übungen ein kleines gemeinsames Platzhalter-Loop-Video. Ersatz durch echte Videos darf keine Codeänderung erfordern
 - [ ] Skript erzeugt `src/data/content/media.generated.ts` (Zuordnung ID → `require(...)`), weil Metro nur statische `require`-Pfade bündelt; das Skript bevorzugt `videos/<id>.mp4`, falls vorhanden, sonst den Platzhalter
 - [ ] Content-Loader mit Validierung beim Start (im Dev-Modus Fehler bei ungültigen Daten)
 - [ ] Tests: Schema-Validierung aller Dateien, 50 eindeutige IDs, alle in Workouts referenzierten Übungen existieren, Varianten-Verweise gültig, mindestens 15 Übungen mit `boden = false`
