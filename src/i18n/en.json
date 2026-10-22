@@ -1,0 +1,272 @@
+{
+  "app": {
+    "name": "Pilates at Home"
+  },
+  "tabs": {
+    "plan": "Plan",
+    "discover": "Discover",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "start": "Start",
+    "min": "{{count}} min",
+    "kcal": "{{count}} kcal",
+    "kcalEstimate": "approx. {{count}} kcal"
+  },
+  "placeholder": {
+    "plan": "Your personal plan will appear here.",
+    "discover": "Discover workouts and exercises.",
+    "progress": "Your progress will appear here."
+  },
+  "profile": {
+    "title": "Profile",
+    "appearance": "Appearance",
+    "scheme": "Color scheme",
+    "schemeSystem": "System",
+    "schemeLight": "Light",
+    "schemeDark": "Dark",
+    "language": "Language",
+    "languageSystem": "System",
+    "languageDe": "Deutsch",
+    "languageEn": "English",
+    "developer": "Developer",
+    "themePreview": "Theme preview",
+    "devReset": "Delete data, restart onboarding"
+  },
+  "themePreview": {
+    "title": "Theme preview",
+    "buttons": "Buttons",
+    "cards": "Cards and selection",
+    "chips": "Chips",
+    "progress": "Progress",
+    "stats": "Stats",
+    "lists": "Lists",
+    "dialog": "Dialog",
+    "openDialog": "Open dialog",
+    "typography": "Typography",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "ghost": "Text",
+    "success": "Success",
+    "danger": "Delete",
+    "dayCard": "Day 3",
+    "dayCardMeta": "18 min · 9 exercises · approx. 64 kcal",
+    "selectA": "Lose weight",
+    "selectB": "Flexibility",
+    "dialogTitle": "Reset plan?",
+    "dialogMessage": "Your progress in the plan will be lost."
+  },
+  "categories": {
+    "wall_pilates": "Wall Pilates",
+    "ganzkoerper": "Full Body",
+    "bauch": "Abs",
+    "po_beine": "Glutes & Legs",
+    "arme": "Arms",
+    "ruecken_haltung": "Back / Posture",
+    "stretching": "Stretching",
+    "anfaenger": "Beginner"
+  },
+  "levels": {
+    "1": "Beginner",
+    "2": "Intermediate",
+    "3": "Advanced"
+  },
+  "discover": {
+    "title": "Discover",
+    "workouts": "{{count}} workouts",
+    "premium": "Premium"
+  },
+  "startup": {
+    "dbError": "The database could not be opened"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "finish": "Done",
+    "backLabel": "Back",
+    "welcome": {
+      "title": "Welcome to Pilates at Home",
+      "subtitle": "Your Pilates plan for home, no equipment needed, with or without a wall.",
+      "point1": "Personal 30-day plan",
+      "point2": "Guided workouts with voice prompts",
+      "point3": "Your progress at a glance",
+      "start": "Get started"
+    },
+    "goal": {
+      "title": "What is your goal?",
+      "abnehmen": "Lose weight",
+      "straffen": "Tone up",
+      "flexibilitaet": "Become more flexible",
+      "haltung": "Improve posture / ease pain",
+      "stress": "Reduce stress"
+    },
+    "gender": {
+      "title": "What is your gender?",
+      "subtitle": "This helps with calorie estimates and exercise selection.",
+      "weiblich": "Female",
+      "maennlich": "Male",
+      "divers": "Non-binary",
+      "keine_angabe": "Prefer not to say"
+    },
+    "birthyear": {
+      "title": "What year were you born?",
+      "subtitle": "The app is for ages 16 and up.",
+      "label": "Birth year",
+      "placeholder": "e.g. 1990",
+      "invalid": "Please enter a valid birth year."
+    },
+    "underage": {
+      "title": "Not yet",
+      "text": "The app can only be used from age 16. No data has been saved.",
+      "correct": "Correct my entry"
+    },
+    "health": {
+      "title": "Important notice",
+      "text": "This app does not replace medical advice. Talk to your doctor before training, especially if you have pain, health conditions or are pregnant. You train at your own responsibility.",
+      "confirm": "I have read and understood this notice."
+    },
+    "consent": {
+      "title": "Consent for health data",
+      "text": "For weight, height and BMI we process health data (Art. 9 GDPR). It stays on your device only. Consent is voluntary and can be withdrawn in settings at any time. Without consent you can keep using the app; calories will be estimated.",
+      "agree": "I consent",
+      "decline": "Continue without body data"
+    },
+    "body": {
+      "title": "Your body data",
+      "subtitle": "Optional. It stays on your device.",
+      "metric": "kg / cm",
+      "imperial": "lb / ft",
+      "height": "Height",
+      "weight": "Weight",
+      "target": "Target weight",
+      "cm": "cm",
+      "kg": "kg",
+      "lb": "lb",
+      "ft": "ft",
+      "in": "in",
+      "invalid": "Please enter plausible values."
+    },
+    "experience": {
+      "title": "How much Pilates experience do you have?",
+      "none": "None",
+      "noneHint": "I am just starting",
+      "some": "Some",
+      "someHint": "I know the basic exercises",
+      "regular": "Regular",
+      "regularHint": "I have trained for a while"
+    },
+    "zones": {
+      "title": "Which areas do you want to train?",
+      "subtitle": "You can select several.",
+      "bauch": "Abs",
+      "arme": "Arms",
+      "brust": "Chest",
+      "po": "Glutes",
+      "beine": "Legs",
+      "ganzkoerper": "Full body"
+    },
+    "limits": {
+      "title": "Do you have any limitations?",
+      "subtitle": "We adapt the exercises. Without a selection, just continue.",
+      "knie": "Knees",
+      "ruecken": "Back",
+      "handgelenke": "Wrists",
+      "kein_boden": "No floor exercises",
+      "schwangerschaft": "Pregnant / recently gave birth"
+    },
+    "pregnancy": {
+      "title": "Pregnancy",
+      "text": "Please have your training checked by a doctor first. We only pick exercises marked as suitable. This does not replace medical advice.",
+      "confirm": "I understand this notice."
+    },
+    "schedule": {
+      "title": "When do you want to train?",
+      "daysLabel": "Training days per week",
+      "timeLabel": "Preferred time",
+      "morning": "Morning (7:00)",
+      "noon": "Noon (12:00)",
+      "evening": "Evening (18:00)",
+      "night": "Late (21:00)",
+      "none": "No preference"
+    },
+    "preview": {
+      "title": "Your plan is ready",
+      "subtitle": "30 days, tailored to you.",
+      "days": "days",
+      "perWeek": "per week",
+      "level": "Level",
+      "zones": "Focus",
+      "bmi": "Your BMI",
+      "forecastTitle": "Goal forecast",
+      "forecastWeeks": "At about 0.5 kg per week you reach your goal in approx. {{count}} weeks.",
+      "forecastNone": "Your target weight is not below your current weight. We focus on strength and mobility.",
+      "forecastLow": "The target weight is in the underweight range. Please talk to a doctor.",
+      "noWeight": "Without body data we show no weight forecast. Calories are estimated.",
+      "bmiUnderweight": "Underweight",
+      "bmiNormal": "Normal weight",
+      "bmiOverweight": "Overweight",
+      "bmiObese": "Obese"
+    },
+    "notifications": {
+      "title": "Enable reminders?",
+      "text": "We remind you at your training time. You can change this in settings at any time.",
+      "allow": "Allow",
+      "later": "Later"
+    }
+  },
+  "plan": {
+    "title": "Plan",
+    "day": "Day {{n}}",
+    "restDay": "Rest day",
+    "restHint": "Your body recovers today. It is part of the plan.",
+    "completeRest": "Complete rest day",
+    "start": "Start",
+    "exercises": "{{count}} exercises",
+    "allDone": "Plan completed",
+    "allDoneHint": "Great work! Create a new plan to keep going.",
+    "newPlan": "Create new plan",
+    "progress": "{{done}} of {{total}} days done",
+    "gridTitle": "All days",
+    "myPlan": "My plan",
+    "challenges": "Challenges",
+    "challengeDays": "{{count}} days",
+    "challengeStart": "Start",
+    "challengeActive": "Active",
+    "challengeEnd": "End challenge",
+    "challengeEndTitle": "End challenge?",
+    "challengeEndMessage": "Your progress in this challenge will be lost.",
+    "challengeStartTitle": "Start challenge?",
+    "challengeStartMessage": "A running challenge will be replaced.",
+    "reset": "Reset plan",
+    "resetTitle": "Regenerate plan?",
+    "resetMessage": "Your progress in the current plan will be lost. A new 30-day plan will be created.",
+    "resetConfirm": "Regenerate",
+    "stateDone": "done",
+    "stateLocked": "locked",
+    "stateCurrent": "current",
+    "stateRest": "rest day",
+    "estimate": "approx. {{count}} kcal",
+    "kcal": "{{count}} kcal"
+  },
+  "workout": {
+    "title": "Workout",
+    "duration": "Duration",
+    "exercises": "Exercises",
+    "kcal": "kcal",
+    "exerciseList": "Exercises",
+    "reps": "{{count}} reps",
+    "seconds": "{{count}} s",
+    "premium": "Premium",
+    "start": "Start",
+    "kcalEstimateHint": "Calories are an estimate (default weight 65 kg).",
+    "notFound": "Workout not found.",
+    "back": "Back"
+  }
+}

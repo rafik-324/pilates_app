@@ -1,0 +1,1569 @@
+[
+  {
+    "id": "wall_basics",
+    "titel": {
+      "de": "Wall Pilates Basics",
+      "en": "Wall Pilates Basics"
+    },
+    "kategorie": "wall_pilates",
+    "level": 1,
+    "zielzonen": [
+      "arme",
+      "brust",
+      "beine",
+      "po",
+      "bauch"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex36_wall_roll_down",
+        "wdh": 6,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 9,
+    "premium": false
+  },
+  {
+    "id": "wall_legs_glutes",
+    "titel": {
+      "de": "Wall Pilates: Beine & Po",
+      "en": "Wall Pilates: Legs & Glutes"
+    },
+    "kategorie": "wall_pilates",
+    "level": 1,
+    "zielzonen": [
+      "po",
+      "beine"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex36_wall_roll_down",
+        "wdh": 6,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex32_wall_bridge",
+        "wdh": 12,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex42_wall_kickback",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex32_wall_bridge",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex42_wall_kickback",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 30,
+        "reihenfolge": 12
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 11,
+    "premium": false
+  },
+  {
+    "id": "wall_core",
+    "titel": {
+      "de": "Wall Pilates: Core",
+      "en": "Wall Pilates: Core"
+    },
+    "kategorie": "wall_pilates",
+    "level": 2,
+    "zielzonen": [
+      "bauch",
+      "beine",
+      "po",
+      "arme"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex37_wall_leg_slides",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex33_wall_bridge_march",
+        "wdh": 10,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex32_wall_bridge",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex37_wall_leg_slides",
+        "wdh": 10,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex33_wall_bridge_march",
+        "wdh": 10,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex32_wall_bridge",
+        "wdh": 12,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 12
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 9,
+    "premium": false
+  },
+  {
+    "id": "wall_full",
+    "titel": {
+      "de": "Wall Pilates Ganzkörper",
+      "en": "Wall Pilates Full Body"
+    },
+    "kategorie": "wall_pilates",
+    "level": 2,
+    "zielzonen": [
+      "po",
+      "beine",
+      "bauch",
+      "arme",
+      "brust"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex36_wall_roll_down",
+        "wdh": 6,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex32_wall_bridge",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex33_wall_bridge_march",
+        "wdh": 10,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex42_wall_kickback",
+        "wdh": 12,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 9,
+    "premium": false
+  },
+  {
+    "id": "fullbody_gentle",
+    "titel": {
+      "de": "Ganzkörper sanft",
+      "en": "Gentle Full Body"
+    },
+    "kategorie": "ganzkoerper",
+    "level": 1,
+    "zielzonen": [
+      "bauch",
+      "po",
+      "beine",
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex12_dead_bug",
+        "wdh": 10,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex12_dead_bug",
+        "wdh": 10,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 13
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 14
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 11,
+    "premium": false
+  },
+  {
+    "id": "fullbody_standing",
+    "titel": {
+      "de": "Ganzkörper im Stand",
+      "en": "Standing Full Body"
+    },
+    "kategorie": "ganzkoerper",
+    "level": 1,
+    "zielzonen": [
+      "beine",
+      "po",
+      "bauch",
+      "arme"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex05_standing_roll_down",
+        "wdh": 6,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex44_standing_side_bend",
+        "wdh": 8,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex43_standing_knee_to_elbow",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex47_arm_circles",
+        "dauer_s": 30,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex46_standing_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex43_standing_knee_to_elbow",
+        "wdh": 12,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex47_arm_circles",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex46_standing_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 30,
+        "reihenfolge": 13
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 10,
+    "premium": false
+  },
+  {
+    "id": "fullbody_flow",
+    "titel": {
+      "de": "Ganzkörper-Flow",
+      "en": "Full Body Flow"
+    },
+    "kategorie": "ganzkoerper",
+    "level": 2,
+    "zielzonen": [
+      "bauch",
+      "po",
+      "beine",
+      "ganzkoerper",
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex08_single_leg_stretch",
+        "wdh": 10,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex25_side_kick",
+        "wdh": 10,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex19_swimming",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex16_saw",
+        "wdh": 8,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 8,
+    "premium": false
+  },
+  {
+    "id": "core_basics",
+    "titel": {
+      "de": "Bauch Basics",
+      "en": "Core Basics"
+    },
+    "kategorie": "bauch",
+    "level": 1,
+    "zielzonen": [
+      "bauch",
+      "beine",
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex11_toe_taps",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex12_dead_bug",
+        "wdh": 10,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex13_single_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex11_toe_taps",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex12_dead_bug",
+        "wdh": 10,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex13_single_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 13
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 10,
+    "premium": true
+  },
+  {
+    "id": "core_flow",
+    "titel": {
+      "de": "Bauch-Flow",
+      "en": "Core Flow"
+    },
+    "kategorie": "bauch",
+    "level": 2,
+    "zielzonen": [
+      "bauch",
+      "ganzkoerper"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex08_single_leg_stretch",
+        "wdh": 10,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex10_criss_cross",
+        "wdh": 12,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex07_roll_up_modified",
+        "wdh": 8,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex29_side_plank_knee",
+        "dauer_s": 30,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex08_single_leg_stretch",
+        "wdh": 10,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex10_criss_cross",
+        "wdh": 12,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex07_roll_up_modified",
+        "wdh": 8,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex29_side_plank_knee",
+        "dauer_s": 30,
+        "reihenfolge": 13
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 30,
+        "reihenfolge": 14
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 10,
+    "premium": true
+  },
+  {
+    "id": "core_burn",
+    "titel": {
+      "de": "Bauch intensiv",
+      "en": "Core Burn"
+    },
+    "kategorie": "bauch",
+    "level": 3,
+    "zielzonen": [
+      "bauch",
+      "ruecken",
+      "ganzkoerper"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex06_hundred_tabletop",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex08_single_leg_stretch",
+        "wdh": 10,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex10_criss_cross",
+        "wdh": 12,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex09_double_leg_stretch",
+        "wdh": 8,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex14_rolling_like_a_ball",
+        "wdh": 8,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex17_teaser_modified",
+        "wdh": 6,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex31_leg_pull_front",
+        "wdh": 8,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 7,
+    "premium": true
+  },
+  {
+    "id": "glutes_legs_floor",
+    "titel": {
+      "de": "Po & Beine am Boden",
+      "en": "Glutes & Legs on the Floor"
+    },
+    "kategorie": "po_beine",
+    "level": 1,
+    "zielzonen": [
+      "po",
+      "beine",
+      "bauch"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex24_clamshell",
+        "wdh": 15,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex26_donkey_kick",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex27_fire_hydrant",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex13_single_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex24_clamshell",
+        "wdh": 15,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex26_donkey_kick",
+        "wdh": 12,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex27_fire_hydrant",
+        "wdh": 12,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex13_single_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 13
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 14
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 13,
+    "premium": true
+  },
+  {
+    "id": "legs_standing",
+    "titel": {
+      "de": "Beine & Po im Stand",
+      "en": "Standing Legs & Glutes"
+    },
+    "kategorie": "po_beine",
+    "level": 2,
+    "zielzonen": [
+      "beine",
+      "po"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex46_standing_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex42_wall_kickback",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex46_standing_leg_circles",
+        "wdh": 8,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex39_wall_calf_raises",
+        "wdh": 15,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex34_wall_sit",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex38_wall_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 12
+      },
+      {
+        "uebung_id": "ex42_wall_kickback",
+        "wdh": 12,
+        "reihenfolge": 13
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 30,
+        "reihenfolge": 14
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 12,
+    "premium": true
+  },
+  {
+    "id": "arms_light",
+    "titel": {
+      "de": "Arme sanft",
+      "en": "Light Arms"
+    },
+    "kategorie": "arme",
+    "level": 1,
+    "zielzonen": [
+      "arme",
+      "brust",
+      "bauch"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex44_standing_side_bend",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex47_arm_circles",
+        "dauer_s": 30,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex47_arm_circles",
+        "dauer_s": 30,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex40_wall_plank",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 7,
+    "premium": true
+  },
+  {
+    "id": "arms_chest_strong",
+    "titel": {
+      "de": "Arme & Brust kräftig",
+      "en": "Arms & Chest Strong"
+    },
+    "kategorie": "arme",
+    "level": 2,
+    "zielzonen": [
+      "arme",
+      "brust",
+      "ruecken",
+      "po",
+      "bauch",
+      "ganzkoerper"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex30_pushup_knees",
+        "wdh": 8,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex19_swimming",
+        "dauer_s": 30,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex35_wall_pushup",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex30_pushup_knees",
+        "wdh": 8,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex19_swimming",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex28_forearm_plank",
+        "dauer_s": 30,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 11
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 8,
+    "premium": true
+  },
+  {
+    "id": "back_posture",
+    "titel": {
+      "de": "Rücken & Haltung",
+      "en": "Back & Posture"
+    },
+    "kategorie": "ruecken_haltung",
+    "level": 1,
+    "zielzonen": [
+      "ruecken",
+      "bauch"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex05_standing_roll_down",
+        "wdh": 6,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex18_swan_prep",
+        "wdh": 8,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex16_saw",
+        "wdh": 8,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex18_swan_prep",
+        "wdh": 8,
+        "reihenfolge": 9
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 10
+      },
+      {
+        "uebung_id": "ex16_saw",
+        "wdh": 8,
+        "reihenfolge": 11
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 12
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 8,
+    "premium": true
+  },
+  {
+    "id": "back_wall_posture",
+    "titel": {
+      "de": "Haltung an der Wand",
+      "en": "Posture at the Wall"
+    },
+    "kategorie": "ruecken_haltung",
+    "level": 1,
+    "zielzonen": [
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex41_wall_angels",
+        "wdh": 10,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex36_wall_roll_down",
+        "wdh": 6,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex44_standing_side_bend",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex18_swan_prep",
+        "wdh": 8,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex18_swan_prep",
+        "wdh": 8,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 6,
+    "premium": true
+  },
+  {
+    "id": "stretch_evening",
+    "titel": {
+      "de": "Dehnen am Abend",
+      "en": "Evening Stretch"
+    },
+    "kategorie": "stretching",
+    "level": 1,
+    "zielzonen": [
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex05_standing_roll_down",
+        "wdh": 6,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 60,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 60,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 60,
+        "reihenfolge": 9
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 7,
+    "premium": true
+  },
+  {
+    "id": "stretch_quick",
+    "titel": {
+      "de": "Schnelles Dehnen",
+      "en": "Quick Stretch"
+    },
+    "kategorie": "stretching",
+    "level": 1,
+    "zielzonen": [
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex44_standing_side_bend",
+        "wdh": 8,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex05_standing_roll_down",
+        "wdh": 6,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex15_spine_stretch_forward",
+        "wdh": 6,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 45,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 45,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 45,
+        "reihenfolge": 7
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 5,
+    "premium": true
+  },
+  {
+    "id": "beginner_first",
+    "titel": {
+      "de": "Erstes Pilates-Workout",
+      "en": "Your First Pilates Workout"
+    },
+    "kategorie": "anfaenger",
+    "level": 1,
+    "zielzonen": [
+      "bauch",
+      "po",
+      "beine"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex11_toe_taps",
+        "wdh": 12,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex11_toe_taps",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex23_side_leg_lift",
+        "wdh": 12,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 8,
+    "premium": false
+  },
+  {
+    "id": "beginner_standing",
+    "titel": {
+      "de": "Anfänger im Stand",
+      "en": "Beginner Standing"
+    },
+    "kategorie": "anfaenger",
+    "level": 1,
+    "zielzonen": [
+      "bauch",
+      "beine",
+      "po"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex01_breathing_standing",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex44_standing_side_bend",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex43_standing_knee_to_elbow",
+        "wdh": 12,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex43_standing_knee_to_elbow",
+        "wdh": 12,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex45_plie_squat",
+        "wdh": 12,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex50_standing_hip_flexor_stretch",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 6,
+    "premium": false
+  },
+  {
+    "id": "beginner_floor",
+    "titel": {
+      "de": "Anfänger am Boden",
+      "en": "Beginner Floor"
+    },
+    "kategorie": "anfaenger",
+    "level": 1,
+    "zielzonen": [
+      "bauch",
+      "po",
+      "beine",
+      "ruecken"
+    ],
+    "uebungen": [
+      {
+        "uebung_id": "ex02_shoulder_rolls",
+        "dauer_s": 30,
+        "reihenfolge": 1
+      },
+      {
+        "uebung_id": "ex03_pelvic_tilt",
+        "wdh": 10,
+        "reihenfolge": 2
+      },
+      {
+        "uebung_id": "ex04_cat_cow",
+        "wdh": 8,
+        "reihenfolge": 3
+      },
+      {
+        "uebung_id": "ex12_dead_bug",
+        "wdh": 10,
+        "reihenfolge": 4
+      },
+      {
+        "uebung_id": "ex21_bridge",
+        "wdh": 12,
+        "reihenfolge": 5
+      },
+      {
+        "uebung_id": "ex24_clamshell",
+        "wdh": 15,
+        "reihenfolge": 6
+      },
+      {
+        "uebung_id": "ex20_bird_dog",
+        "wdh": 10,
+        "reihenfolge": 7
+      },
+      {
+        "uebung_id": "ex49_supine_twist",
+        "dauer_s": 30,
+        "reihenfolge": 8
+      },
+      {
+        "uebung_id": "ex48_childs_pose",
+        "dauer_s": 30,
+        "reihenfolge": 9
+      }
+    ],
+    "pause_s": 10,
+    "geschaetzte_dauer": 7,
+    "premium": false
+  }
+]

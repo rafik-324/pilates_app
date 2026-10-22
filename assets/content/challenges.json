@@ -1,0 +1,235 @@
+[
+  {
+    "id": "wall_pilates_28",
+    "titel": {
+      "de": "Wall Pilates 28 Tage",
+      "en": "Wall Pilates 28 Days"
+    },
+    "beschreibung": {
+      "de": "28 Tage Wall Pilates von sanft bis kräftig, mit Ruhetagen.",
+      "en": "28 days of Wall Pilates from gentle to strong, with rest days."
+    },
+    "level": 1,
+    "tage": 28,
+    "premium": false,
+    "plan": [
+      {
+        "tag": 1,
+        "ruhetag": false,
+        "workout_id": "wall_basics"
+      },
+      {
+        "tag": 2,
+        "ruhetag": false,
+        "workout_id": "wall_legs_glutes"
+      },
+      {
+        "tag": 3,
+        "ruhetag": false,
+        "workout_id": "wall_basics"
+      },
+      {
+        "tag": 4,
+        "ruhetag": true
+      },
+      {
+        "tag": 5,
+        "ruhetag": false,
+        "workout_id": "wall_legs_glutes"
+      },
+      {
+        "tag": 6,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 7,
+        "ruhetag": false,
+        "workout_id": "wall_legs_glutes"
+      },
+      {
+        "tag": 8,
+        "ruhetag": true
+      },
+      {
+        "tag": 9,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 10,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 11,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 12,
+        "ruhetag": true
+      },
+      {
+        "tag": 13,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 14,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 15,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 16,
+        "ruhetag": true
+      },
+      {
+        "tag": 17,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 18,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 19,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 20,
+        "ruhetag": true
+      },
+      {
+        "tag": 21,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 22,
+        "ruhetag": false,
+        "workout_id": "wall_core"
+      },
+      {
+        "tag": 23,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 24,
+        "ruhetag": true
+      },
+      {
+        "tag": 25,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 26,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 27,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      },
+      {
+        "tag": 28,
+        "ruhetag": false,
+        "workout_id": "wall_full"
+      }
+    ]
+  },
+  {
+    "id": "core_14",
+    "titel": {
+      "de": "Bauch 14 Tage",
+      "en": "Core 14 Days"
+    },
+    "beschreibung": {
+      "de": "14 Tage gezieltes Bauchtraining mit steigender Intensität.",
+      "en": "14 days of focused core training with increasing intensity."
+    },
+    "level": 2,
+    "tage": 14,
+    "premium": true,
+    "plan": [
+      {
+        "tag": 1,
+        "ruhetag": false,
+        "workout_id": "core_basics"
+      },
+      {
+        "tag": 2,
+        "ruhetag": false,
+        "workout_id": "core_flow"
+      },
+      {
+        "tag": 3,
+        "ruhetag": false,
+        "workout_id": "core_basics"
+      },
+      {
+        "tag": 4,
+        "ruhetag": true
+      },
+      {
+        "tag": 5,
+        "ruhetag": false,
+        "workout_id": "core_flow"
+      },
+      {
+        "tag": 6,
+        "ruhetag": false,
+        "workout_id": "core_basics"
+      },
+      {
+        "tag": 7,
+        "ruhetag": false,
+        "workout_id": "core_flow"
+      },
+      {
+        "tag": 8,
+        "ruhetag": true
+      },
+      {
+        "tag": 9,
+        "ruhetag": false,
+        "workout_id": "core_flow"
+      },
+      {
+        "tag": 10,
+        "ruhetag": false,
+        "workout_id": "core_burn"
+      },
+      {
+        "tag": 11,
+        "ruhetag": false,
+        "workout_id": "core_flow"
+      },
+      {
+        "tag": 12,
+        "ruhetag": true
+      },
+      {
+        "tag": 13,
+        "ruhetag": false,
+        "workout_id": "core_burn"
+      },
+      {
+        "tag": 14,
+        "ruhetag": false,
+        "workout_id": "core_burn"
+      }
+    ]
+  }
+]
